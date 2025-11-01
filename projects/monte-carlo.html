@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monte Carlo Simulation — Brian Buchanan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b12;--panel:#11111a;--text:#e8e8f0;--muted:#a0a3b1;--accent:#7c5cff;--border:#1e1e2a;--max:1100px;--card:#141421}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:900;letter-spacing:.3px}.brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}.links a:hover{opacity:1}
+    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{font-size:36px;margin:8px 0 0}.muted{color:var(--muted)}
+    .hero{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+    .iframe-wrap{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    iframe{width:100%;height:720px;border:0}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);width:max-content}
+    .note{color:var(--muted);font-size:14px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Brian <b>Buchanan</b></div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/projects/python.html">← Back to Python</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="hero">
+      <span class="muted">Project</span>
+      <h1>Monte Carlo Investment Simulation</h1>
+      <p class="muted">1,000-trial forecast with shaded uncertainty bands (25–75%) and sample paths (5 runs). Adjusts return and volatility assumptions to see dispersion.</p>
+      <div class="cta">
+        <a class="btn" href="/files/python/monte-carlo-sim.html" target="_blank" rel="noopener">Open in New Tab</a>
+        <a class="btn" href="/files/python/monte-carlo-simulations.csv" target="_blank" rel="noopener">Download CSV</a>
+      </div>
+    </div>
+
+    <div class="iframe-wrap">
+      <iframe src="/files/python/monte-carlo-sim.html" title="Monte Carlo Interactive" loading="lazy"></iframe>
+    </div>
+
+    <p class="note">
+      If the embed doesn’t load (strict CSP on some hosts), use the “Open in New Tab” button above.
+    </p>
+  </main>
+</body>
+</html>

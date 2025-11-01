@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study — Monte Carlo Investment Simulation</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b12;--panel:#11111a;--text:#e8e8f0;--muted:#a0a3b1;--accent:#7c5cff;--accent-2:#3fa9ff;--card:#141421;--border:#1e1e2a;--max:1100px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}
+    .links a:hover{opacity:1}
+    .links a.active{color:var(--accent)}
+    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{font-size:36px;margin:8px 0 0}
+    h2{margin:24px 0 8px}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);width:max-content;margin-right:10px}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+    .pill{background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:8px 12px;display:inline-block;color:var(--muted);font-size:14px;margin-right:8px}
+    @media(max-width:900px){.kpi{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Brian <b>Buchanan</b></div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/projects/excel.html">Excel</a>
+        <a href="/projects/python.html">Python</a>
+        <a class="active" href="/projects/case-studies.html">Case Studies</a>
+        <a href="mailto:brianb97002@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <span class="muted">Case Study</span>
+    <h1>Monte Carlo Investment Simulation</h1>
+    <p class="muted">Forecasts a distribution of future portfolio values using random draws from an assumed return distribution (mean μ, volatility σ). Outputs percentile bands, sample paths, and an optional goal-probability check.</p>
+
+    <div style="margin:16px 0 22px;">
+      <a class="btn" href="/files/python/monte-carlo-sim.html" target="_blank">Open HTML Notebook</a>
+      <a class="btn" href="/files/python/monte-carlo-simulations.csv" target="_blank">Download CSV Output</a>
+      <a class="btn" href="https://github.com/brianbuchanan-official/brianbuchanan.github.io/tree/main/files/python" target="_blank">View Repo Folder</a>
+    </div>
+
+    <div class="card">
+      <h2>Problem</h2>
+      <p>Point forecasts hide uncertainty. For planning (retirement, college, capital projects), we need to see a realistic range of outcomes and the likelihood of hitting target values by a given horizon.</p>
+
+      <h2>Approach</h2>
+      <ul>
+        <li>Generate <b>1,000</b> simulated annual return paths with mean μ and volatility σ.</li>
+        <li>Compute yearly portfolio values, then extract <b>5th/25th/50th/75th/95th percentiles</b>.</li>
+        <li>Overlay a few sample paths to illustrate path-dependence.</li>
+        <li>(Optional) Add monthly contributions, fees, and inflation for more realism.</li>
+      </ul>
+
+      <h2>Key Outputs</h2>
+      <div class="kpi">
+        <div class="card">
+          <b>Percentile Bands</b>
+          <p class="muted">Shows downside risk & upside potential (5–95% range).</p>
+        </div>
+        <div class="card">
+          <b>Median Trajectory</b>
+          <p class="muted">Most likely growth path under current assumptions.</p>
+        </div>
+        <div class="card">
+          <b>Goal Probability</b>
+          <p class="muted">Share of simulations that reach the target value by year N.</p>
+        </div>
+      </div>
+
+      <h2>Tech</h2>
+      <span class="pill">Python</span>
+      <span class="pill">NumPy</span>
+      <span class="pill">Pandas</span>
+      <span class="pill">Matplotlib</span>
+      <span class="pill">Jupyter</span>
+    </div>
+
+    <p class="muted" style="margin-top:18px">Tip: The HTML notebook shows parameters at the top so you can see how μ, σ, horizon, and contributions change the distribution.</p>
+  </main>
+</body>
+</html>

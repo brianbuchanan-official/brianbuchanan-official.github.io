@@ -3,67 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brian Buchanan – Data & Actuarial Analytics</title>
-  <meta name="description" content="Excel & Python projects across actuarial, finance, and data analytics.">
-  <link rel="stylesheet" href="/assets/style.css" />
+  <title>Brian Buchanan — Finance · Data · Python</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b12;
+      --panel:#11111a;
+      --text:#e8e8f0;
+      --muted:#a0a3b1;
+      --accent:#7c5cff; /* modern tech purple */
+      --accent-2:#3fa9ff; /* soft blue */
+      --card:#141421;
+      --border:#1e1e2a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.85}
+    .links a.active{color:var(--accent)}
+    .hero{max-width:1100px;margin:60px auto;padding:0 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#1a1a28,#151523);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:12px;color:var(--muted)}
+    .badge i{width:8px;height:8px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent-2))}
+    h1{font-size:44px;line-height:1.1;margin:18px 0 10px}
+    .subtitle{color:var(--muted);font-size:18px;max-width:720px}
+    .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none}
+    .glass{
+      background:radial-gradient(1200px 600px at -10% -20%,#1d1635 0%,transparent 40%),
+                 radial-gradient(1000px 500px at 110% 10%,#0c2442 0%,transparent 45%);
+      border:1px solid var(--border);border-radius:16px;padding:16px
+    }
+    .preview{
+      height:360px;border-radius:16px;background:
+      linear-gradient(180deg,#151526,#0f0f1a);
+      border:1px solid var(--border);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:500;color:#cfd1ff
+    }
+    .section{max-width:1100px;margin:50px auto;padding:0 20px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .card h3{margin:8px 0 6px;font-size:18px}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid var(--border);margin-top:60px}
+    .foot{max-width:1100px;margin:0 auto;padding:18px 20px;color:var(--muted);font-size:14px}
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="/">Brian Buchanan</a>
-    <nav>
-      <a href="/projects/excel.html">Excel</a>
-      <a href="/projects/python.html">Python</a>
-      <a href="/projects/case-studies.html">Case Studies</a>
-      <a href="/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-    </nav>
-  </header>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Brian <b>Buchanan</b></div>
+      <div class="links">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="mailto:brian.buchanan@bankerslife.com">Contact</a>
+      </div>
+    </div>
+  </nav>
 
   <main>
     <section class="hero">
-      <h1>Data & Actuarial Analytics Portfolio</h1>
-      <p>Hybrid focus: actuarial modeling, finance, and data analytics — built in Excel and Python.</p>
-      <div class="cta">
-        <a class="btn" href="/projects/excel.html">View Excel Projects</a>
-        <a class="btn ghost" href="/projects/python.html">View Python Projects</a>
+      <div>
+        <span class="badge"><i></i> Modern Tech · Finance · Data</span>
+        <h1>Finance, Data & Applied Python Projects</h1>
+        <p class="subtitle">I build practical analytics and tools across insurance, finance, and quantitative methods — from Excel dashboards to Python backtests — and share the results here.</p>
+        <div class="cta">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="about.html">About Me</a>
+        </div>
+      </div>
+      <div class="glass">
+        <!-- Replace the placeholder below once you upload your image to assets/img/ -->
+        <div class="preview">Add your image: <code>assets/img/profile.jpg</code></div>
       </div>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <h3>Actuarial Modeling</h3>
-        <p>Annuities, loans, bonds (duration/convexity), and claims distributions.</p>
-        <a href="/projects/excel.html" class="card-link">See Excel work →</a>
-      </article>
-      <article class="card">
-        <h3>Finance & Forecasting</h3>
-        <p>Monte Carlo simulations, retirement funding models, sensitivity analysis.</p>
-        <a href="/projects/python.html" class="card-link">See Python work →</a>
-      </article>
-      <article class="card">
-        <h3>Data Case Studies</h3>
-        <p>End-to-end stories with problem, data, method, and outcome.</p>
-        <a href="/projects/case-studies.html" class="card-link">Open case studies →</a>
-      </article>
-    </section>
-
-    <section class="about">
-      <h2>About</h2>
-      <p>I'm Brian Buchanan, based in NY. I work across Excel and Python to solve actuarial and analytics problems. Current studies include Exam FM topics and data tools.</p>
-      <ul class="bullets">
-        <li>Excel: dashboards, pivot tables, financial models</li>
-        <li>Python: pandas, NumPy, matplotlib; simulations & modeling</li>
-        <li>Focus areas: insurance, finance, and real-world analytics</li>
-      </ul>
-      <div class="links">
-        <a class="btn small" href="https://github.com/brianb9700-maker" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn small ghost" href="mailto:brian.buchanan@bankerslife.com">Email</a>
+    <section class="section">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <a class="card" href="projects.html#gre-weakness">
+          <h3>GRE Quant Weakness Map</h3>
+          <p class="muted">Log practice → auto heatmap of weak topics. Excel + Python.</p>
+        </a>
+        <a class="card" href="projects.html#crypto-backtester">
+          <h3>Crypto Trend Signal Backtester</h3>
+          <p class="muted">EMA/ADX strategy vs. Buy & Hold. Clear charts + CSV exports.</p>
+        </a>
+        <a class="card" href="projects.html#medicare-optimizer">
+          <h3>Medicare Plan Cost Optimizer</h3>
+          <p class="muted">Scenario modeling to compare out-of-pocket costs.</p>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© <span id="y"></span> Brian Buchanan</span>
-  </footer>
+  <footer><div class="foot">© <span id="y"></span> Brian Buchanan · <a href="https://github.com">GitHub</a></div></footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>

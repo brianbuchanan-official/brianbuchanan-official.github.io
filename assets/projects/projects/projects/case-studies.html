@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Case Studies – Brian Buchanan</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/">Brian Buchanan</a>
+  <nav>
+    <a href="/projects/excel.html">Excel</a>
+    <a href="/projects/python.html">Python</a>
+    <a href="/projects/case-studies.html">Case Studies</a>
+    <a href="/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </nav>
+</header>
+<main>
+  <h1>Data Case Studies</h1>
+  <p>End-to-end write-ups with problem, data, method, and results.</p>
+
+  <section class="grid">
+    <article class="card">
+      <h3>Medicare Plan Comparison (Sample)</h3>
+      <p><strong>Problem:</strong> Compare plan costs/benefits for a sample client.<br>
+         <strong>Tools:</strong> Excel (pivot + charts).<br>
+         <strong>Outcome:</strong> Clear cost driver analysis and plan shortlist.
+      </p>
+      <a class="btn small" href="/files/case-studies/medicare-comparison.pdf" target="_blank">Read PDF</a>
+    </article>
+
+    <article class="card">
+      <h3>Bond Risk Dashboard</h3>
+      <p><strong>Problem:</strong> Sensitivity of bond price to rate changes.<br>
+         <strong>Tools:</strong> Excel + Python (duration/convexity).<br>
+         <strong>Outcome:</strong> Playbook for rate scenarios.
+      </p>
+      <a class="btn small" href="/files/case-studies/bond-risk.pdf" target="_blank">Read PDF</a>
+    </article>
+  </section>
+</main>
+<footer class="footer">© <span id="y"></span> Brian Buchanan</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>

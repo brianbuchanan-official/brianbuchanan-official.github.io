@@ -1,49 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Excel Projects – Brian Buchanan</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excel Projects — Brian Buchanan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b12;--panel:#11111a;--text:#e8e8f0;--muted:#a0a3b1;--accent:#7c5cff;--accent-2:#3fa9ff;--card:#141421;--border:#1e1e2a;--max:1100px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}
+    .links a:hover{opacity:1}
+    .links a.active{color:var(--accent)}
+    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{font-size:36px;margin:8px 0 0}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);width:max-content}
+    .btn.small{font-size:14px}
+  </style>
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href="/">Brian Buchanan</a>
-  <nav>
-    <a href="/projects/excel.html">Excel</a>
-    <a href="/projects/python.html">Python</a>
-    <a href="/projects/case-studies.html">Case Studies</a>
-    <a href="/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Brian <b>Buchanan</b></div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/resume.html">Resume</a>
+        <a class="active" href="/projects/excel.html">Excel</a>
+        <a href="/projects/python.html">Python</a>
+        <a href="/projects/case-studies.html">Case Studies</a>
+        <a href="mailto:brianb97002@gmail.com">Contact</a>
+      </div>
+    </div>
   </nav>
-</header>
-<main>
-  <h1>Excel Projects</h1>
-  <p>Downloadable dashboards and financial models.</p>
 
-  <section class="grid">
-    <article class="card">
-      <h3>Loan & Amortization Explorer</h3>
-      <p>Exam FM-style schedule with interest/principal breakdown and charts.</p>
-      <a class="btn small" href="/files/excel/loan-amortization.xlsx" download>Download .xlsx</a>
-      <a class="card-link" href="/files/excel/loan-amortization.pdf" target="_blank">Preview (PDF)</a>
-    </article>
+  <main class="section">
+    <span class="muted">Projects · Excel</span>
+    <h1>Excel Projects</h1>
+    <p class="muted">Finance & actuarial models built in Excel. Downloads are live.</p>
 
-    <article class="card">
-      <h3>Bond Duration & Convexity Dashboard</h3>
-      <p>Price-yield curve, duration/convexity calculator, and sensitivity analysis.</p>
-      <a class="btn small" href="/files/excel/bond-duration-convexity.xlsx" download>Download .xlsx</a>
-    </article>
+    <div class="grid">
+      <!-- Project 1 -->
+      <div class="card">
+        <h3>Loan & Amortization Model</h3>
+        <p class="muted">FM-style level payment schedule with interest/principal breakdown and balance chart.</p>
+        <a class="btn small" href="/files/excel/loan-amortization.xlsx" download>Download .xlsx</a>
+      </div>
 
-    <article class="card">
-      <h3>Retirement Funding Model</h3>
-      <p>Contributions, returns, and withdrawal scenarios with scenario toggles.</p>
-      <a class="btn small" href="/files/excel/retirement-model.xlsx" download>Download .xlsx</a>
-    </article>
-  </section>
+      <!-- Placeholder cards you can fill later -->
+      <div class="card">
+        <h3>Bond Duration & Convexity (Coming Soon)</h3>
+        <p class="muted">Compute Macaulay/Modified duration and convexity with scenario shocks.</p>
+        <a class="btn small" href="#" onclick="return false;">Uploading soon</a>
+      </div>
 
-  <p class="muted">Tip: Put your Excel files in <code>/files/excel/</code> (create the folders) and link them as above.</p>
-</main>
-<footer class="footer">© <span id="y"></span> Brian Buchanan</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+      <div class="card">
+        <h3>Insurance Premium Calculator (Coming Soon)</h3>
+        <p class="muted">Simplified pricing sheet with loss ratio target & sensitivity toggles.</p>
+        <a class="btn small" href="#" onclick="return false;">Uploading soon</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
-

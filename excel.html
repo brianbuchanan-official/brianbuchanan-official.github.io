@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Python Projects — Brian Buchanan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0b12;--panel:#11111a;--text:#e8e8f0;--muted:#a0a3b1;--accent:#7c5cff;--accent-2:#3fa9ff;--card:#141421;--border:#1e1e2a;--max:1100px}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:900;letter-spacing:.3px}.brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}.links a:hover{opacity:1}.links a.active{color:var(--accent)}
+    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{font-size:36px;margin:8px 0 0}.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+    .btn{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);width:max-content}
+    .btn.small{font-size:14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Brian <b>Buchanan</b></div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/excel.html">Excel</a>
+        <a class="active" href="/python.html">Python</a>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/future-build-library.html">Future Build Library</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <span class="muted">Projects · Python</span>
+    <h1>Python Projects</h1>
+    <p class="muted">Interactive financial notebooks rendered to fast HTML.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Monte Carlo Investment Simulation</h3>
+        <p class="muted">1,000-run simulation with percentile bands + sample paths to visualize long-term uncertainty.</p>
+        <div class="cta">
+          <a class="btn small" href="/monte-carlo.html">View details</a>
+          <a class="btn small" href="/files/python/monte-carlo-sim.html" target="_blank">Open HTML</a>
+          <a class="btn small" href="/files/python/monte-carlo-simulations.csv" target="_blank">Download CSV</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Portfolio Risk Metrics (Coming Soon)</h3>
+        <p class="muted">Sharpe, volatility, max drawdown, and factor exposure summary.</p>
+        <a class="btn small" href="#" onclick="return false;">Uploading Soon</a>
+      </div>
+
+      <div class="card">
+        <h3>Bond Pricing Toolkit (Coming Soon)</h3>
+        <p class="muted">YTM, PV cashflows, duration &amp; convexity helpers.</p>
+        <a class="btn small" href="#" onclick="return false;">Uploading Soon</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,185 @@
+---
+layout: default
+title: Excel Projects
+---
+
+<section class="excel-projects-wrap">
+  <h1 class="page-title">Excel Projects</h1>
+  <p class="page-subtitle">
+    Business-focused Excel + BI models designed to solve real analytical problems.
+  </p>
+
+  <!-- GRID -->
+  <div class="projects-grid">
+
+    <!-- STREAMVERSE CARD (NEW) -->
+    <article class="project-card featured">
+      <a class="card-img" href="/professional-projects/excel/streamverse.html">
+        <img
+          src="/files/case-studies/streamverse/StreamVerse_Dashboard.png"
+          alt="StreamVerse SaaS Churn Dashboard"
+        />
+      </a>
+
+      <div class="card-body">
+        <h2 class="card-title">StreamVerse — SaaS Churn & Revenue Analytics</h2>
+        <p class="card-desc">
+          End-to-end subscription churn analysis with MRR, ARPU, and LTV metrics.
+          Built from a simulated Excel dataset and modeled in Power BI with DAX.
+        </p>
+
+        <div class="card-tags">
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>DAX</span>
+          <span>SaaS KPIs</span>
+        </div>
+
+        <div class="card-actions">
+          <a class="btn primary" href="/professional-projects/excel/streamverse.html">
+            View Case Study
+          </a>
+          <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">
+            GitHub
+          </a>
+          <a class="btn" href="/files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>
+            Excel File
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <!-- EXAMPLE EXISTING CARD TEMPLATE (duplicate for your other Excel projects) -->
+    <!--
+    <article class="project-card">
+      <a class="card-img" href="/professional-projects/excel/loan-amortization.html">
+        <img src="/assets/images/loan-amortization.png" alt="Loan Amortization Tool" />
+      </a>
+      <div class="card-body">
+        <h2 class="card-title">Loan Amortization Dashboard</h2>
+        <p class="card-desc">
+          Interactive amortization schedule with scenario toggles and payoff sensitivity.
+        </p>
+        <div class="card-tags">
+          <span>Excel</span><span>Finance</span><span>Modeling</span>
+        </div>
+        <div class="card-actions">
+          <a class="btn primary" href="/professional-projects/excel/loan-amortization.html">View</a>
+          <a class="btn" href="/files/excel/loan-amortization.xlsx" download>Excel File</a>
+        </div>
+      </div>
+    </article>
+    -->
+
+  </div>
+</section>
+
+<style>
+  .excel-projects-wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .page-title{
+    font-size: 2.2rem;
+    margin-bottom: 6px;
+  }
+  .page-subtitle{
+    color:#666;
+    margin-bottom: 18px;
+  }
+
+  .projects-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap:18px;
+  }
+
+  .project-card{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .project-card:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+  }
+
+  .card-img img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    display:block;
+  }
+
+  .card-body{
+    padding:14px 14px 16px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .card-title{
+    font-size:1.1rem;
+    margin:0;
+  }
+  .card-desc{
+    color:#444;
+    font-size:.95rem;
+    line-height:1.35;
+    margin:0;
+  }
+
+  .card-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:4px;
+  }
+  .card-tags span{
+    font-size:.78rem;
+    background:#f1f3f5;
+    padding:4px 8px;
+    border-radius:999px;
+    color:#333;
+  }
+
+  .card-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:6px;
+  }
+  .btn{
+    display:inline-block;
+    padding:7px 10px;
+    border-radius:8px;
+    background:#f1f3f5;
+    color:#111;
+    text-decoration:none;
+    font-size:.9rem;
+  }
+  .btn.primary{
+    background:#0b5fff;
+    color:#fff;
+  }
+  .btn:hover{ opacity:.9; }
+
+  /* Featured card subtle ring */
+  .project-card.featured{
+    border:1px solid rgba(11,95,255,.25);
+  }
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .projects-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 640px){
+    .projects-grid{ grid-template-columns: 1fr; }
+    .card-img img{ height:210px; }
+  }
+</style>

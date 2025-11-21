@@ -3,184 +3,66 @@ layout: default
 title: Excel Projects
 ---
 
-<section class="excel-projects-wrap">
-  <h1 class="page-title">Excel Projects</h1>
-  <p class="page-subtitle">
+<main>
+
+  <h1 style="margin-bottom: 6px;">Excel Projects</h1>
+  <p style="color: var(--muted); margin-bottom: 20px;">
     Business-focused Excel + BI models designed to solve real analytical problems.
   </p>
 
-  <!-- GRID -->
-  <div class="projects-grid">
+  <!-- PROJECT GRID -->
+  <div class="grid">
 
     <!-- STREAMVERSE CARD -->
-    <article class="project-card featured">
-      <a class="card-img" href="/professional-projects/excel/streamverse.html">
-        <img
-          src="/files/case-studies/streamverse/StreamVerse_Dashboard.png"
-          alt="StreamVerse SaaS Churn Dashboard"
-        />
+    <div class="card" style="padding: 0; overflow: hidden;">
+
+      <!-- Thumbnail -->
+      <a href="/professional-projects/excel/streamverse.html">
+        <img 
+          src="/files/case-studies/streamverse/StreamVerse_Dashboard.png" 
+          alt="StreamVerse Dashboard"
+          style="width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid var(--stroke);"
+        >
       </a>
 
-      <div class="card-body">
-        <h2 class="card-title">StreamVerse — SaaS Churn & Revenue Analytics</h2>
-        <p class="card-desc">
-          End-to-end churn, retention, and revenue analysis with Excel + Power BI.
-          Includes MRR, ARPU, LTV, cancellations, and cohort behavior.
+      <!-- Body -->
+      <div style="padding: 16px;">
+        
+        <h2 style="margin: 0 0 8px 0; font-size: 18px;">
+          StreamVerse — SaaS Churn & Revenue Analytics
+        </h2>
+
+        <p style="margin: 0 0 12px 0; color: var(--muted); font-size: 14px;">
+          A full churn, retention, and revenue analytics dashboard built using 
+          Excel, Power BI, and DAX.
         </p>
 
-        <div class="card-tags">
-          <span>Excel</span>
-          <span>Power BI</span>
-          <span>DAX</span>
+        <!-- Tags -->
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+          <span style="font-size: 12px; background: var(--stroke); padding: 4px 8px; border-radius: 8px;">
+            Excel
+          </span>
+          <span style="font-size: 12px; background: var(--stroke); padding: 4px 8px; border-radius: 8px;">
+            Power BI
+          </span>
+          <span style="font-size: 12px; background: var(--stroke); padding: 4px 8px; border-radius: 8px;">
+            DAX
+          </span>
         </div>
 
-        <div class="card-actions">
-          <a class="btn primary" href="/professional-projects/excel/streamverse.html">
+        <!-- Buttons -->
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <a class="btn small" href="/professional-projects/excel/streamverse.html">
             View Project
           </a>
-          <a class="btn" href="/files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>
+          <a class="btn ghost small" href="/files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>
             Excel File
           </a>
         </div>
+
       </div>
-    </article>
-
-    <!-- TEMPLATE FOR YOUR OTHER EXCEL PROJECTS -->
-    <!-- Duplicate this block for more projects -->
-    <!--
-    <article class="project-card">
-      <a class="card-img" href="/professional-projects/excel/YOURPAGE.html">
-        <img src="/assets/images/YOURIMAGE.jpg" alt="Project Thumbnail" />
-      </a>
-
-      <div class="card-body">
-        <h2 class="card-title">Your Project Title</h2>
-        <p class="card-desc">
-          Short project description goes here.
-        </p>
-
-        <div class="card-tags">
-          <span>Excel</span>
-          <span>Finance</span>
-        </div>
-
-        <div class="card-actions">
-          <a class="btn primary" href="/professional-projects/excel/YOURPAGE.html">View Project</a>
-          <a class="btn" href="/files/excel/YOURFILE.xlsx" download>Excel File</a>
-        </div>
-      </div>
-    </article>
-    -->
+    </div>
 
   </div>
-</section>
 
-<style>
-  .excel-projects-wrap{
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-  .page-title{
-    font-size: 2.2rem;
-    margin-bottom: 6px;
-  }
-  .page-subtitle{
-    color:#666;
-    margin-bottom: 18px;
-  }
-
-  .projects-grid{
-    display:grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap:18px;
-  }
-
-  .project-card{
-    background:#fff;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .project-card:hover{
-    transform: translateY(-3px);
-    box-shadow:0 10px 24px rgba(0,0,0,.12);
-  }
-
-  .card-img img{
-    width:100%;
-    height:190px;
-    object-fit:cover;
-    display:block;
-  }
-
-  .card-body{
-    padding:14px 14px 16px 14px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .card-title{
-    font-size:1.1rem;
-    margin:0;
-  }
-  .card-desc{
-    color:#444;
-    font-size:.95rem;
-    line-height:1.35;
-    margin:0;
-  }
-
-  .card-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-top:4px;
-  }
-  .card-tags span{
-    font-size:.78rem;
-    background:#f1f3f5;
-    padding:4px 8px;
-    border-radius:999px;
-    color:#333;
-  }
-
-  .card-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:6px;
-  }
-  .btn{
-    display:inline-block;
-    padding:7px 10px;
-    border-radius:8px;
-    background:#f1f3f5;
-    color:#111;
-    text-decoration:none;
-    font-size:.9rem;
-  }
-  .btn.primary{
-    background:#0b5fff;
-    color:#fff;
-  }
-  .btn:hover{ opacity:.9; }
-
-  /* Featured card subtle ring */
-  .project-card.featured{
-    border:1px solid rgba(11,95,255,.25);
-  }
-
-  /* Responsive */
-  @media (max-width: 980px){
-    .projects-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-  }
-  @media (max-width: 640px){
-    .projects-grid{ grid-template-columns: 1fr; }
-    .card-img img{ height:210px; }
-  }
-</style>
+</main>

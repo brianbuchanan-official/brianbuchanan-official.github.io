@@ -4,59 +4,149 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Brian Buchanan</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
-    body{background:#0b0b12;color:#e8e8f0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{
+      background:#0b0b12;
+      color:#e8e8f0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
     a{color:#e8e8f0;text-decoration:none}
-    .nav{position:sticky;top:0;background:#0b0b12cc;border-bottom:1px solid #1e1e2a;backdrop-filter:blur(8px)}
-    .nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
-    .links a{margin-left:18px;opacity:.85}
+
+    /* NAVIGATION */
+    .nav{
+      position:sticky;
+      top:0;
+      background:#0b0b12cc;
+      border-bottom:1px solid #1e1e2a;
+      backdrop-filter:blur(8px);
+      z-index:10;
+    }
+    .nav-inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 20px;
+    }
+    .brand{
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+    .brand b{color:#7c5cff}
+    .links a{
+      margin-left:18px;
+      opacity:.85;
+    }
+    .links a:hover{opacity:1}
     .links a.active{color:#7c5cff}
-    .wrap{max-width:1100px;margin:40px auto;padding:0 20px}
-    h1{margin:8px 0 4px}
-    .muted{color:#a0a3b1}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:#141421;border:1px solid #1e1e2a;border-radius:12px;padding:16px}
-    .tag{display:inline-block;margin-top:8px;font-size:12px;color:#a0a3b1}
+
+    /* PAGE LAYOUT */
+    .wrap{
+      max-width:1100px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+    h1{
+      margin:8px 0 4px;
+      font-size:36px;
+      font-weight:900;
+    }
+    .muted{
+      color:#a0a3b1;
+    }
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+      gap:16px;
+      margin-top:24px;
+    }
+
+    /* PROJECT CARD */
+    .card{
+      background:#141421;
+      border:1px solid #1e1e2a;
+      border-radius:14px;
+      padding:18px;
+      transition:0.2s;
+    }
+    .card:hover{
+      border-color:#7c5cff;
+      transform:translateY(-2px);
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:20px;
+    }
+    .card p{
+      margin:0 0 12px 0;
+      color:#a0a3b1;
+      line-height:1.5;
+    }
+    .tag{
+      background:#1e1e2a;
+      padding:4px 8px;
+      border-radius:8px;
+      font-size:12px;
+      margin-right:6px;
+      color:#a0a3b1;
+    }
+
+    /* EMPTY STATE */
+    .empty{
+      margin-top:40px;
+      padding:40px;
+      text-align:center;
+      border:1px dashed #3a3a48;
+      border-radius:14px;
+      background:#11111a;
+      color:#a0a3b1;
+    }
+
   </style>
 </head>
+
 <body>
+
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">Brian <b>Buchanan</b></div>
       <div class="links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
         <a class="active" href="projects.html">Projects</a>
-        <a href="mailto:brian.buchanan@bankerslife.com">Contact</a>
+        <a href="python.html">Python</a>
+        <a href="excel.html">Excel</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="future-build-library.html">Future Build Library</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
       </div>
     </div>
   </nav>
 
+  <!-- CONTENT -->
   <div class="wrap">
     <h1>Projects</h1>
-    <p class="muted">Excel + Python builds with short write-ups and code links.</p>
+    <p class="muted">A collection of my Excel, Python, and analytics builds.</p>
 
-    <div class="grid">
-      <a id="gre-weakness" class="card" href="#">
-        <h3>GRE Quant Weakness Map</h3>
-        <p>Log sessions → Python creates topic heatmap + accuracy table. Exports to Excel.</p>
-        <span class="tag">Excel · Python · pandas</span>
-      </a>
-
-      <a id="crypto-backtester" class="card" href="#">
-        <h3>Crypto Trend Signal Backtester</h3>
-        <p>EMA/ADX logic vs. Buy & Hold on BTC/ETH/DOGE with equity curve plots.</p>
-        <span class="tag">Python · Backtesting · matplotlib</span>
-      </a>
-
-      <a id="medicare-optimizer" class="card" href="#">
-        <h3>Medicare Plan Cost Optimizer</h3>
-        <p>Scenario modeling (premiums + OOP) to pick cheapest plan by condition.</p>
-        <span class="tag">Excel · Python</span>
-      </a>
+    <!-- EMPTY STATE (no projects yet) -->
+    <div class="empty">
+      No projects added yet.<br>
+      Add one by dropping a <b>project card</b> into this grid.
     </div>
+
+    <!-- PROJECT GRID (starts empty for now) -->
+    <div class="grid">
+      <!-- When you're ready, I’ll give you simple 1-card snippets -->
+    </div>
+
   </div>
+
 </body>
 </html>

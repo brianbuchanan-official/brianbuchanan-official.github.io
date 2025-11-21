@@ -1,162 +1,130 @@
----
-layout: default
-title: StreamVerse — SaaS Churn & Revenue Analytics
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreamVerse – Customer Churn & Revenue Dashboard</title>
+    <link rel="stylesheet" href="../../assets/style.css" />
+    <style>
+        .project-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        }
+        .btn-row {
+            margin: 25px 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 20px;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background: #084298;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-top: 35px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            line-height: 1.7;
+        }
+    </style>
+</head>
 
-<section class="case-wrap">
-  <header class="case-header">
-    <h1>StreamVerse — SaaS Churn & Revenue Analytics</h1>
-    <p>
-      End-to-end subscription analytics case study using a simulated Excel dataset and a Power BI dashboard.
-      KPIs include churn rate, MRR, ARPU, and LTV with segmentation by region, plan type, and family status.
-    </p>
+<body>
 
-    <div class="case-links">
-      <a class="btn primary" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">GitHub Repo</a>
-      <a class="btn" href="/files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>Download Excel Dataset</a>
-      <a class="btn" href="/files/case-studies/streamverse/StreamVerse_SaaS_ChurnDashboard.pbix" download>Download Power BI (.pbix)</a>
-      <a class="btn" href="/files/case-studies/streamverse/StreamVerse_Dashboard.png" target="_blank">Open Dashboard Image</a>
+<div class="project-container">
+
+    <h1>StreamVerse — Customer Churn & Revenue Dashboard</h1>
+    <p><strong>Category:</strong> Excel + Power BI Case Study</p>
+
+    <!-- Dashboard Image -->
+    <img src="../../assets/StreamVerse_Dashboard.png" alt="StreamVerse Dashboard" class="hero-img" />
+
+    <!-- Buttons Row -->
+    <div class="btn-row">
+        <a class="btn" href="../../files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>
+            📊 Download Excel Dataset
+        </a>
+
+        <a class="btn" href="../../files/case-studies/streamverse/StreamVerse_SaaS_ChurnDashboard.pbix" download>
+            📈 Download Power BI File (PBIX)
+        </a>
+
+        <a class="btn" href="../../assets/StreamVerse_Dashboard.png" target="_blank">
+            🖼️ View Dashboard Image
+        </a>
+
+        <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">
+            🔗 View GitHub Repository
+        </a>
     </div>
-  </header>
 
-  <figure class="hero">
-    <img src="/files/case-studies/streamverse/StreamVerse_Dashboard.png" alt="StreamVerse Dashboard">
-    <figcaption>Power BI dashboard preview.</figcaption>
-  </figure>
-
-  <hr>
-
-  <section>
-    <h2>Business Problem</h2>
+    <h2>📌 Project Summary</h2>
     <p>
-      StreamVerse operates in a competitive streaming market where acquisition costs are high.
-      Retention is critical, but monthly churn was eroding MRR and long-term customer value.
-      The objective was to identify churn patterns, quantify revenue risk, and surface high-risk segments.
+        StreamVerse is a fictional video-streaming SaaS business. This project analyzes customer churn,
+        revenue performance, retention, LTV, and subscription behavior across 12 months using Excel and Power BI.
+        The dashboard is designed for executives who need insight into revenue trends and churn risk.
     </p>
-  </section>
 
-  <section>
-    <h2>KPIs</h2>
+    <h2>🎯 Objectives</h2>
     <ul>
-      <li><strong>Active Customers</strong> — Paying subscribers each month.</li>
-      <li><strong>Cancels</strong> — Subscriptions lost per month.</li>
-      <li><strong>Churn Rate (%)</strong> — Cancels ÷ Active Customers.</li>
-      <li><strong>MRR</strong> — Monthly subscription revenue.</li>
-      <li><strong>ARPU</strong> — MRR ÷ Active Customers.</li>
-      <li><strong>LTV</strong> — ARPU ÷ Churn Rate.</li>
+        <li>Measure customer churn monthly and overall</li>
+        <li>Track Monthly Recurring Revenue (MRR)</li>
+        <li>Analyze Active Customers vs Cancels</li>
+        <li>Calculate ARPU and LTV</li>
+        <li>Create an interactive drill-down dashboard in Power BI</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Data & Method</h2>
-    <p>
-      A 12-month synthetic dataset was built in Excel to mimic real SaaS behavior:
-      customers were assigned plan types, regions, add-ons, and churn probabilities that decay over time.
-      The dataset was imported into Power BI, modeled in a star schema, and analyzed using DAX measures.
-    </p>
-  </section>
-
-  <section>
-    <h2>Core DAX Measures</h2>
-    <pre><code>Active_Customers = SUM(Fact_Monthly[Is_Active])
-
-Cancels = SUM(Fact_Monthly[Churn_Flag])
-
-Churn_Pct = DIVIDE([Cancels], [Active_Customers])
-
-MRR_Monthly = SUM(Fact_Monthly[MRR])
-
-ARPU = DIVIDE([MRR], [Active_Customers])
-
-LTV = DIVIDE([ARPU], [Churn_Pct])</code></pre>
-  </section>
-
-  <section>
-    <h2>Findings</h2>
+    <h2>📊 Key Findings</h2>
     <ul>
-      <li>Churn is highest in Month 1 and declines sharply by Month 3.</li>
-      <li>MRR trends upward month-over-month as retention stabilizes.</li>
-      <li>Premium plans retain better and drive higher ARPU and LTV.</li>
-      <li>Segments by Region and Has Kids show meaningful churn differences.</li>
+        <li>Churn starts high early, then stabilizes around ~7–10%</li>
+        <li>MRR grows steadily across 12 months</li>
+        <li>Active customer count increases despite churn</li>
+        <li>Premium and Standard plans generate most revenue</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Recommendations</h2>
+    <h2>🛠️ Tools Used</h2>
     <ul>
-      <li>Offer annual-plan incentives to reduce month-to-month churn.</li>
-      <li>Improve early-life support and onboarding to reduce Month-1 churn spike.</li>
-      <li>Upsell engaged Basic users into Premium features to increase LTV.</li>
-      <li>Monitor high-risk regions with targeted retention campaigns.</li>
+        <li><strong>Excel:</strong> Data cleaning, revenue modeling, churn calculations</li>
+        <li><strong>Power BI:</strong> Data modeling (DAX), dashboards, KPI visualization</li>
+        <li><strong>DAX Measures:</strong> MRR_Monthly, Active_Customers, Cancels, LTV, ARPU</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Next Steps</h2>
+    <h2>📂 Files Included</h2>
     <ul>
-      <li>Build a Python churn-prediction model to flag high-risk users early.</li>
-      <li>A/B test retention offers to find the most cost-effective approach.</li>
-      <li>Add cohort curves and survival analysis for deeper retention modeling.</li>
+        <li><strong>Excel Dataset:</strong> StreamVerse_ChurnProject.xlsx</li>
+        <li><strong>Dashboard Image:</strong> StreamVerse_Dashboard.png</li>
+        <li><strong>Power BI File:</strong> StreamVerse_SaaS_ChurnDashboard.pbix</li>
     </ul>
-  </section>
 
-  <footer class="case-footer">
-    <p>
-      🔗 <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
-      🌐 <a href="https://brianbuchanan-official.github.io/" target="_blank">Portfolio</a>
-    </p>
-  </footer>
-</section>
+    <h2>📎 Links</h2>
+    <ul>
+        <li><a href="https://brianbuchanan-official.github.io/">My Portfolio Website</a></li>
+        <li><a href="https://www.linkedin.com/in/brian-buchanan-616727224/">My LinkedIn</a></li>
+        <li><a href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics">GitHub Repository</a></li>
+    </ul>
 
-<style>
-  .case-wrap{
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-  .case-header h1{ font-size:2.1rem; margin-bottom:6px; }
-  .case-header p{ color:#444; line-height:1.5; }
+</div>
 
-  .case-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:10px;
-    margin-bottom:8px;
-  }
-  .btn{
-    display:inline-block;
-    padding:8px 12px;
-    border-radius:8px;
-    background:#f1f3f5;
-    color:#111;
-    text-decoration:none;
-    font-size:.95rem;
-  }
-  .btn.primary{ background:#0b5fff; color:#fff; }
-  .btn:hover{ opacity:.9; }
-
-  .hero img{
-    width:100%;
-    border-radius:12px;
-    margin-top:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
-  }
-  figcaption{ color:#666; font-size:.9rem; margin-top:6px; }
-
-  section{ margin-top:18px; }
-  h2{ margin-bottom:6px; }
-  pre{
-    background:#0b1020;
-    color:#e6e6e6;
-    padding:12px;
-    border-radius:10px;
-    overflow:auto;
-  }
-  .case-footer{
-    margin-top:22px;
-    padding-top:10px;
-    border-top:1px solid #eee;
-    color:#444;
-  }
-</style>
+</body>
+</html>

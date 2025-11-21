@@ -90,7 +90,6 @@
       gap:8px;
     }
 
-    /* IMAGE PREVIEW */
     .thumb{
       width:100%;
       border-radius:12px;
@@ -98,7 +97,6 @@
       margin-bottom:10px;
     }
 
-    /* BUTTONS */
     .btn{
       padding:10px 12px;
       border-radius:12px;
@@ -116,6 +114,12 @@
       color:white;
     }
 
+    .btn.ghost{
+      background:transparent;
+      border-color:var(--accent);
+      color:var(--accent);
+    }
+
     .tag{
       background:#1e1e2a;
       padding:3px 8px;
@@ -124,11 +128,13 @@
       margin-right:4px;
       color:var(--muted);
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">Brian <b>Buchanan</b></div>
@@ -144,6 +150,7 @@
     </div>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <main class="section">
     <span class="muted">Projects · Excel</span>
     <h1>Excel Projects</h1>
@@ -151,7 +158,9 @@
 
     <div class="grid">
 
-      <!-- STREAMVERSE CARD -->
+      <!-- ========================= -->
+      <!-- STREAMVERSE — FINAL CARD -->
+      <!-- ========================= -->
       <div class="card">
         <img class="thumb" src="files/case-studies/streamverse/StreamVerse_Dashboard.png" alt="StreamVerse Dashboard">
 
@@ -167,52 +176,23 @@
           <span class="tag">DAX</span>
         </div>
 
-        <a class="btn" href="case-studies/streamverse.html">View Project</a>
+        <!-- Correct path -->
+        <a class="btn" href="professional-projects/excel/streamverse.html">View Project</a>
+
         <a class="btn" href="files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" target="_blank">Excel File</a>
         <a class="btn" href="files/case-studies/streamverse/StreamVerse_SaaS_ChurnDashboard.pbix" target="_blank">Power BI File</a>
       </div>
 
-      <div class="grid">
+      <!-- ======================== -->
+      <!-- LOAN AMORTIZATION CARD -->
+      <!-- ======================== -->
+      <div class="card">
+        <h3>Loan Amortization Model</h3>
+        <p class="muted">FM-style amortization schedule with principal/interest breakdown.</p>
+        <a class="btn" href="assets/files/excel/loan-amortization.xlsx" target="_blank">Download .xlsx</a>
+      </div>
 
-  <!-- Loan Amortization (existing project) -->
-  <div class="card">
-    <h3>Loan Amortization Model</h3>
-    <p class="muted">FM-style amortization schedule with principal/interest breakdown.</p>
-    <a class="btn small" href="assets/files/excel/loan-amortization.xlsx" target="_blank">Download .xlsx</a>
-  </div>
-
-      
-  <!-- StreamVerse Churn Project -->
-<div class="card">
-  <img 
-    src="files/case-studies/streamverse/StreamVerse_Dashboard.png" 
-    alt="StreamVerse Dashboard"
-    style="width:100%; border-radius:12px; border:1px solid var(--stroke); margin-bottom:10px;"
-  />
-
-  <h3>StreamVerse — SaaS Churn & Revenue Analytics</h3>
-  <p class="muted">
-    End-to-end churn, retention, and revenue analysis with Excel + Power BI.  
-    KPIs: MRR, ARPU, LTV, Active Customers, Cancels, Churn Rate.
-  </p>
-
-  <div class="cta">
-    <!-- THIS points to your StreamVerse html where it is NOW -->
-    <a class="btn small" href="professional-projects/excel/streamverse.html">View Project</a>
-
-    <!-- Excel download -->
-    <a class="btn ghost small" href="files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" download>
-      Excel File
-    </a>
-  </div>
-
-  <div class="links" style="margin-top:8px;">
-    <span class="muted">Excel</span>
-    <span class="muted">Power BI</span>
-    <span class="muted">DAX</span>
-  </div>
-</div>
-
+    </div>
 
   </main>
 

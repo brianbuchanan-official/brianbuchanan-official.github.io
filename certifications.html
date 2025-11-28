@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certifications — Brian Buchanan</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
@@ -13,139 +12,158 @@
       --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
       --max:1100px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
 
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
     a{color:var(--text);text-decoration:none}
 
     /* NAV */
     .nav{
       position:sticky;top:0;z-index:10;
-      background:#0b0b12cc;border-bottom:1px solid var(--border);
+      background:#0b0b12cc;
+      border-bottom:1px solid var(--border);
       backdrop-filter:blur(8px);
     }
     .nav-inner{
       max-width:var(--max);margin:0 auto;
-      display:flex;justify-content:space-between;align-items:center;
+      display:flex;align-items:center;justify-content:space-between;
       padding:14px 20px;
     }
     .brand{font-weight:900;letter-spacing:.3px}
     .brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.85}
+    .links a{margin-left:18px;opacity:.9}
+    .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
 
     /* CONTENT */
-    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
-    h1{margin:6px 0 10px}
+    .wrap{
+      max-width:var(--max);
+      margin:50px auto;
+      padding:0 20px;
+    }
+    h1{font-size:38px;margin-bottom:12px}
+    h2{margin-top:34px;margin-bottom:12px;font-size:26px}
     .muted{color:var(--muted)}
-
-    .section{margin-top:42px}
-    h2{margin-bottom:10px}
-
     .card{
       background:var(--card);
       border:1px solid var(--border);
-      border-radius:14px;
-      padding:18px;
-      margin-top:12px;
+      border-radius:16px;
+      padding:18px 20px;
+      margin-top:18px;
     }
-
-    .title{font-size:18px;font-weight:700;margin:0 0 4px}
-    .status{font-size:14px;color:var(--muted);margin:2px 0}
-    .notes{font-size:14px;color:var(--muted);line-height:1.5;margin-top:6px}
-    hr{border:0;border-top:1px solid var(--border);opacity:.6;margin:40px 0}
+    .item{
+      margin-bottom:10px;
+    }
+    .label{font-weight:700}
+    .status{color:var(--muted);font-size:14px;margin-top:2px}
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a class="active" href="certifications.html">Certifications</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
-      </div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
-  </nav>
-
-  <div class="wrap">
-
-    <h1>Certifications</h1>
-    <p class="muted">All certifications listed below are accurate and grouped for clarity.  
-    Insurance credentials are marked historical due to no current company appointment.</p>
-
-    <!-- ⭐ SECTION 1 — FINANCE & DATA -->
-    <div class="section">
-      <h2>Finance & Data Certifications</h2>
-
-      <div class="card">
-        <div class="title">Securities Industry Essentials (SIE)</div>
-        <div class="status">Status: Passed — Feb 2025</div>
-        <div class="notes">FINRA foundational exam covering markets, products, and regulatory framework.</div>
-      </div>
-
-      <div class="card">
-        <div class="title">Google Data Analytics Professional Certificate</div>
-        <div class="status">Status: In Progress</div>
-        <div class="notes">Training in data cleaning, analysis, dashboards, spreadsheets, SQL, and Python.</div>
-      </div>
-    </div>
-
-    <!-- ⭐ SECTION 2 — INSURANCE & COMPLIANCE (HISTORICAL) -->
-    <div class="section">
-      <h2>Insurance & Compliance (Historical)</h2>
-
-      <div class="card">
-        <div class="title">State Insurance Producer Licenses — NY, NJ, FL</div>
-        <div class="status">Status: Inactive (Not appointed with a company)</div>
-        <div class="notes">Previously licensed for Life, Accident & Health across NY, NJ, and FL.  
-        Inactive strictly due to no current firm appointment.</div>
-      </div>
-
-      <div class="card">
-        <div class="title">Medicare Certifications — AHIP & Carrier Equivalents</div>
-        <div class="status">Status: Historical — No active Medicare appointment</div>
-        <div class="notes">Completed while affiliated with Bankers Life/CNO (Plan Years 2025–2026).</div>
-      </div>
-
-      <div class="card">
-        <div class="title">Carrier Product Certifications (Aetna, WellCare, Anthem, CNO, etc.)</div>
-        <div class="status">Status: Historical</div>
-        <div class="notes">Completed product, compliance, and extended care coursework during prior affiliation.</div>
-      </div>
-
-      <div class="card">
-        <div class="title">NAIC Best Interest Annuity Training</div>
-        <div class="status">Status: Completed</div>
-        <div class="notes">State-approved NAIC Model Regulation training for annuity recommendations.</div>
-      </div>
-    </div>
-
-    <!-- ⭐ SECTION 3 — ADDITIONAL TECHNICAL & COMPLIANCE TRAINING -->
-    <div class="section">
-      <h2>Additional Technical & Compliance Training</h2>
-
-      <div class="card">
-        <div class="title">Suitability, Compliance & Ethics — Bankers Life Cornerstone</div>
-        <div class="status">Status: Historical</div>
-        <div class="notes">Internal training on ethical practices, suitability responsibilities, and compliance.</div>
-      </div>
-
-      <div class="card">
-        <div class="title">Other Training Completed</div>
-        <div class="notes">
-          HIPAA · AML · Cybersecurity 101 · Life insurance product training ·  
-          Extended care product training · Sales & compliance curriculum
-        </div>
-      </div>
-    </div>
-
   </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="wrap">
+
+  <h1>Certifications</h1>
+  <p class="muted">A summary of completed licenses, regulatory exams, and professional coursework.</p>
+
+  <!-- SECURITIES & QUANT -->
+  <h2>Securities & Quant Exams</h2>
+
+  <div class="card">
+    <div class="item">
+      <div class="label">SIE — Securities Industry Essentials</div>
+      <div class="status">Status: Passed (Feb 2025)</div>
+    </div>
+
+    <div class="item">
+      <div class="label">SOA Exam FM</div>
+      <div class="status">Status: Studying for Feb 2026</div>
+    </div>
+  </div>
+
+  <!-- INSURANCE -->
+  <h2>Insurance & Medicare Certifications</h2>
+
+  <div class="card">
+    <div class="item">
+      <div class="label">NY Life/Accident/Health — 2025</div>
+      <div class="status">Status: Former — Not Appointed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">NJ Life/Accident/Health — 2025</div>
+      <div class="status">Status: Former — Not Appointed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">FL Life/Accident/Health — 2025</div>
+      <div class="status">Status: Former — Not Appointed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">AHIP + Medicare Carrier Certifications — 2025</div>
+      <div class="status">Status: Former — Not Appointed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">NAIC Annuity Best Interest Training — 2025</div>
+      <div class="status">Status: Completed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">Life & Extended Care Product Training (Bankers Life) — 2025</div>
+      <div class="status">Status: Completed</div>
+    </div>
+  </div>
+
+  <!-- ADDITIONAL LEARNING -->
+  <h2>Additional Learning</h2>
+
+  <div class="card">
+    <div class="item">
+      <div class="label">Statistics & Data Analysis with Excel (Macquarie University)</div>
+      <div class="status">Essentials + Intermediate completed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">Google Data Analytics</div>
+      <div class="status">Foundations module completed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">McGuire Data Course</div>
+      <div class="status">Partial coursework completed</div>
+    </div>
+
+    <div class="item">
+      <div class="label">HIPAA · AML · Cybersecurity 101</div>
+    </div>
+
+    <div class="item">
+      <div class="label">Carrier Product Trainings (Aetna, Wellcare, etc.)</div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>

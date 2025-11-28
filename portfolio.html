@@ -10,18 +10,20 @@
   <style>
     :root {
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff; --card:#141421; --border:#1e1e2a;
-      --max:1100px
+      --accent:#7c5cff; --accent-2:#3fa9ff;
+      --card:#141421; --border:#1e1e2a;
+      --max:1100px;
     }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
       background:var(--bg);
       color:var(--text);
       font-family:'Inter',sans-serif;
-      line-height:1.7;
+      line-height:1.6;
     }
 
-    header{
+    header {
       width:100%;
       border-bottom:1px solid var(--border);
       background:var(--panel);
@@ -29,7 +31,7 @@
       margin-bottom:40px;
     }
 
-    nav{
+    nav {
       max-width:var(--max);
       margin:0 auto;
       display:flex;
@@ -38,7 +40,7 @@
       padding:0 20px;
     }
 
-    nav a{
+    nav a {
       color:var(--text);
       text-decoration:none;
       margin-left:22px;
@@ -46,78 +48,125 @@
       transition:.2s ease;
     }
 
-    nav a:hover{
-      color:var(--accent);
-    }
+    nav a:hover { color:var(--accent); }
 
-    .container{
+    .container {
       max-width:var(--max);
       margin:0 auto;
       padding:20px;
     }
 
-    h1{
+    h1 {
       font-size:42px;
       font-weight:900;
-      margin-bottom:12px;
+      margin-bottom:8px;
     }
 
-    .subtitle{
+    .subtitle {
       color:var(--muted);
-      margin-bottom:40px;
-      font-size:18px;
+      margin-bottom:30px;
     }
 
-    .project{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:25px;
-      margin-bottom:35px;
-      transition:.25s ease;
+    /* FEATURED PROJECT (same as screenshot, just smaller) */
+    .featured-wrapper {
+      margin-bottom:50px;
     }
 
-    .project:hover{
-      border-color:var(--accent);
-      transform:translateY(-2px);
-    }
-
-    .project h2{
+    .featured-title {
       font-size:26px;
       font-weight:800;
-      color:var(--accent);
+      color:var(--text);
+      margin-bottom:10px;
     }
 
-    .project p{
-      margin:12px 0 20px 0;
+    .featured-box {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:20px; /* smaller */
+      box-shadow:0 0 12px rgba(0,0,0,0.25);
+    }
+
+    .featured-img {
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      border:1px solid var(--border);
+      margin-bottom:18px;
+    }
+
+    .featured-text {
+      margin-bottom:18px;
       color:var(--text);
       font-size:17px;
     }
 
-    .btn{
+    .btn {
       display:inline-block;
-      padding:10px 18px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 16px;
       border-radius:8px;
       text-decoration:none;
-      background:var(--accent);
-      color:white;
       font-weight:600;
+      margin-right:10px;
       transition:.2s ease;
     }
+    .btn:hover { background:var(--accent-2); }
 
-    .btn:hover{
-      background:var(--accent-2);
-    }
-
-    .coming{
+    .tags span {
+      display:inline-block;
+      background:#1e1e29;
+      padding:4px 10px;
+      margin-right:6px;
+      margin-bottom:6px;
+      font-size:13px;
+      border-radius:6px;
       color:var(--muted);
-      font-style:italic;
-      margin-top:8px;
     }
 
-  </style>
+    .pipeline-title {
+      font-size:28px;
+      font-weight:900;
+      margin-bottom:20px;
+      margin-top:10px;
+    }
 
+    /* GRID CARDS (same as screenshot style) */
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .card {
+      background:var(--card);
+      border:1px solid var(--border);
+      padding:20px;
+      border-radius:14px;
+      transition:.25s ease;
+    }
+
+    .card:hover {
+      border-color:var(--accent);
+      transform:translateY(-3px);
+    }
+
+    .card h3 {
+      font-size:22px;
+      font-weight:800;
+      color:var(--accent);
+      margin-bottom:10px;
+    }
+
+    .card p {
+      font-size:16px;
+      color:var(--text);
+      margin-bottom:16px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -139,52 +188,60 @@
 <div class="container">
 
   <h1>Portfolio</h1>
-  <div class="subtitle">A growing collection of hands-on analytics, finance, and data projects.</div>
+  <div class="subtitle">A collection of analytics, financial models, and multi-tool data projects.</div>
 
-  <!-- StreamVerse -->
-  <div class="project">
-    <h2>StreamVerse — SaaS Churn & Revenue Analytics Dashboard</h2>
-    <p>
-      A clean and compact analytics dashboard showing churn, retention, monthly revenue,
-      active customers, and customer cohorts using Excel + Power BI.
-    </p>
-    <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse" target="_blank">GitHub Project</a>
+  <!-- FEATURED PROJECT -->
+  <div class="featured-wrapper">
+    <h2 class="featured-title">Featured Project</h2>
+
+    <div class="featured-box">
+
+      <img src="files/case-studies/streamverse/StreamVerse_Dashboard.png"
+           alt="StreamVerse Dashboard"
+           class="featured-img">
+
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:8px; color:var(--accent);">
+        StreamVerse — Customer Churn & Revenue Dashboard
+      </h2>
+
+      <div class="featured-text">
+        End-to-end churn, retention, and revenue insights using Excel and Power BI.
+        Includes MRR trends, cohort analysis, churn drivers, ARPU, and customer behavior analysis.
+      </div>
+
+      <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse" target="_blank">GitHub Project</a>
+    </div>
   </div>
 
-  <!-- QuickCredit -->
-  <div class="project">
-    <h2>QuickCredit Default Predictor — Python Logistic Regression</h2>
-    <p>
-      A fast ML build predicting loan default using logistic regression. Includes data cleaning,
-      model training, accuracy evaluation, confusion matrix, and feature importance visualization.
-    </p>
-  </div>
+  <!-- PIPELINE PROJECTS -->
+  <h2 class="pipeline-title">Pipeline Projects</h2>
 
-  <!-- FraudRuleEngine_SQL -->
-  <div class="project">
-    <h2>FraudRuleEngine_SQL — SQL Fraud Flag Rules</h2>
-    <p>
-      A rule-based SQL system that flags suspicious transactions based on spending anomalies,
-      device/location mismatch, unusual hours, velocity checks, and foreign activity.
-    </p>
-  </div>
+  <div class="grid">
 
-  <!-- SQL Segmentation Pack -->
-  <div class="project">
-    <h2>SQL_Segmentation_Pack — Query Collection</h2>
-    <p>
-      A 7-query SQL pack covering customer spending rankings, age group analysis, retention cohorts,
-      late payments, multi-ticket customers, regional segmentation, and LTV estimation.
-    </p>
-  </div>
+    <div class="card">
+      <h3>QuickCredit Default Predictor</h3>
+      <p>A Python logistic regression model predicting borrower default using cleaned CSV data, accuracy scoring, and feature importance.</p>
+      <div class="tags"><span>Python</span><span>ML</span><span>pandas</span></div>
+    </div>
 
-  <!-- RetailOne Dashboard -->
-  <div class="project">
-    <h2>RetailOne_Dashboard — Power BI Retail Analytics</h2>
-    <p>
-      A one-page dashboard showing total sales, profit, monthly trends, regional performance,
-      top-selling products, and category breakdowns using clean, recruiter-friendly visuals.
-    </p>
+    <div class="card">
+      <h3>FraudRuleEngine_SQL</h3>
+      <p>SQL rules that flag suspicious transactions based on spending anomalies, device/location mismatch, unusual hours, and velocity checks.</p>
+      <div class="tags"><span>SQL</span><span>Risk</span><span>Data</span></div>
+    </div>
+
+    <div class="card">
+      <h3>SQL_Segmentation_Pack</h3>
+      <p>A 7-query SQL pack covering segmentation, retention, LTV estimation, and customer cohort insights.</p>
+      <div class="tags"><span>SQL</span><span>Analytics</span></div>
+    </div>
+
+    <div class="card">
+      <h3>RetailOne_Dashboard</h3>
+      <p>A Power BI retail dashboard showing sales, profit, regional performance, product insights, and monthly trends.</p>
+      <div class="tags"><span>Power BI</span><span>Visualization</span></div>
+    </div>
+
   </div>
 
 </div>

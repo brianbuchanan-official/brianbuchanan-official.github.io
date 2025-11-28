@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Brian Buchanan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
+      --accent:#7c5cff; --accent-2:#3fa9ff; --border:#1e1e2a; 
+      --card:#141421; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui}
+    a{color:var(--accent);text-decoration:none}
+    .nav{position:sticky;top:0;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+    .nav-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+    .brand{font-weight:900}.brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}
+    .links a.active{color:var(--accent)}
+    .section{max-width:var(--max);margin:50px auto;padding:0 20px;text-align:center}
+    .card{background:var(--card);border:1px solid var(--border);padding:30px;border-radius:16px;max-width:600px;margin:30px auto}
+    .btn{padding:12px 18px;background:var(--accent);border-radius:12px;color:white;font-weight:600;font-size:15px;display:inline-block;margin-top:10px}
+  </style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <h1>Contact</h1>
+  <p class="muted">I keep all communication through LinkedIn to avoid spam and stay organized.</p>
+
+  <div class="card">
+    <h2>Connect With Me</h2>
+    <p class="muted">Send me a message — I respond quickly.</p>
+
+    <a class="btn" 
+       href="https://www.linkedin.com/in/brian-buchanan-616727224/" 
+       target="_blank">Visit My LinkedIn</a>
+  </div>
+</section>
+
+</body>
+</html>

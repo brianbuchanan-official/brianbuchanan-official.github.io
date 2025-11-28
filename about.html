@@ -4,68 +4,161 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Brian Buchanan</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff; --border:#1e1e2a; --card:#141421;
-      --max:1100px;
+      --accent:#7c5cff; --accent-2:#3fa9ff; --card:#141421; --border:#1e1e2a;
+      --max:1100px
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,-apple-system}
-    a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:#0b0b12dd;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
-    .brand{font-weight:900}
-    .brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.9}
-    .links a.active{color:var(--accent)}
-    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
-    h1{margin-bottom:10px}
-    h2{margin-top:30px;margin-bottom:8px}
-    .muted{color:var(--muted)}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px}
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+      padding: 16px 0;
+      margin-bottom: 40px;
+    }
+
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 500;
+      transition: .2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 26px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 12px;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .skills {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    .skills li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
   </style>
 </head>
 
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <div class="brand">Brian <b>Buchanan</b></div>
-    <div class="links">
+<header>
+  <nav>
+    <div class="logo" style="font-weight:900; font-size:20px;">Brian Buchanan</div>
+    <div>
       <a href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="certifications.html">Certifications</a>
       <a href="resume.html">Resume</a>
-      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
+      <a href="mission.html">Mission</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/brianbuchanan1" target="_blank">LinkedIn</a>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<section class="section">
+<div class="container">
 
   <h1>About Me</h1>
-  <p class="muted">This page will be finished later — here is a placeholder structure.</p>
 
-  <div class="card">
-    <h2>Mission Statement</h2>
-    <p class="muted">[PLACEHOLDER] Your mission statement will go here.</p>
+  <h2>Who I Am</h2>
+  <p>
+    I’m Brian — a data-driven problem solver with a background in actuarial science, finance, and analytics. 
+    I enjoy taking messy datasets, uncovering insights, and turning them into clean dashboards, models, and 
+    business-ready solutions. My goal is to build advanced analytics and financial modeling skills while developing 
+    real projects that demonstrate both technical ability and business understanding.
+  </p>
+
+  <h2>My Background</h2>
+  <p>
+    I graduated from Baruch College (CUNY) with a B.A. in Actuarial Science, where I focused on probability, 
+    financial mathematics, interest theory, and data-centric problem-solving. I’ve worked in roles that required 
+    both customer-facing communication and analytical thinking, developing a strong foundation for financial and 
+    data analytics work.
+  </p>
+  <p>
+    Beyond academics, I’ve been building a portfolio of hands-on analytics projects — including churn modeling, 
+    fraud detection, Excel-based models, SQL segmentation, Power BI dashboards, and Python workflows — to show 
+    employers real, tangible skills.
+  </p>
+
+  <h2>What I’m Working on Right Now</h2>
+  <p>
+    I’m currently developing several end-to-end analytics projects that combine SQL, Excel, Power BI, and Python — 
+    including a Fraud Detection Pipeline, a SaaS Churn Dashboard, and a Bank Loan Default Model. I’m also studying 
+    for Exam FM (Feb 2026) and building a complete Training & Learning Log to document my growth.
+  </p>
+
+  <h2>Skills Snapshot</h2>
+  <div class="skills">
+    <ul>
+      <li><strong>SQL:</strong> Joins, CTEs, segmentation queries, data cleaning</li>
+      <li><strong>Python:</strong> Pandas, NumPy, scikit-learn, logistic regression</li>
+      <li><strong>Excel:</strong> Pivot tables, financial modeling, dashboards</li>
+      <li><strong>Power BI:</strong> DAX, KPI tracking, interactive dashboards</li>
+      <li><strong>Finance & Actuarial:</strong> Interest theory, annuities, risk modeling, FM prep</li>
+    </ul>
   </div>
 
-  <div class="card">
-    <h2>Background</h2>
-    <p class="muted">[PLACEHOLDER] Summary of your background, degree, and focus.</p>
-  </div>
-
-  <div class="card">
-    <h2>What I'm Working On</h2>
-    <p class="muted">[PLACEHOLDER] Current projects and goals.</p>
-  </div>
-
-</section>
+</div>
 
 </body>
 </html>

@@ -5,107 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Brian Buchanan</title>
 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      background:#0b0b12;
-      color:#e8e8f0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    }
-    a{color:#e8e8f0;text-decoration:none}
-
-    /* NAVIGATION */
-    .nav{
-      position:sticky;
-      top:0;
-      background:#0b0b12cc;
-      border-bottom:1px solid #1e1e2a;
-      backdrop-filter:blur(8px);
-      z-index:10;
-    }
-    .nav-inner{
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 20px;
-    }
-    .brand{
-      font-weight:900;
-      letter-spacing:.3px;
-    }
-    .brand b{color:#7c5cff}
-    .links a{
-      margin-left:18px;
-      opacity:.85;
-    }
-    .links a:hover{opacity:1}
-    .links a.active{color:#7c5cff}
-
-    /* PAGE LAYOUT */
-    .wrap{
-      max-width:1100px;
-      margin:40px auto;
-      padding:0 20px;
-    }
-    h1{
-      margin:8px 0 4px;
-      font-size:36px;
-      font-weight:900;
-    }
-    .muted{
-      color:#a0a3b1;
+    :root {
+      --bg: #0b0b12;
+      --panel: #11111a;
+      --text: #e8e8f0;
+      --muted: #a0a3b1;
+      --accent: #7c5cff;
+      --border: #1e1e2a;
+      --card: #141421;
+      --max: 1100px;
     }
 
-    /* GRID */
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-      gap:16px;
-      margin-top:24px;
+    * {box-sizing: border-box;}
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* PROJECT CARD */
-    .card{
-      background:#141421;
-      border:1px solid #1e1e2a;
-      border-radius:14px;
-      padding:18px;
-      transition:0.2s;
-    }
-    .card:hover{
-      border-color:#7c5cff;
-      transform:translateY(-2px);
-    }
-    .card h3{
-      margin:0 0 8px 0;
-      font-size:20px;
-    }
-    .card p{
-      margin:0 0 12px 0;
-      color:#a0a3b1;
-      line-height:1.5;
-    }
-    .tag{
-      background:#1e1e2a;
-      padding:4px 8px;
-      border-radius:8px;
-      font-size:12px;
-      margin-right:6px;
-      color:#a0a3b1;
+    header {
+      width: 100%;
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
     }
 
-    /* EMPTY STATE */
-    .empty{
-      margin-top:40px;
-      padding:40px;
-      text-align:center;
-      border:1px dashed #3a3a48;
-      border-radius:14px;
-      background:#11111a;
-      color:#a0a3b1;
+    header nav {
+      max-width: var(--max);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .section-title {
+      max-width: var(--max);
+      margin: 60px auto 20px auto;
+      padding: 0 20px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .projects-grid {
+      max-width: var(--max);
+      margin: auto;
+      padding: 0 20px 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+
+    .tools {
+      margin: 10px 0;
+      font-size: .85rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn-row {
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+      margin-right: 8px;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
     }
 
   </style>
@@ -113,40 +146,102 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a class="active" href="projects.html">Projects</a>
-        <a href="python.html">Python</a>
-        <a href="excel.html">Excel</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="future-build-library.html">Future Build Library</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
-      </div>
+<header>
+  <nav>
+    <div style="font-weight:900; font-size:1.2rem;">Brian Buchanan</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
+</header>
 
-  <!-- CONTENT -->
-  <div class="wrap">
-    <h1>Projects</h1>
-    <p class="muted">A collection of my Excel, Python, and analytics builds.</p>
+<section class="hero">
+  <h1>Projects & Analytics Work</h1>
+  <p>A collection of data, finance, and analytics projects built with SQL, Python, Excel, and Power BI.</p>
+</section>
 
-    <!-- EMPTY STATE (no projects yet) -->
-    <div class="empty">
-      No projects added yet.<br>
-      Add one by dropping a <b>project card</b> into this grid.
+<!-- FEATURED PROJECTS -->
+<div class="section-title">⭐ Featured Projects</div>
+
+<div class="projects-grid">
+
+  <div class="card">
+    <h3>StreamVerse — SaaS Analytics Dashboard</h3>
+    <p>Churn and revenue analytics using SQL-style logic, Excel modeling, DAX formulas, and Power BI dashboards.</p>
+    <div class="tools">SQL • Excel • Power BI</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">View Project</a>
+      <a class="btn" href="#" target="_blank">GitHub</a>
     </div>
-
-    <!-- PROJECT GRID (starts empty for now) -->
-    <div class="grid">
-      <!-- When you're ready, I’ll give you simple 1-card snippets -->
-    </div>
-
   </div>
+
+  <div class="card">
+    <h3>Fraud Detection Pipeline</h3>
+    <p>SQL + Python pipeline with feature engineering, anomaly rules, and Power BI scoring dashboards.</p>
+    <div class="tools">SQL • Python • Power BI</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">View Project</a>
+      <a class="btn" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>BankLoan360 — Default Risk Analysis</h3>
+    <p>Loan approval and default analytics using SQL extraction, Excel modeling, Power BI KPIs, and Python modeling.</p>
+    <div class="tools">SQL • Excel • Power BI • Python</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">View Project</a>
+      <a class="btn" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ALL PROJECTS -->
+<div class="section-title">📂 All Projects</div>
+
+<div class="projects-grid">
+
+  <div class="card">
+    <h3>SQL Segmentation Pack</h3>
+    <p>Seven segmentation queries including spending, age groups, cohorts, support tickets, and regional personas.</p>
+    <div class="tools">SQL</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">Open Prompt</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>SQL Fraud Rule Engine</h3>
+    <p>Suspicious transaction rules including high-amount, new device, rapid attempts, and unusual hours.</p>
+    <div class="tools">SQL</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">Open Prompt</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>RetailOne Power BI Dashboard</h3>
+    <p>One-page Power BI dashboard with KPIs, regional sales, monthly trends, and top product analysis.</p>
+    <div class="tools">Power BI</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">Open Prompt</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>QuickCredit Logistic Regression</h3>
+    <p>Python logistic regression model on a credit dataset including cleaning, training, accuracy, and feature importance.</p>
+    <div class="tools">Python</div>
+    <div class="btn-row">
+      <a class="btn" href="#" target="_blank">Open Prompt</a>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>

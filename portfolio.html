@@ -4,34 +4,131 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Brian Buchanan</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff; --card:#141421;
-      --border:#1e1e2a; --max:1100px;
+    :root {
+      --bg:#0b0b12;
+      --panel:#11111a;
+      --text:#e8e8f0;
+      --muted:#a0a3b1;
+      --accent:#7c5cff;
+      --accent2:#3fa9ff;
+      --card:#141421;
+      --border:#1e1e2a;
+      --max:1100px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui}
-    a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-    .nav-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
-    .brand{font-weight:900}.brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.9}
-    .links a.active{color:var(--accent)}
-    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
-    h1{margin-bottom:10px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px}
-    .card{background:var(--card);border:1px solid var(--border);padding:18px;border-radius:14px}
-    .muted{color:var(--muted)}
-    .btn{padding:8px 12px;border-radius:10px;border:1px solid var(--accent);color:var(--accent);font-size:14px;margin-right:8px;display:inline-block}
-    .btn:hover{background:var(--accent);color:#fff}
+
+    * {box-sizing:border-box;}
+
+    body {
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner {
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 20px;
+    }
+    .brand {
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+    .brand b {color:var(--accent);}
+    .links a {
+      margin-left:18px;
+      color:var(--text);
+      opacity:.9;
+      text-decoration:none;
+    }
+    .links a:hover {opacity:1;}
+    .links a.active {color:var(--accent);}
+
+    /* PAGE */
+    .section {
+      max-width:var(--max);
+      margin:40px auto;
+      padding:0 20px;
+    }
+
+    h1 {font-size:38px;margin-bottom:10px;}
+    h2 {font-size:24px;margin-top:40px;margin-bottom:12px;}
+    .muted {color:var(--muted);}
+
+    /* GRID */
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+      margin-top:16px;
+    }
+
+    /* CARD */
+    .card {
+      background:var(--card);
+      padding:18px;
+      border:1px solid var(--border);
+      border-radius:16px;
+    }
+    .card:hover {border-color:var(--accent);}
+
+    .thumb {
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--border);
+      margin-bottom:12px;
+    }
+
+    .btn {
+      display:inline-block;
+      text-decoration:none;
+      margin-right:8px;
+      margin-top:6px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      font-size:14px;
+      color:var(--text);
+      background:var(--panel);
+      transition:.2s;
+    }
+    .btn:hover {
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+
+    .tag {
+      background:#1e1e2a;
+      padding:4px 8px;
+      font-size:12px;
+      border-radius:8px;
+      margin-right:5px;
+      color:var(--muted);
+    }
+
   </style>
 </head>
-
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <div class="brand">Brian <b>Buchanan</b></div>
@@ -41,55 +138,84 @@
       <a class="active" href="portfolio.html">Portfolio</a>
       <a href="certifications.html">Certifications</a>
       <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
       <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </nav>
 
-<section class="section">
+<!-- MAIN -->
+<main class="section">
+
   <h1>Portfolio</h1>
-  <p class="muted">A unified list of all my active and upcoming analytics projects.</p>
+  <p class="muted">A collection of analytics, financial models, and multi-tool data projects.</p>
+
+  <!-- ========================= -->
+  <!-- REAL PROJECT: STREAMVERSE -->
+  <!-- ========================= -->
+  <h2>Featured Project</h2>
+
+  <div class="grid">
+    <div class="card">
+
+      <img class="thumb" src="files/case-studies/streamverse/StreamVerse_Dashboard.png" alt="StreamVerse Dashboard">
+
+      <h3>StreamVerse — SaaS Churn & Revenue Analytics</h3>
+      <p class="muted">
+        End-to-end churn, retention, and revenue analysis using Excel + Power BI.  
+        Includes MRR trends, customer cohorts, ARPU, LTV calculations, and cancellation behavior.
+      </p>
+
+      <div>
+        <span class="tag">Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Analytics</span>
+      </div>
+
+      <a class="btn" href="professional-projects/excel/streamverse.html">View Project Page</a>
+      <a class="btn" href="files/case-studies/streamverse/StreamVerse_ChurnProject.xlsx" target="_blank">Download Excel</a>
+      <a class="btn" href="files/case-studies/streamverse/StreamVerse_SaaS_ChurnDashboard.pbix" target="_blank">Download Power BI</a>
+      <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!-- PIPELINE PROJECTS SECTION -->
+  <!-- ========================= -->
+  <h2>Pipeline Projects</h2>
+  <p class="muted">
+    These builds are currently in development and will be added to the portfolio as they reach a production-ready state.
+  </p>
 
   <div class="grid">
 
     <div class="card">
-      <h3>StreamVerse — SaaS Analytics Dashboard</h3>
-      <p class="muted">Churn, revenue, retention, and customer behavior analytics.</p>
-      <a class="btn" href="professional-projects/excel/streamverse.html">View</a>
+      <h3>Fraud Detection Analytics Suite</h3>
+      <p class="muted">
+        Multi-layer fraud workflow combining Python feature engineering, Excel Power Query modeling, and Power BI risk scoring.
+      </p>
+      <span class="tag">Python</span><span class="tag">Excel</span><span class="tag">Power BI</span>
     </div>
 
     <div class="card">
-      <h3>Fraud Detection Pipeline</h3>
-      <p class="muted">Python + SQL + Power BI end-to-end fraud detection workflow.</p>
-      <a class="btn" href="#">Coming Soon</a>
+      <h3>BankLoan360 — Default Risk Model</h3>
+      <p class="muted">
+        Credit analytics project modeling PD, LGD, approval trends, and revenue impact using SQL → Excel → Power BI → Python.
+      </p>
+      <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Python</span>
     </div>
 
     <div class="card">
-      <h3>SQL Segmentation Pack</h3>
-      <p class="muted">7-query segmentation challenge with business personas.</p>
-      <a class="btn" href="#">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>SQL Fraud Rule Engine</h3>
-      <p class="muted">Flag suspicious transactions using rule-based SQL.</p>
-      <a class="btn" href="#">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>RetailOne — Power BI Dashboard</h3>
-      <p class="muted">1-page retail performance dashboard.</p>
-      <a class="btn" href="#">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>QuickCredit Logistic Regression</h3>
-      <p class="muted">Python credit-risk classification mini project.</p>
-      <a class="btn" href="#">Open Prompt</a>
+      <h3>Portfolio Risk Metrics Toolkit</h3>
+      <p class="muted">
+        Toolkit for volatility, Sharpe, drawdown, and sensitivity analysis across multi-asset portfolios.
+      </p>
+      <span class="tag">Python</span><span class="tag">Finance</span>
     </div>
 
   </div>
-</section>
+
+</main>
 
 </body>
 </html>

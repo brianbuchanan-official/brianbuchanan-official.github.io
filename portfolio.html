@@ -14,17 +14,14 @@
     }
     *{box-sizing:border-box}
     html,body{
-      margin:0;padding:0;
-      background:var(--bg);color:var(--text);
+      margin:0;padding:0;background:var(--bg);color:var(--text);
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
     a{color:var(--text);text-decoration:none}
 
-    /* NAV */
     .nav{
       position:sticky;top:0;z-index:10;
-      background:#0b0b12cc;
-      border-bottom:1px solid var(--border);
+      background:#0b0b12cc;border-bottom:1px solid var(--border);
       backdrop-filter:blur(8px);
     }
     .nav-inner{
@@ -38,71 +35,42 @@
     .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
 
-    /* HERO */
     .hero{
       max-width:var(--max);margin:60px auto 40px;
       padding:0 20px;text-align:center;
     }
-    .hero h1{
-      font-size:42px;font-weight:900;margin-bottom:10px;
-    }
-    .hero p{
-      font-size:18px;color:var(--muted);margin-top:0;
-    }
+    .hero h1{font-size:42px;font-weight:900;margin-bottom:10px}
+    .hero p{font-size:18px;color:var(--muted);margin-top:0}
 
-    /* SECTIONS */
     .section{
-      max-width:var(--max);
-      margin:40px auto;
-      padding:0 20px;
+      max-width:var(--max);margin:40px auto;padding:0 20px;
     }
-    .section h2{
-      font-size:26px;font-weight:700;
-      margin-bottom:18px;
-    }
+    .section h2{font-size:26px;font-weight:700;margin-bottom:14px}
 
-    /* GRID */
     .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
       gap:20px;
     }
-
-    /* CARD */
     .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:18px;
-      transition:.2s ease;
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:18px;transition:.2s;
     }
-    .card:hover{
-      border-color:var(--accent);transform:translateY(-3px);
-    }
+    .card:hover{border-color:var(--accent);transform:translateY(-3px)}
     .card h3{margin:6px 0 6px;font-size:20px}
     .card p{color:var(--muted);font-size:14.5px;margin-top:0}
 
     .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      border:1px solid var(--accent);
-      color:var(--accent);
-      font-size:14px;
-      font-weight:600;
-      margin-top:10px;
+      display:inline-block;padding:10px 14px;border-radius:10px;
+      border:1px solid var(--accent);color:var(--accent);
+      font-size:14px;font-weight:600;margin-top:10px;
       transition:.2s;
     }
-    .btn:hover{
-      background:var(--accent);
-      color:white;
-    }
+    .btn:hover{background:var(--accent);color:white}
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <div class="brand">Brian <b>Buchanan</b></div>
@@ -117,65 +85,14 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Analytics & Data Projects</h1>
-  <p>Real-world projects across SQL, Python, Excel, and Power BI.</p>
+  <p>A collection of SQL, Python, Excel, and Power BI builds.</p>
 </section>
 
-<!-- FEATURED PROJECTS -->
 <section class="section">
   <h2>⭐ Featured Projects</h2>
 
   <div class="grid">
-
     <div class="card">
-      <h3>StreamVerse — SaaS Analytics Dashboard</h3>
-      <p>Full churn, revenue, and retention analytics using Excel modeling, DAX, and Power BI dashboards.</p>
-      <a class="btn" href="professional-projects/excel/streamverse.html">View Project</a>
-    </div>
-
-    <div class="card">
-      <h3>Fraud Detection Analytics (Coming Soon)</h3>
-      <p>Python + Excel + Power BI pipeline to detect high-risk transactions using engineered features and rule-based flags.</p>
-      <a class="btn" href="#" onclick="return false;">Coming Soon</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ALL PROJECTS -->
-<section class="section">
-  <h2>📂 All Projects</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>SQL Segmentation Pack</h3>
-      <p>Seven SQL segmentation queries analyzing spending, cohorts, support tickets, regions, and LTV.</p>
-      <a class="btn" href="#" target="_blank">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>SQL Fraud Rule Engine</h3>
-      <p>Rule-based SQL flags for suspicious transactions, including new device, unusual hour, and foreign mismatch rules.</p>
-      <a class="btn" href="#" target="_blank">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>RetailOne Power BI Dashboard</h3>
-      <p>Retail sales dashboard showing KPIs, regional breakdowns, monthly trends, and top product performance.</p>
-      <a class="btn" href="#" target="_blank">Open Prompt</a>
-    </div>
-
-    <div class="card">
-      <h3>QuickCredit Logistic Regression</h3>
-      <p>Python logistic regression model to predict credit default using data cleaning, training, and feature importance.</p>
-      <a class="btn" href="#" target="_blank">Open Prompt</a>
-    </div>
-
-  </div>
-</section>
-
-</body>
-</html>
+      <h3>StreamVerse — SaaS Analytics Dashboard

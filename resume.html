@@ -8,100 +8,110 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
+      --accent:#7c5cff; --accent2:#3fa9ff; --card:#141421; --border:#1e1e2a;
       --max:1100px;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;background:var(--bg);color:var(--text);
+    html,body{
+      margin:0; padding:0;
+      background:var(--bg); color:var(--text);
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
-
-    a{color:var(--text);text-decoration:none}
+    a{color:var(--text); text-decoration:none}
 
     /* NAV */
     .nav{
-      position:sticky;top:0;z-index:10;
-      background:#0b0b12cc;border-bottom:1px solid var(--border);
+      position:sticky; top:0; z-index:10;
+      background:#0b0b12cc;
+      border-bottom:1px solid var(--border);
       backdrop-filter:blur(8px);
     }
     .nav-inner{
-      max-width:var(--max);margin:0 auto;
-      display:flex;justify-content:space-between;align-items:center;
+      max-width:var(--max); margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
       padding:14px 20px;
     }
-    .brand{font-weight:900;letter-spacing:.3px}
+    .brand{font-weight:900; letter-spacing:.3px}
     .brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.85}
+    .links a{margin-left:18px; opacity:.9}
+    .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
 
-    /* PAGE */
-    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
-    h1{margin:6px 0 16px;font-size:36px}
+    /* CONTENT */
+    .wrap{
+      max-width:var(--max);
+      margin:40px auto;
+      padding:0 20px;
+    }
+    h1{
+      font-size:36px;
+      margin-bottom:10px;
+      font-weight:900;
+    }
+    .muted{color:var(--muted)}
 
-    .pdf-container{
-      width:100%;height:90vh;
+    .viewer{
+      margin-top:24px;
       border:1px solid var(--border);
       border-radius:12px;
-      background:var(--card);
       overflow:hidden;
-      margin-top:20px;
+      background:var(--card);
+      height:85vh;
     }
 
     .btn{
       display:inline-block;
       padding:10px 14px;
-      background:var(--panel);
-      border:1px solid var(--border);
       border-radius:10px;
-      font-size:14px;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      font-size:15px;
+      font-weight:600;
       margin-top:14px;
+      transition:.2s;
     }
     .btn:hover{
       background:var(--accent);
-      border-color:var(--accent);
-      color:#fff;
+      color:white;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="certifications.html">Certifications</a>
-        <a class="active" href="resume.html">Resume</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
-      </div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
+      <a class="active" href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
-  </nav>
-
-  <div class="wrap">
-
-    <h1>Resume</h1>
-    <p class="muted">View or download my resume below.</p>
-
-    <!-- Download Button -->
-    <a class="btn" href="Website_friendly_resume.pdf" download>Download PDF</a>
-
-    <!-- PDF Viewer -->
-    <div class="pdf-container">
-      <iframe 
-        src="Website_friendly_resume.pdf#toolbar=0&navpanes=0&scrollbar=0" 
-        width="100%" 
-        height="100%">
-      </iframe>
-    </div>
-
   </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="wrap">
+  <h1>Resume</h1>
+  <p class="muted">You can preview or download my resume below.</p>
+
+  <a class="btn" href="Website_friendly_resume.pdf" target="_blank" download>
+    Download PDF
+  </a>
+
+  <div class="viewer">
+    <iframe
+      src="Website_friendly_resume.pdf#zoom=100"
+      style="width:100%; height:100%; border:none;"
+    ></iframe>
+  </div>
+</div>
 
 </body>
 </html>

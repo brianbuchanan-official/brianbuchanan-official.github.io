@@ -3,153 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brian Buchanan — Finance · Data · Python</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Brian Buchanan — Finance · Data · Analytics</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff; --card:#141421; --border:#1e1e2a;
-      --max:1100px
+      --accent:#7c5cff; --accent2:#3fa9ff; --card:#141421; --border:#1e1e2a;
+      --max:1100px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    html,body{
+      margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
     a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 20px;
+    }
     .brand{font-weight:900;letter-spacing:.3px}
     .brand b{color:var(--accent)}
     .links a{margin-left:18px;opacity:.9}
     .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
-    .hero{max-width:var(--max);margin:60px auto;padding:0 20px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#1a1a28,#151523);border:1px solid var(--border);border-radius:999px;padding:8px 14px;font-size:12px;color:var(--muted)}
-    .badge i{width:8px;height:8px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent-2))}
-    h1{font-size:44px;line-height:1.1;margin:18px 0 10px}
-    .subtitle{color:var(--muted);font-size:18px;max-width:720px}
-    .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
-    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:var(--card)}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none}
-    .glass{background:radial-gradient(1200px 600px at -10% -20%,#1d1635 0%,transparent 40%),radial-gradient(1000px 500px at 110% 10%,#0c2442 0%,transparent 45%);border:1px solid var(--border);border-radius:16px;padding:16px}
-    .preview{height:360px;border-radius:16px;background:linear-gradient(180deg,#151526,#0f0f1a);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:500;color:#cfd1ff}
-    .section{max-width:var(--max);margin:50px auto;padding:0 20px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;transition:0.2s}
-    .card:hover{border-color:var(--accent);transform:translateY(-2px)}
-    .card h3{margin:8px 0 6px;font-size:18px}
-    .muted{color:var(--muted)}
-    footer{border-top:1px solid var(--border);margin-top:60px}
-    .foot{max-width:var(--max);margin:0 auto;padding:18px 20px;color:var(--muted);font-size:14px}
-    .bullets{margin:8px 0 0 0;padding-left:18px}
+
+    /* HERO */
+    .hero{
+      max-width:var(--max);margin:70px auto 60px;
+      padding:0 20px;display:grid;
+      grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+    }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center}
+    }
+    .hero h1{
+      font-size:42px;font-weight:900;margin-bottom:10px;
+    }
+    .hero p{font-size:18px;color:var(--muted);margin-top:10px}
+
+    .btn{
+      display:inline-block;padding:12px 16px;
+      border-radius:12px;border:1px solid var(--accent);
+      color:var(--accent);font-weight:600;margin-top:18px;
+      transition:.2s;
+    }
+    .btn:hover{background:var(--accent);color:white}
+
+    /* GRID */
+    .grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:20px;margin-top:18px;
+    }
+    .card{
+      background:var(--card);border:1px solid var(--border);
+      border-radius:16px;padding:18px;
+      transition:.2s;
+    }
+    .card:hover{border-color:var(--accent);transform:translateY(-3px)}
+    .card h3{margin:6px 0 6px;font-size:20px}
+    .card p{color:var(--muted);font-size:14.5px;margin-top:0}
   </style>
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a class="active" href="/">Home</a>
-        <a href="/resume.html">Resume</a>
-        <a href="/excel.html">Excel</a>
-        <a href="/python.html">Python</a>
-        <a href="/case-studies.html">Case Studies</a>
-        <a href="/future-build-library.html">Future Build Library</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
-      </div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <div>
-        <span class="badge"><i></i> Finance · Actuarial · Data</span>
-        <h1>Finance, Data & Applied Python Projects</h1>
-        <p class="subtitle">I build practical analytics across insurance and finance—Excel dashboards, actuarial models, and Python simulations—and publish the results here.</p>
-        <div class="cta">
-          <a class="btn primary" href="/excel.html">View Excel Projects</a>
-          <a class="btn" href="/python.html">View Python Projects</a>
-          <a class="btn" href="/resume.pdf" target="_blank">Open Resume</a>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Finance, Data & Applied Analytics</h1>
+    <p>I build hands-on analytics projects using SQL, Python, Excel, and Power BI — focusing on finance, fraud, actuarial concepts, and real-world business problems.</p>
+    <a class="btn" href="portfolio.html">View My Projects</a>
+  </div>
 
-      <!-- ⭐ PROFILE IMAGE -->
-      <div class="glass" style="display:flex; justify-content:center;">
-        <img src="assets/img/profile.jpg"
-             alt="Brian Buchanan"
-             style="width:340px; height:auto; border-radius:16px;">
-      </div>
+  <div style="text-align:center;">
+    <img src="assets/img/profile.jpg" style="width:300px;border-radius:16px;border:1px solid var(--border);" />
+  </div>
+</section>
 
-    </section>
+<!-- NEWEST PROJECT -->
+<section style="max-width:var(--max);margin:40px auto;padding:0 20px;">
+  <h2 style="font-size:26px;font-weight:700;margin-bottom:16px;">Newest Project</h2>
 
-    <!-- NEWEST PROJECTS -->
-    <section class="section">
-      <h2>Newest Projects</h2>
-
-      <div class="grid">
-        <a class="card" href="/professional-projects/excel/streamverse.html">
-          <h3>StreamVerse — SaaS Churn & Revenue Analytics</h3>
-          <p class="muted">
-            End-to-end churn, retention, and revenue analysis using Excel + Power BI.
-            Includes MRR, ARPU, LTV, cancellations, and customer behavior metrics.
-          </p>
-        </a>
-      </div>
-    </section>
-
-    <!-- ⭐ FRAUD DETECTION COMING SOON BLOCK -->
-    <section class="section" style="margin-top:40px;">
-      <div style="background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; text-align:center;">
-        
-        <h2 style="font-family:Inter; font-weight:700; font-size:28px; margin-bottom:8px; color:var(--text);">
-          🕵️ Fraud Detection Analytics Project — Coming Soon
-        </h2>
-
-        <p style="font-family:Inter; font-weight:300; font-size:16px; color:var(--muted); max-width:750px; margin:0 auto 16px;">
-          A multi-tool fraud detection system built using Python, Excel (Power Query), and Power BI.  
-          This project identifies suspicious transactions using anomaly detection, behavioral analytics,  
-          and interactive dashboards.
-        </p>
-
-        <div style="margin:0 auto 14px; text-align:left; max-width:650px; color:var(--muted); font-size:15px;">
-          <strong style="color:var(--text); font-weight:500;">Project Components:</strong>
-          <ul style="margin-top:8px; padding-left:20px; line-height:1.5;">
-            <li>Python preprocessing (cleaning, feature engineering, anomaly scoring)</li>
-            <li>Excel Power Query model for merging + refreshing all transaction data</li>
-            <li>Pivot-based fraud segmentation (device, hour, customer income, transaction type)</li>
-            <li>Rule-based fraud flags + z-score anomaly tagging</li>
-            <li>Power BI dashboard showing risk scores, patterns, and hotspot visuals</li>
-          </ul>
-        </div>
-
-        <p style="font-family:Inter; font-weight:500; font-size:15px; color:var(--accent); margin-top:6px;">
-          Expected Release: <strong>11/30</strong>
-        </p>
-
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section">
-      <h2>Certifications & Training</h2>
-      <p class="muted">Full details on LinkedIn; highlights below.</p>
-      <ul class="bullets">
-        <li><strong>Licenses:</strong> NY, NJ, FL Insurance Producer (Life; Accident & Health; Variable lines); FINRA SIE.</li>
-        <li><strong>Training:</strong> AHIP + 2026 carrier product trainings; NAIC Suitability; NY 4-Hour Annuity; Bankers Life Sales & Compliance; HIPAA/AML/Cybersecurity.</li>
-      </ul>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="foot">© <span id="y"></span> Brian Buchanan ·
-      <a href="https://github.com/brianbuchanan-official" target="_blank">GitHub</a>
+  <div class="grid">
+    <div class="card">
+      <h3>StreamVerse — SaaS Analytics Dashboard</h3>
+      <p>Full churn, retention, and revenue analytics built using Excel modeling, SQL-style logic, and Power BI dashboards.</p>
+      <a class="btn" href="professional-projects/excel/streamverse.html">View Project</a>
     </div>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  </div>
+</section>
+
 </body>
 </html>

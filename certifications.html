@@ -4,36 +4,62 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certifications — Brian Buchanan</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
       --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
+      --max:1100px;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+
     a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-    .nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 20px;
+    }
     .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
     .links a{margin-left:18px;opacity:.85}
     .links a.active{color:var(--accent)}
-    .wrap{max-width:1100px;margin:40px auto;padding:0 20px}
+
+    /* CONTENT */
+    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
     h1{margin:6px 0 10px}
     .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-    .row{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
-    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:#1a1a28;border:1px solid var(--border);font-size:14px}
-    .btn.verified{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border:none}
-    .section{margin-top:28px}
-    ul{margin:8px 0 0 18px}
-    hr{border:0;border-top:1px solid var(--border);opacity:.6}
+
+    .section{margin-top:42px}
+    h2{margin-bottom:10px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      margin-top:12px;
+    }
+
+    .title{font-size:18px;font-weight:700;margin:0 0 4px}
+    .status{font-size:14px;color:var(--muted);margin:2px 0}
+    .notes{font-size:14px;color:var(--muted);line-height:1.5;margin-top:6px}
+    hr{border:0;border-top:1px solid var(--border);opacity:.6;margin:40px 0}
   </style>
 </head>
+
 <body>
+
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">Brian <b>Buchanan</b></div>
@@ -42,126 +68,84 @@
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a class="active" href="certifications.html">Certifications</a>
-        <a href="mailto:brian.buchanan@bankerslife.com">Contact</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
       </div>
     </div>
   </nav>
 
   <div class="wrap">
-    <span class="badge">Credentials (privacy-safe)</span>
+
     <h1>Certifications</h1>
-    <p class="muted">Listed for verification on request. No license numbers or documents displayed publicly.</p>
+    <p class="muted">All certifications listed below are accurate and grouped for clarity.  
+    Insurance credentials are marked historical due to no current company appointment.</p>
 
-    <div class="grid">
-      <!-- SIE -->
-      <div class="card">
-        <h3>Securities Industry Essentials (SIE)</h3>
-        <p class="muted">FINRA foundational exam: markets, products, risks, ethics.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Status: Passed — Feb 2025</span>
-        </div>
-      </div>
-
-      <!-- Series 7 (studying) -->
-      <div class="card">
-        <h3>FINRA Series 7 — General Securities Representative</h3>
-        <p class="muted">Licensing exam for broker-dealer representatives.</p>
-        <div class="row">
-          <span class="btn">In Progress</span>
-          <span class="muted">Status: Studying</span>
-        </div>
-      </div>
-
-      <!-- Life/Accident/Health — NY, FL, NJ -->
-      <div class="card">
-        <h3>Life, Accident &amp; Health Insurance — NY · FL · NJ</h3>
-        <p class="muted">Authorized to solicit and sell life, annuity, and A&amp;H products.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Status: Active</span>
-        </div>
-      </div>
-
-      <!-- Medicare compliance (AHIP or carrier) -->
-      <div class="card">
-        <h3>Medicare Compliance — AHIP / Carrier Equivalent</h3>
-        <p class="muted">Annual MA &amp; Part D compliance, ethics, and product training.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Plan Year: 2026</span>
-        </div>
-      </div>
-
-      <!-- CNO / Bankers Life -->
-      <div class="card">
-        <h3>CNO (Bankers Life) — Medicare, Life &amp; Extended Care</h3>
-        <p class="muted">Carrier certifications: product knowledge, compliance, suitability.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed</span>
-        </div>
-      </div>
-
-      <!-- Annuity & Suitability / NAIC Best Interest -->
-      <div class="card">
-        <h3>Annuity &amp; Suitability — NAIC Best Interest Standards</h3>
-        <p class="muted">State-approved annuity training aligned to NAIC Model Reg BI.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed: 2025</span>
-        </div>
-      </div>
-
-      <!-- Cornerstone compliance -->
-      <div class="card">
-        <h3>Suitability, Compliance &amp; Ethics — Bankers Life Cornerstone</h3>
-        <p class="muted">Internal standards for ethical sales and suitability.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed</span>
-        </div>
-      </div>
-
-      <!-- Google DA (in progress) -->
-      <div class="card">
-        <h3>Google Data Analytics Professional Certificate</h3>
-        <p class="muted">Data cleaning, analysis, visualization with spreadsheets/SQL/Python.</p>
-        <div class="row">
-          <span class="btn">In Progress</span>
-          <span class="muted">Status: Ongoing</span>
-        </div>
-      </div>
-    </div>
-
+    <!-- ⭐ SECTION 1 — FINANCE & DATA -->
     <div class="section">
-      <h2>Additional Training</h2>
-      <ul class="muted">
-        <li>HIPAA · AML · Cybersecurity 101</li>
-        <li>Carrier product trainings (Aetna, Wellcare, etc.)</li>
-        <li>Sales &amp; Compliance Curriculum (internal)</li>
-      </ul>
+      <h2>Finance & Data Certifications</h2>
+
+      <div class="card">
+        <div class="title">Securities Industry Essentials (SIE)</div>
+        <div class="status">Status: Passed — Feb 2025</div>
+        <div class="notes">FINRA foundational exam covering markets, products, and regulatory framework.</div>
+      </div>
+
+      <div class="card">
+        <div class="title">Google Data Analytics Professional Certificate</div>
+        <div class="status">Status: In Progress</div>
+        <div class="notes">Training in data cleaning, analysis, dashboards, spreadsheets, SQL, and Python.</div>
+      </div>
     </div>
 
-    <hr style="margin:28px 0;" />
+    <!-- ⭐ SECTION 2 — INSURANCE & COMPLIANCE (HISTORICAL) -->
+    <div class="section">
+      <h2>Insurance & Compliance (Historical)</h2>
 
-    <!-- COURSES & LEARNING -->
-    <div class="section" id="courses">
-      <h2>Courses &amp; Learning</h2>
-      <p class="muted" style="margin:0 0 14px 0;">Selected completed courses (more on request).</p>
+      <div class="card">
+        <div class="title">State Insurance Producer Licenses — NY, NJ, FL</div>
+        <div class="status">Status: Inactive (Not appointed with a company)</div>
+        <div class="notes">Previously licensed for Life, Accident & Health across NY, NJ, and FL.  
+        Inactive strictly due to no current firm appointment.</div>
+      </div>
 
-      <h3 style="margin:18px 0 6px 0;">Data Analytics (Excel Focused)</h3>
-      <ul class="muted">
-        <li><strong>Statistics and Data Analysis with Excel: Essentials</strong> — Complete</li>
-        <li><strong>Statistics and Data Analysis with Excel: Intermediate</strong> — Complete</li>
-      </ul>
+      <div class="card">
+        <div class="title">Medicare Certifications — AHIP & Carrier Equivalents</div>
+        <div class="status">Status: Historical — No active Medicare appointment</div>
+        <div class="notes">Completed while affiliated with Bankers Life/CNO (Plan Years 2025–2026).</div>
+      </div>
 
-      <h3 style="margin:22px 0 6px 0;">Data Analytics (Google Series)</h3>
-      <ul class="muted">
-        <li><strong>Foundations: Data, Data, Everywhere</strong> — Complete</li>
-      </ul>
+      <div class="card">
+        <div class="title">Carrier Product Certifications (Aetna, WellCare, Anthem, CNO, etc.)</div>
+        <div class="status">Status: Historical</div>
+        <div class="notes">Completed product, compliance, and extended care coursework during prior affiliation.</div>
+      </div>
+
+      <div class="card">
+        <div class="title">NAIC Best Interest Annuity Training</div>
+        <div class="status">Status: Completed</div>
+        <div class="notes">State-approved NAIC Model Regulation training for annuity recommendations.</div>
+      </div>
     </div>
-    <!-- /COURSES & LEARNING -->
+
+    <!-- ⭐ SECTION 3 — ADDITIONAL TECHNICAL & COMPLIANCE TRAINING -->
+    <div class="section">
+      <h2>Additional Technical & Compliance Training</h2>
+
+      <div class="card">
+        <div class="title">Suitability, Compliance & Ethics — Bankers Life Cornerstone</div>
+        <div class="status">Status: Historical</div>
+        <div class="notes">Internal training on ethical practices, suitability responsibilities, and compliance.</div>
+      </div>
+
+      <div class="card">
+        <div class="title">Other Training Completed</div>
+        <div class="notes">
+          HIPAA · AML · Cybersecurity 101 · Life insurance product training ·  
+          Extended care product training · Sales & compliance curriculum
+        </div>
+      </div>
+    </div>
+
   </div>
+
 </body>
 </html>

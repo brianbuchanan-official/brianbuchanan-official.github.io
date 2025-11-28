@@ -9,47 +9,23 @@
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
+      --accent:#7c5cff; --accent-2:#3fa9ff; --border:#1e1e2a; --card:#141421;
       --max:1100px;
     }
     *{box-sizing:border-box}
-    html,body{
-      margin:0;padding:0;background:var(--bg);color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,-apple-system}
     a{color:var(--text);text-decoration:none}
-
-    .nav{
-      position:sticky;top:0;z-index:10;
-      background:#0b0b12cc;
-      border-bottom:1px solid var(--border);
-      backdrop-filter:blur(8px);
-    }
-    .nav-inner{
-      max-width:var(--max);margin:0 auto;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 20px;
-    }
-    .brand{font-weight:900;letter-spacing:.3px}
+    .nav{position:sticky;top:0;z-index:10;background:#0b0b12dd;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+    .brand{font-weight:900}
     .brand b{color:var(--accent)}
     .links a{margin-left:18px;opacity:.9}
-    .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
-
-    .wrap{
-      max-width:var(--max);
-      margin:60px auto;
-      padding:0 20px;
-    }
-    h1{font-size:40px;margin-bottom:10px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:20px;
-      margin-top:24px;
-    }
+    .section{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{margin-bottom:10px}
+    h2{margin-top:30px;margin-bottom:8px}
     .muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px}
   </style>
 </head>
 
@@ -69,27 +45,27 @@
   </div>
 </nav>
 
-<div class="wrap">
+<section class="section">
 
   <h1>About Me</h1>
-  <p class="muted">*Placeholder: You can write your mission, background, and story here.*</p>
+  <p class="muted">This page will be finished later — here is a placeholder structure.</p>
 
   <div class="card">
-    <h2>Mission</h2>
-    <p class="muted">*Write your mission statement here.*</p>
+    <h2>Mission Statement</h2>
+    <p class="muted">[PLACEHOLDER] Your mission statement will go here.</p>
   </div>
 
   <div class="card">
     <h2>Background</h2>
-    <p class="muted">*Add your academic background, interests, and experience here.*</p>
+    <p class="muted">[PLACEHOLDER] Summary of your background, degree, and focus.</p>
   </div>
 
   <div class="card">
     <h2>What I'm Working On</h2>
-    <p class="muted">*List current projects or things you're learning.*</p>
+    <p class="muted">[PLACEHOLDER] Current projects and goals.</p>
   </div>
 
-</div>
+</section>
 
 </body>
 </html>

@@ -3,133 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Certifications — Brian Buchanan</title>
+  <title>About — Brian Buchanan</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
-    :root{--bg:#0b0b12;--panel:#11111a;--text:#e8e8f0;--muted:#a0a3b1;--accent:#7c5cff;--accent2:#3fa9ff;--border:#1e1e2a;--card:#141421}
+    :root{
+      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
+      --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
+      --max:1100px;
+    }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+
     a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-    .nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 20px;
+    }
     .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
     .links a{margin-left:18px;opacity:.85}
     .links a.active{color:var(--accent)}
-    .wrap{max-width:1100px;margin:40px auto;padding:0 20px}
-    h1{margin:6px 0 10px}
+
+    /* PAGE */
+    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{font-size:36px;margin:10px 0 16px}
+    h2{margin-top:40px;margin-bottom:12px;font-size:22px}
     .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-    .row{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
-    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:10px;background:#1a1a28;border:1px solid var(--border);font-size:14px}
-    .btn.verified{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border:none}
-    .section{margin-top:28px}
-    ul{margin:8px 0 0 18px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:20px;
+      margin-top:14px;
+    }
+
+    .section-text{
+      font-size:15.5px;
+      line-height:1.6;
+      margin-top:6px;
+      color:var(--muted);
+      max-width:850px;
+    }
+
   </style>
 </head>
+
 <body>
+
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">Brian <b>Buchanan</b></div>
       <div class="links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a class="active" href="about.html">About</a>
         <a href="projects.html">Projects</a>
-        <a class="active" href="certifications.html">Certifications</a>
-        <a href="mailto:brian.buchanan@bankerslife.com">Contact</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
       </div>
     </div>
   </nav>
 
   <div class="wrap">
-    <span class="badge">Credentials (privacy-safe)</span>
-    <h1>Certifications</h1>
-    <p class="muted">Listed for verification on request. No license numbers or documents are displayed publicly.</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Securities Industry Essentials (SIE)</h3>
-        <p class="muted">FINRA foundational exam: markets, products, risks, ethics.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Status: Passed — Feb 2025</span>
-        </div>
-      </div>
+    <h1>About Me</h1>
+    <p class="section-text">
+      I'm a data-driven problem solver with a foundation in actuarial science and finance.  
+      I build practical analytics projects across SQL, Python, Excel, and Power BI — always focusing on  
+      clear insights, clean structure, and real business value.
+    </p>
 
-      <div class="card">
-        <h3>FINRA Series 7 — General Securities Representative</h3>
-        <p class="muted">Licensing exam for broker-dealer representatives.</p>
-        <div class="row">
-          <span class="btn">In Progress</span>
-          <span class="muted">Status: Studying</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Life, Accident & Health Insurance — NY · FL · NJ</h3>
-        <p class="muted">Authorized to solicit and sell life, annuity, and A&H products.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Status: Active</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Medicare Compliance — AHIP / Carrier Equivalent</h3>
-        <p class="muted">Annual MA & Part D compliance, ethics, and product training.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Plan Year: 2026</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>CNO (Bankers Life) — Medicare, Life & Extended Care</h3>
-        <p class="muted">Carrier certifications: product knowledge, compliance, suitability.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Annuity & Suitability — NAIC Best Interest Standards</h3>
-        <p class="muted">State-approved annuity training aligned to NAIC Model Reg BI.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed: 2025</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Suitability, Compliance & Ethics — Bankers Life Cornerstone</h3>
-        <p class="muted">Internal standards for ethical sales and suitability.</p>
-        <div class="row">
-          <span class="btn verified">Verified</span>
-          <span class="muted">Completed</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Google Data Analytics Professional Certificate</h3>
-        <p class="muted">Data cleaning, analysis, visualization with spreadsheets/SQL/Python.</p>
-        <div class="row">
-          <span class="btn">In Progress</span>
-          <span class="muted">Status: Ongoing</span>
-        </div>
-      </div>
+    <!-- ⭐ MISSION -->
+    <h2>My Mission</h2>
+    <div class="card">
+      <p class="section-text">
+        My mission is to sharpen my skills in analytics and financial modeling while building real,
+        portfolio-ready projects that demonstrate technical depth and business understanding.
+        I focus on creating tools and dashboards that support decision-making, uncover insights,
+        and make complex data easy to understand.
+      </p>
     </div>
 
-    <div class="section">
-      <h2>Additional Training</h2>
-      <ul class="muted">
-        <li>HIPAA · AML · Cybersecurity 101</li>
-        <li>Carrier product trainings (Aetna, Wellcare, etc.)</li>
-        <li>Sales & Compliance Curriculum (internal)</li>
+    <!-- ⭐ BACKGROUND -->
+    <h2>Background</h2>
+    <div class="card">
+      <p class="section-text">
+        I graduated from Baruch College (CUNY) with a B.A. in Actuarial Science, where I studied
+        probability, financial mathematics, life contingencies, interest theory, and quantitative risk fundamentals.
+        I later worked in the financial services and insurance space, gaining experience with compliance, suitability,
+        and client-focused problem solving.
+      </p>
+      <p class="section-text">
+        Today, I’m working toward a career in data analytics and financial analytics — combining statistical thinking,
+        technical skills, and practical business knowledge.
+      </p>
+    </div>
+
+    <!-- ⭐ CURRENT WORK -->
+    <h2>What I'm Working On</h2>
+    <div class="card">
+      <p class="section-text">
+        I’m currently focused on developing a portfolio of real analytics projects, including:
+      </p>
+      <ul class="section-text" style="margin-left:20px;">
+        <li>SQL segmentation queries and rule-based fraud detection systems</li>
+        <li>Python modeling (logistic regression, feature engineering, evaluation)</li>
+        <li>Power BI dashboards with finance-style KPI visuals</li>
+        <li>Full project pipelines from raw data → cleaning → modeling → dashboards</li>
       </ul>
+      <p class="section-text">
+        Each project is designed to replicate real industry workflows so I can continue strengthening
+        my technical stack and professional portfolio.
+      </p>
     </div>
+
   </div>
+
 </body>
 </html>

@@ -4,157 +4,104 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume — Brian Buchanan</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff; --card:#141421; --border:#1e1e2a;
-      --max:1100px
+      --accent:#7c5cff; --accent2:#3fa9ff; --border:#1e1e2a; --card:#141421;
+      --max:1100px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
     a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0b0b12cc,#0b0b1200);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 20px;
+    }
     .brand{font-weight:900;letter-spacing:.3px}
     .brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.9}
-    .links a:hover{opacity:1}
+    .links a{margin-left:18px;opacity:.85}
     .links a.active{color:var(--accent)}
-    .section{max-width:var(--max);margin:28px auto;padding:0 20px}
-    .resume-header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:16px}
-    .title{font-size:28px;font-weight:900;letter-spacing:.2px}
-    .meta{color:var(--muted)}
-    .btns{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card)}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none}
-    h2{margin:22px 0 10px}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-    ul{margin:8px 0 0 18px}
-    .muted{color:var(--muted)}
-    .kvs{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-    .kv{border:1px solid var(--border);background:#11111a;border-radius:10px;padding:8px 10px;font-size:13px;color:var(--muted)}
-    footer{border-top:1px solid var(--border);margin-top:40px}
-    .foot{max-width:var(--max);margin:0 auto;padding:18px 20px;color:var(--muted);font-size:14px}
+
+    /* PAGE */
+    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
+    h1{margin:6px 0 16px;font-size:36px}
+
+    .pdf-container{
+      width:100%;height:90vh;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:var(--card);
+      overflow:hidden;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:10px;
+      font-size:14px;
+      margin-top:14px;
+    }
+    .btn:hover{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
   </style>
 </head>
+
 <body>
-  <!-- NAV (fixed links) -->
+
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <div class="brand">Brian <b>Buchanan</b></div>
       <div class="links">
-        <a href="/">Home</a>
-        <a class="active" href="/resume.html">Resume</a>
-        <a href="/excel.html">Excel</a>
-        <a href="/python.html">Python</a>
-        <a href="/case-studies.html">Case Studies</a>
-        <a href="/future-build-library.html">Future Build Library</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a class="active" href="resume.html">Resume</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
-  <section class="section">
-    <div class="resume-header">
-      <div>
-        <div class="title">Finance · Data · Python Analyst</div>
-        <div class="meta">Queens, NY</div>
-        <div class="meta">
-          <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noopener">LinkedIn</a> ·
-          <a href="https://brianbuchanan-official.github.io" target="_blank" rel="noopener">Portfolio</a>
-        </div>
-      </div>
-      <div class="btns">
-        <a class="btn primary" href="/resume.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a class="btn" href="mailto:brianb9700@gmail.com">Email me</a>
-      </div>
-    </div>
-  </section>
+  <div class="wrap">
 
-  <!-- SUMMARY + SKILLS -->
-  <section class="section grid-2">
-    <div class="card">
-      <h2>Summary</h2>
-      <p>Finance and data analyst skilled in Python and Excel modelling, with actuarial science training and practical experience in financial needs analysis. Build tools and simulations that support decision-making across finance and insurance.</p>
-    </div>
-    <div class="card">
-      <h2>Key Skills</h2>
-      <div class="kvs">
-        <div class="kv">Excel (pivot tables, modeling)</div>
-        <div class="kv">Python (pandas, NumPy, matplotlib)</div>
-        <div class="kv">Basic SQL</div>
-        <div class="kv">Time Value of Money</div>
-        <div class="kv">Monte Carlo Simulation</div>
-        <div class="kv">Actuarial & Insurance Math</div>
-        <div class="kv">Data Visualization</div>
-      </div>
-    </div>
-  </section>
+    <h1>Resume</h1>
+    <p class="muted">View or download my resume below.</p>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <h2>Experience</h2>
+    <!-- Download Button -->
+    <a class="btn" href="Website_friendly_resume.pdf" download>Download PDF</a>
 
-    <div class="card">
-      <h3>Bankers Conseco Life Insurance Company — Rosedale, NY</h3>
-      <p><strong>Financial Professional</strong> · Feb 2025 – Aug 2025</p>
-      <ul>
-        <li>Conducted client financial needs assessments and created insurance-based risk-mitigation strategies using Excel scenario modeling.</li>
-        <li>Built projection models illustrating retirement income gaps, premium affordability ranges, and long-term cost impacts.</li>
-        <li>Increased booked appointments and referral volume through targeted outreach and qualification strategy.</li>
-      </ul>
+    <!-- PDF Viewer -->
+    <div class="pdf-container">
+      <iframe 
+        src="Website_friendly_resume.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+        width="100%" 
+        height="100%">
+      </iframe>
     </div>
 
-    <div class="card">
-      <h3>YMCA — Jamaica, NY</h3>
-      <p><strong>Lifeguard / Deck Supervisor</strong> · Mar 2019 – Apr 2020; May 2023 – Present</p>
-      <ul>
-        <li>Supervised aquatic safety operations and monitored up to 40 patrons per session with zero major incident occurrences.</li>
-        <li>Delivered CPR, first-aid, and emergency response training to staff, strengthening risk-prevention and operational readiness.</li>
-        <li><em>Certifications:</em> YMCA Lifeguard; BLS/CPR.</li>
-      </ul>
-    </div>
-  </section>
+  </div>
 
-  <!-- PROJECTS -->
-  <section class="section">
-    <h2>Projects</h2>
-    <div class="card">
-      <ul>
-        <li><strong>Loan Amortization Model (Excel):</strong> FM-style amortization schedule with principal/interest breakdown and balance visualization. <a href="/files/excel/loan-amortization.xlsx" target="_blank">Download .xlsx</a></li>
-        <li><strong>Monte Carlo Investment Simulation (Python):</strong> 1,000 return paths with percentile bands and sample trajectories. <a href="/files/python/monte-carlo-sim.html" target="_blank">Open HTML</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- EDUCATION + CERTS -->
-  <section class="section grid-2">
-    <div class="card">
-      <h2>Education</h2>
-      <p><strong>Baruch College (CUNY)</strong> — B.A., Actuarial Science · <span class="muted">May 2024</span></p>
-      <p><strong>Queensborough Community College</strong> — A.A.S., Accounting · <span class="muted">GPA: 3.145</span></p>
-    </div>
-
-    <div class="card">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Securities Industry Essentials (SIE) — FINRA (Feb 2025)</li>
-        <li>New York Insurance Producer — Life, Accident & Health (Feb 2025)</li>
-        <li>New Jersey Insurance Producer — LA&H; Variable Life & Variable Annuity (May 2025)</li>
-        <li>Florida Insurance Producer — Life, Health; Variable Life & Variable Annuity (Apr 2025)</li>
-      </ul>
-      <h2 style="margin-top:14px">Coursework & Training</h2>
-      <p class="muted">Coursework: Theory of Interest, Intro to Probability, Short-Term Insurance Math I & II, Mathematics of Inferential Statistics, Algorithms/Programming, Corporate Finance, Business Statistics.</p>
-      <p class="muted">Professional Training: AHIP 2026 Medicare + FWA; NAIC Best Interest (FL & NJ); NY 4-Hour Annuity Training.</p>
-    </div>
-  </section>
-
-  <footer><div class="foot">© <span id="y"></span> Brian Buchanan · <a href="https://github.com/brianbuchanan-official" target="_blank" rel="noopener">GitHub</a></div></footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>

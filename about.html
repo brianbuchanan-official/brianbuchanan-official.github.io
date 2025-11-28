@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Brian Buchanan</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
@@ -14,51 +12,38 @@
       --max:1100px;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
-
+    html,body{
+      margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
     a{color:var(--text);text-decoration:none}
-
-    /* NAV */
-    .nav{
-      position:sticky;top:0;z-index:10;
-      background:#0b0b12cc;border-bottom:1px solid var(--border);
-      backdrop-filter:blur(8px);
-    }
-    .nav-inner{
-      max-width:var(--max);margin:0 auto;
-      display:flex;justify-content:space-between;align-items:center;
-      padding:14px 20px;
-    }
+    .nav{position:sticky;top:0;z-index:10;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
     .brand{font-weight:900;letter-spacing:.3px}
     .brand b{color:var(--accent)}
-    .links a{margin-left:18px;opacity:.85}
+    .links a{margin-left:18px;opacity:.9}
+    .links a:hover{opacity:1}
     .links a.active{color:var(--accent)}
 
-    /* PAGE */
-    .wrap{max-width:var(--max);margin:40px auto;padding:0 20px}
-    h1{font-size:36px;margin:10px 0 16px}
-    h2{margin-top:40px;margin-bottom:12px;font-size:22px}
-    .muted{color:var(--muted)}
+    .wrap{
+      max-width:var(--max);
+      margin:50px auto;
+      padding:0 20px;
+      line-height:1.6;
+    }
 
+    h1{font-size:38px;margin-bottom:10px}
+    h2{margin-top:28px;margin-bottom:8px}
+    .muted{color:var(--muted)}
     .card{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;
       padding:20px;
-      margin-top:14px;
+      margin-top:20px;
     }
-
-    .section-text{
-      font-size:15.5px;
-      line-height:1.6;
-      margin-top:6px;
-      color:var(--muted);
-      max-width:850px;
-    }
-
   </style>
 </head>
-
 <body>
 
   <!-- NAV -->
@@ -70,64 +55,31 @@
         <a class="active" href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="certifications.html">Certifications</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224" target="_blank">LinkedIn</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
       </div>
     </div>
   </nav>
 
+  <!-- CONTENT -->
   <div class="wrap">
-
     <h1>About Me</h1>
-    <p class="section-text">
-      I'm a data-driven problem solver with a foundation in actuarial science and finance.  
-      I build practical analytics projects across SQL, Python, Excel, and Power BI — always focusing on  
-      clear insights, clean structure, and real business value.
-    </p>
+    <p class="muted">*Placeholder text — you can write your mission, background, and story here.*</p>
 
-    <!-- ⭐ MISSION -->
-    <h2>My Mission</h2>
     <div class="card">
-      <p class="section-text">
-        My mission is to sharpen my skills in analytics and financial modeling while building real,
-        portfolio-ready projects that demonstrate technical depth and business understanding.
-        I focus on creating tools and dashboards that support decision-making, uncover insights,
-        and make complex data easy to understand.
-      </p>
+      <h2>Mission</h2>
+      <p class="muted">*Write your mission statement here.*</p>
     </div>
 
-    <!-- ⭐ BACKGROUND -->
-    <h2>Background</h2>
     <div class="card">
-      <p class="section-text">
-        I graduated from Baruch College (CUNY) with a B.A. in Actuarial Science, where I studied
-        probability, financial mathematics, life contingencies, interest theory, and quantitative risk fundamentals.
-        I later worked in the financial services and insurance space, gaining experience with compliance, suitability,
-        and client-focused problem solving.
-      </p>
-      <p class="section-text">
-        Today, I’m working toward a career in data analytics and financial analytics — combining statistical thinking,
-        technical skills, and practical business knowledge.
-      </p>
+      <h2>Background</h2>
+      <p class="muted">*Write about your academic background, interests, and experience here.*</p>
     </div>
 
-    <!-- ⭐ CURRENT WORK -->
-    <h2>What I'm Working On</h2>
     <div class="card">
-      <p class="section-text">
-        I’m currently focused on developing a portfolio of real analytics projects, including:
-      </p>
-      <ul class="section-text" style="margin-left:20px;">
-        <li>SQL segmentation queries and rule-based fraud detection systems</li>
-        <li>Python modeling (logistic regression, feature engineering, evaluation)</li>
-        <li>Power BI dashboards with finance-style KPI visuals</li>
-        <li>Full project pipelines from raw data → cleaning → modeling → dashboards</li>
-      </ul>
-      <p class="section-text">
-        Each project is designed to replicate real industry workflows so I can continue strengthening
-        my technical stack and professional portfolio.
-      </p>
+      <h2>What I'm Working On</h2>
+      <p class="muted">*List current projects, certifications you're taking, or things you're learning.*</p>
     </div>
-
   </div>
 
 </body>

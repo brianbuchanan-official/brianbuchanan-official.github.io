@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Brian Buchanan</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
@@ -17,8 +18,18 @@
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     }
     a{color:var(--text);text-decoration:none}
-    .nav{position:sticky;top:0;z-index:10;background:#0b0b12cc;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
-    .nav-inner{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 20px;
+    }
     .brand{font-weight:900;letter-spacing:.3px}
     .brand b{color:var(--accent)}
     .links a{margin-left:18px;opacity:.9}
@@ -27,60 +38,58 @@
 
     .wrap{
       max-width:var(--max);
-      margin:50px auto;
+      margin:60px auto;
       padding:0 20px;
-      line-height:1.6;
     }
-
-    h1{font-size:38px;margin-bottom:10px}
-    h2{margin-top:28px;margin-bottom:8px}
-    .muted{color:var(--muted)}
+    h1{font-size:40px;margin-bottom:10px}
     .card{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;
       padding:20px;
-      margin-top:20px;
+      margin-top:24px;
     }
+    .muted{color:var(--muted)}
   </style>
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="resume.html">Resume</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- CONTENT -->
-  <div class="wrap">
-    <h1>About Me</h1>
-    <p class="muted">*Placeholder text — you can write your mission, background, and story here.*</p>
-
-    <div class="card">
-      <h2>Mission</h2>
-      <p class="muted">*Write your mission statement here.*</p>
-    </div>
-
-    <div class="card">
-      <h2>Background</h2>
-      <p class="muted">*Write about your academic background, interests, and experience here.*</p>
-    </div>
-
-    <div class="card">
-      <h2>What I'm Working On</h2>
-      <p class="muted">*List current projects, certifications you're taking, or things you're learning.*</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
   </div>
+</nav>
+
+<div class="wrap">
+
+  <h1>About Me</h1>
+  <p class="muted">*Placeholder: You can write your mission, background, and story here.*</p>
+
+  <div class="card">
+    <h2>Mission</h2>
+    <p class="muted">*Write your mission statement here.*</p>
+  </div>
+
+  <div class="card">
+    <h2>Background</h2>
+    <p class="muted">*Add your academic background, interests, and experience here.*</p>
+  </div>
+
+  <div class="card">
+    <h2>What I'm Working On</h2>
+    <p class="muted">*List current projects or things you're learning.*</p>
+  </div>
+
+</div>
 
 </body>
 </html>

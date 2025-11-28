@@ -3,245 +3,179 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects — Brian Buchanan</title>
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Portfolio — Brian Buchanan</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0b0b12;
-      --panel: #11111a;
-      --text: #e8e8f0;
-      --muted: #a0a3b1;
-      --accent: #7c5cff;
-      --border: #1e1e2a;
-      --card: #141421;
-      --max: 1100px;
+    :root{
+      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
+      --accent:#7c5cff; --accent2:#3fa9ff; --card:#141421; --border:#1e1e2a;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;
+      background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    a{color:var(--text);text-decoration:none}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#0b0b12cc;
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(8px);
+    }
+    .nav-inner{
+      max-width:var(--max);margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 20px;
+    }
+    .brand{font-weight:900;letter-spacing:.3px}
+    .brand b{color:var(--accent)}
+    .links a{margin-left:18px;opacity:.9}
+    .links a:hover{opacity:1}
+    .links a.active{color:var(--accent)}
+
+    /* HERO */
+    .hero{
+      max-width:var(--max);margin:60px auto 40px;
+      padding:0 20px;text-align:center;
+    }
+    .hero h1{
+      font-size:42px;font-weight:900;margin-bottom:10px;
+    }
+    .hero p{
+      font-size:18px;color:var(--muted);margin-top:0;
     }
 
-    * {box-sizing: border-box;}
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
+    /* SECTIONS */
+    .section{
+      max-width:var(--max);
+      margin:40px auto;
+      padding:0 20px;
+    }
+    .section h2{
+      font-size:26px;font-weight:700;
+      margin-bottom:18px;
     }
 
-    header {
-      width: 100%;
-      padding: 20px;
-      border-bottom: 1px solid var(--border);
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+      gap:20px;
     }
 
-    header nav {
-      max-width: var(--max);
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* CARD */
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      transition:.2s ease;
     }
-
-    header nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: 500;
+    .card:hover{
+      border-color:var(--accent);transform:translateY(-3px);
     }
+    .card h3{margin:6px 0 6px;font-size:20px}
+    .card p{color:var(--muted);font-size:14.5px;margin-top:0}
 
-    .hero {
-      text-align: center;
-      padding: 70px 20px;
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      font-size:14px;
+      font-weight:600;
+      margin-top:10px;
+      transition:.2s;
     }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      font-weight: 900;
+    .btn:hover{
+      background:var(--accent);
+      color:white;
     }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      margin-top: 0;
-    }
-
-    .section-title {
-      max-width: var(--max);
-      margin: 60px auto 20px auto;
-      padding: 0 20px;
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    .projects-grid {
-      max-width: var(--max);
-      margin: auto;
-      padding: 0 20px 60px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform .2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.4rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.4;
-    }
-
-    .tools {
-      margin: 10px 0;
-      font-size: .85rem;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .btn-row {
-      margin-top: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      font-size: .9rem;
-      font-weight: 600;
-      margin-right: 8px;
-      transition: .2s ease;
-    }
-
-    .btn:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-
   </style>
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <div style="font-weight:900; font-size:1.2rem;">Brian Buchanan</div>
-    <div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div class="links">
       <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a class="active" href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
       <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Projects & Analytics Work</h1>
-  <p>A collection of data, finance, and analytics projects built with SQL, Python, Excel, and Power BI.</p>
+  <h1>Analytics & Data Projects</h1>
+  <p>Real-world projects across SQL, Python, Excel, and Power BI.</p>
 </section>
 
 <!-- FEATURED PROJECTS -->
-<div class="section-title">⭐ Featured Projects</div>
+<section class="section">
+  <h2>⭐ Featured Projects</h2>
 
-<div class="projects-grid">
+  <div class="grid">
 
-  <div class="card">
-    <h3>StreamVerse — SaaS Analytics Dashboard</h3>
-    <p>Churn and revenue analytics using SQL-style logic, Excel modeling, DAX formulas, and Power BI dashboards.</p>
-    <div class="tools">SQL • Excel • Power BI</div>
-    <div class="btn-row">
-      <a class="btn" href="#" target="_blank">View Project</a>
-      <a class="btn" href="#" target="_blank">GitHub</a>
+    <div class="card">
+      <h3>StreamVerse — SaaS Analytics Dashboard</h3>
+      <p>Full churn, revenue, and retention analytics using Excel modeling, DAX, and Power BI dashboards.</p>
+      <a class="btn" href="professional-projects/excel/streamverse.html">View Project</a>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>Fraud Detection Pipeline</h3>
-    <p>SQL + Python pipeline with feature engineering, anomaly rules, and Power BI scoring dashboards.</p>
-    <div class="tools">SQL • Python • Power BI</div>
-    <div class="btn-row">
-      <a class="btn" href="#" target="_blank">View Project</a>
-      <a class="btn" href="#" target="_blank">GitHub</a>
+    <div class="card">
+      <h3>Fraud Detection Analytics (Coming Soon)</h3>
+      <p>Python + Excel + Power BI pipeline to detect high-risk transactions using engineered features and rule-based flags.</p>
+      <a class="btn" href="#" onclick="return false;">Coming Soon</a>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>BankLoan360 — Default Risk Analysis</h3>
-    <p>Loan approval and default analytics using SQL extraction, Excel modeling, Power BI KPIs, and Python modeling.</p>
-    <div class="tools">SQL • Excel • Power BI • Python</div>
-    <div class="btn-row">
-      <a class="btn" href="#" target="_blank">View Project</a>
-      <a class="btn" href="#" target="_blank">GitHub</a>
-    </div>
   </div>
-
-</div>
+</section>
 
 <!-- ALL PROJECTS -->
-<div class="section-title">📂 All Projects</div>
+<section class="section">
+  <h2>📂 All Projects</h2>
 
-<div class="projects-grid">
+  <div class="grid">
 
-  <div class="card">
-    <h3>SQL Segmentation Pack</h3>
-    <p>Seven segmentation queries including spending, age groups, cohorts, support tickets, and regional personas.</p>
-    <div class="tools">SQL</div>
-    <div class="btn-row">
+    <div class="card">
+      <h3>SQL Segmentation Pack</h3>
+      <p>Seven SQL segmentation queries analyzing spending, cohorts, support tickets, regions, and LTV.</p>
       <a class="btn" href="#" target="_blank">Open Prompt</a>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>SQL Fraud Rule Engine</h3>
-    <p>Suspicious transaction rules including high-amount, new device, rapid attempts, and unusual hours.</p>
-    <div class="tools">SQL</div>
-    <div class="btn-row">
+    <div class="card">
+      <h3>SQL Fraud Rule Engine</h3>
+      <p>Rule-based SQL flags for suspicious transactions, including new device, unusual hour, and foreign mismatch rules.</p>
       <a class="btn" href="#" target="_blank">Open Prompt</a>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>RetailOne Power BI Dashboard</h3>
-    <p>One-page Power BI dashboard with KPIs, regional sales, monthly trends, and top product analysis.</p>
-    <div class="tools">Power BI</div>
-    <div class="btn-row">
+    <div class="card">
+      <h3>RetailOne Power BI Dashboard</h3>
+      <p>Retail sales dashboard showing KPIs, regional breakdowns, monthly trends, and top product performance.</p>
       <a class="btn" href="#" target="_blank">Open Prompt</a>
     </div>
-  </div>
 
-  <div class="card">
-    <h3>QuickCredit Logistic Regression</h3>
-    <p>Python logistic regression model on a credit dataset including cleaning, training, accuracy, and feature importance.</p>
-    <div class="tools">Python</div>
-    <div class="btn-row">
+    <div class="card">
+      <h3>QuickCredit Logistic Regression</h3>
+      <p>Python logistic regression model to predict credit default using data cleaning, training, and feature importance.</p>
       <a class="btn" href="#" target="_blank">Open Prompt</a>
     </div>
-  </div>
 
-</div>
+  </div>
+</section>
 
 </body>
 </html>

@@ -4,93 +4,110 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Brian Buchanan</title>
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0b0b12;
-      --panel:#11111a;
-      --text:#e8e8f0;
-      --muted:#a0a3b1;
-      --accent:#7c5cff;
-      --accent-2:#3fa9ff;
-      --card:#141421;
-      --border:#1e1e2a;
+    :root {
+      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
+      --accent:#7c5cff; --accent-2:#3fa9ff;
+      --card:#141421; --border:#1e1e2a;
       --max:1100px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
       background:var(--bg);
       color:var(--text);
       font-family:'Inter',sans-serif;
       line-height:1.6;
     }
 
-    header{
+    header {
+      width:100%;
       border-bottom:1px solid var(--border);
       background:var(--panel);
       padding:16px 0;
       margin-bottom:40px;
     }
 
-    nav{
+    nav {
       max-width:var(--max);
       margin:0 auto;
-      padding:0 20px;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      padding:0 20px;
     }
 
-    nav a{
+    nav a {
       color:var(--text);
       text-decoration:none;
       margin-left:22px;
       font-weight:500;
+      transition:.2s ease;
     }
 
-    nav a:hover{color:var(--accent)}
+    nav a:hover { color:var(--accent); }
 
-    .container{
+    .container {
       max-width:var(--max);
       margin:0 auto;
       padding:20px;
     }
 
-    h1{
+    h1 {
       font-size:42px;
       font-weight:900;
       margin-bottom:8px;
     }
 
-    .subtitle{
+    .subtitle {
       color:var(--muted);
       margin-bottom:30px;
     }
 
-    /* FEATURED */
-    .featured-wrapper{margin-bottom:50px}
-    .featured-title{
+    .featured-wrapper { margin-bottom:50px; }
+
+    .featured-title {
       font-size:26px;
       font-weight:800;
-      margin-bottom:12px;
+      margin-bottom:10px;
     }
-    .featured-box{
+
+    .featured-box {
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;
-      padding:24px;
+      padding:20px;
     }
-    .featured-text{
-      margin:14px 0 18px;
+
+    .featured-img {
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--border);
+      margin-bottom:18px;
+    }
+
+    .featured-text {
+      margin-bottom:18px;
       font-size:17px;
     }
 
-    /* TAGS + BUTTON */
-    .tags span{
+    .btn {
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.2s ease;
+    }
+
+    .btn:hover { background:var(--accent-2); }
+
+    .tags span {
       display:inline-block;
       background:#1e1e29;
       padding:4px 10px;
@@ -101,48 +118,50 @@
       color:var(--muted);
     }
 
-    .btn{
-      display:inline-block;
-      margin-top:12px;
-      background:var(--accent);
-      color:#fff;
-      padding:10px 16px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-    }
-    .btn:hover{background:var(--accent-2)}
-
-    /* GRID */
-    .pipeline-title{
+    .pipeline-title {
       font-size:28px;
       font-weight:900;
-      margin:40px 0 20px;
+      margin:10px 0 20px;
     }
 
-    .grid{
+    .grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:25px;
     }
 
-    .card{
+    .card {
       background:var(--card);
       border:1px solid var(--border);
       padding:20px;
       border-radius:14px;
+      transition:.25s ease;
     }
 
-    .card h3{
+    .card:hover {
+      border-color:var(--accent);
+      transform:translateY(-3px);
+    }
+
+    .card h3 {
       font-size:22px;
       font-weight:800;
       color:var(--accent);
       margin-bottom:10px;
     }
 
-    .card p{
-      margin-bottom:14px;
+    .card p {
       font-size:16px;
+      margin-bottom:16px;
+    }
+
+    .project-img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:10px;
+      border:1px solid var(--border);
+      margin-bottom:15px;
     }
   </style>
 </head>
@@ -168,27 +187,34 @@
 <div class="container">
 
   <h1>Portfolio</h1>
-  <div class="subtitle">Analytics, finance, and data projects.</div>
+  <div class="subtitle">A collection of analytics, financial models, and multi-tool data projects.</div>
 
-  <!-- FEATURED PROJECT (UNCHANGED) -->
+  <!-- FEATURED PROJECT -->
   <div class="featured-wrapper">
     <h2 class="featured-title">Featured Project</h2>
 
     <div class="featured-box">
-      <h2 style="color:var(--accent);font-weight:800">
-        StreamVerse — SaaS Churn Analytics
+
+      <img src="files/case-studies/streamverse/StreamVerse_Dashboard.png"
+           alt="StreamVerse Dashboard"
+           class="featured-img">
+
+      <h2 style="font-size:24px; font-weight:800; color:var(--accent);">
+        StreamVerse — Customer Churn & Revenue Dashboard
       </h2>
 
       <div class="featured-text">
-        End-to-end churn analytics project analyzing subscription behavior, revenue risk,
-        and retention drivers using SQL, Excel, Power BI, and Python.
+        End-to-end churn, retention, and revenue insights using Excel and Power BI.
+        Includes MRR trends, cohort analysis, churn drivers, ARPU, and customer behavior analysis.
       </div>
 
-      <div class="tags">
-        <span>SQL</span><span>Excel</span><span>Power BI</span><span>Python</span>
-      </div>
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
 
-      <a class="btn" href="projects/streamverse.html">View Project</a>
     </div>
   </div>
 
@@ -197,37 +223,66 @@
 
   <div class="grid">
 
-    <!-- NEW PROJECT -->
+    <!-- SPY vs XLU -->
     <div class="card">
       <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
       <p>
         Mean–Variance Portfolio Optimization in Excel to construct an efficient frontier and
         identify the minimum-variance allocation between SPY and XLU.
       </p>
-      <div class="tags">
-        <span>Excel</span><span>Finance</span><span>Risk</span><span>Optimization</span>
-      </div>
+      <div class="tags"><span>Excel</span><span>Finance</span><span>Risk</span></div>
       <a class="btn"
          href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization"
          target="_blank"
          rel="noopener">
-        GitHub Repo
+        View on GitHub
       </a>
     </div>
 
-    <!-- EXISTING PROJECTS (UNCHANGED) -->
+    <!-- SUBSCRIPTION ANALYTICS -->
     <div class="card">
-      <h3>Subscription Analytics</h3>
-      <p>Revenue, churn, and cohort analysis using Excel dashboards.</p>
+      <h3>Subscription Analytics Dashboard</h3>
+
+      <img src="files/Subscription Project Files/Subscription_Dashboard.png"
+           alt="Subscription Dashboard"
+           class="project-img">
+
+      <p>
+        Excel-based subscription analytics dashboard tracking MRR, ARR, churn,
+        retention, and customer growth metrics.
+      </p>
+
       <div class="tags"><span>Excel</span><span>Analytics</span></div>
-      <a class="btn" href="projects/subscription_analytics.html">View</a>
+
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
     </div>
 
+    <!-- SQL SEGMENTATION PACK -->
     <div class="card">
-      <h3>SQL Segmentation Pack</h3>
-      <p>Customer segmentation and revenue insights using SQL queries.</p>
-      <div class="tags"><span>SQL</span><span>Analytics</span></div>
-      <a class="btn" href="projects/sql_segmentation.html">View</a>
+      <h3>SQL Segmentation Pack — CommerceConnect</h3>
+
+      <img src="files/sql-segmentation/sql-preview.png"
+           alt="SQL Segmentation Pack Preview"
+           class="project-img">
+
+      <p>
+        Customer segmentation, retention analysis, and revenue modeling using PostgreSQL,
+        including cohort analysis and LTV segmentation.
+      </p>
+
+      <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Analytics</span></div>
+
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
     </div>
 
   </div>

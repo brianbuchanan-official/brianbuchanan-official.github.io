@@ -4,117 +4,93 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Brian Buchanan</title>
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg:#0b0b12; --panel:#11111a; --text:#e8e8f0; --muted:#a0a3b1;
-      --accent:#7c5cff; --accent-2:#3fa9ff;
-      --card:#141421; --border:#1e1e2a;
+    :root{
+      --bg:#0b0b12;
+      --panel:#11111a;
+      --text:#e8e8f0;
+      --muted:#a0a3b1;
+      --accent:#7c5cff;
+      --accent-2:#3fa9ff;
+      --card:#141421;
+      --border:#1e1e2a;
       --max:1100px;
     }
 
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body {
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
       background:var(--bg);
       color:var(--text);
       font-family:'Inter',sans-serif;
       line-height:1.6;
     }
 
-    header {
-      width:100%;
+    header{
       border-bottom:1px solid var(--border);
       background:var(--panel);
       padding:16px 0;
       margin-bottom:40px;
     }
 
-    nav {
+    nav{
       max-width:var(--max);
       margin:0 auto;
+      padding:0 20px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:0 20px;
     }
 
-    nav a {
+    nav a{
       color:var(--text);
       text-decoration:none;
       margin-left:22px;
       font-weight:500;
-      transition:.2s ease;
     }
 
-    nav a:hover { color:var(--accent); }
+    nav a:hover{color:var(--accent)}
 
-    .container {
+    .container{
       max-width:var(--max);
       margin:0 auto;
       padding:20px;
     }
 
-    h1 {
+    h1{
       font-size:42px;
       font-weight:900;
       margin-bottom:8px;
     }
 
-    .subtitle {
+    .subtitle{
       color:var(--muted);
       margin-bottom:30px;
     }
 
-    /* FEATURED PROJECT */
-    .featured-wrapper {
-      margin-bottom:50px;
-    }
-
-    .featured-title {
+    /* FEATURED */
+    .featured-wrapper{margin-bottom:50px}
+    .featured-title{
       font-size:26px;
       font-weight:800;
-      color:var(--text);
-      margin-bottom:10px;
+      margin-bottom:12px;
     }
-
-    .featured-box {
+    .featured-box{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:16px;
-      padding:20px;
-      box-shadow:0 0 12px rgba(0,0,0,0.25);
+      padding:24px;
     }
-
-    .featured-img {
-      width:100%;
-      height:auto;
-      border-radius:12px;
-      border:1px solid var(--border);
-      margin-bottom:18px;
-    }
-
-    .featured-text {
-      margin-bottom:18px;
-      color:var(--text);
+    .featured-text{
+      margin:14px 0 18px;
       font-size:17px;
     }
 
-    .btn {
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:10px 16px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      margin-right:10px;
-      transition:.2s ease;
-    }
-    .btn:hover { background:var(--accent-2); }
-
-    .tags span {
+    /* TAGS + BUTTON */
+    .tags span{
       display:inline-block;
       background:#1e1e29;
       padding:4px 10px;
@@ -125,74 +101,66 @@
       color:var(--muted);
     }
 
-    .pipeline-title {
+    .btn{
+      display:inline-block;
+      margin-top:12px;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn:hover{background:var(--accent-2)}
+
+    /* GRID */
+    .pipeline-title{
       font-size:28px;
       font-weight:900;
-      margin-bottom:20px;
-      margin-top:10px;
+      margin:40px 0 20px;
     }
 
-    .grid {
+    .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
       gap:25px;
     }
 
-    .card {
+    .card{
       background:var(--card);
       border:1px solid var(--border);
       padding:20px;
       border-radius:14px;
-      transition:.25s ease;
     }
 
-    .card:hover {
-      border-color:var(--accent);
-      transform:translateY(-3px);
-    }
-
-    .card h3 {
+    .card h3{
       font-size:22px;
       font-weight:800;
       color:var(--accent);
       margin-bottom:10px;
     }
 
-    .card p {
+    .card p{
+      margin-bottom:14px;
       font-size:16px;
-      color:var(--text);
-      margin-bottom:16px;
     }
-
-    /* 🔥 NEW – UNIFORM IMAGE SIZE FOR ALL PROJECT CARDS */
-    .project-img {
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:10px;
-      border:1px solid var(--border);
-      margin-bottom:15px;
-    }
-
   </style>
 </head>
 
 <body>
 
 <header>
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Brian <b>Buchanan</b></div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-        <a href="mission.html">Mission</a>
-        <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
-      </div>
+  <nav>
+    <div class="brand">Brian <b>Buchanan</b></div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <a href="mission.html">Mission</a>
+      <a href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
     </div>
   </nav>
 </header>
@@ -200,41 +168,68 @@
 <div class="container">
 
   <h1>Portfolio</h1>
-  <div class="subtitle">A collection of analytics, financial models, and multi-tool data projects.</div>
+  <div class="subtitle">Analytics, finance, and data projects.</div>
 
-  <!-- FEATURED PROJECT (ONLY) -->
+  <!-- FEATURED PROJECT (UNCHANGED) -->
   <div class="featured-wrapper">
     <h2 class="featured-title">Featured Project</h2>
 
     <div class="featured-box">
-
-      <h2 style="font-size:24px; font-weight:800; margin-bottom:8px; color:var(--accent);">
-        SPY vs XLU Portfolio Optimization (2020–2025)
+      <h2 style="color:var(--accent);font-weight:800">
+        StreamVerse — SaaS Churn Analytics
       </h2>
 
       <div class="featured-text">
-        Mean–Variance Portfolio Optimization in Excel using daily market data to construct an efficient frontier and
-        identify the minimum-variance allocation between SPY and XLU. Includes return/risk modeling, correlation-based
-        diversification analysis, and a polished dashboard with exported visuals.
+        End-to-end churn analytics project analyzing subscription behavior, revenue risk,
+        and retention drivers using SQL, Excel, Power BI, and Python.
       </div>
 
       <div class="tags">
-        <span>Excel</span>
-        <span>Portfolio Optimization</span>
-        <span>Risk Analysis</span>
-        <span>Finance</span>
+        <span>SQL</span><span>Excel</span><span>Power BI</span><span>Python</span>
       </div>
 
-      <br>
+      <a class="btn" href="projects/streamverse.html">View Project</a>
+    </div>
+  </div>
 
+  <!-- GENERAL PROJECTS -->
+  <h2 class="pipeline-title">General Projects</h2>
+
+  <div class="grid">
+
+    <!-- NEW PROJECT -->
+    <div class="card">
+      <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
+      <p>
+        Mean–Variance Portfolio Optimization in Excel to construct an efficient frontier and
+        identify the minimum-variance allocation between SPY and XLU.
+      </p>
+      <div class="tags">
+        <span>Excel</span><span>Finance</span><span>Risk</span><span>Optimization</span>
+      </div>
       <a class="btn"
          href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization"
          target="_blank"
          rel="noopener">
-         GitHub Repo
+        GitHub Repo
       </a>
-
     </div>
+
+    <!-- EXISTING PROJECTS (UNCHANGED) -->
+    <div class="card">
+      <h3>Subscription Analytics</h3>
+      <p>Revenue, churn, and cohort analysis using Excel dashboards.</p>
+      <div class="tags"><span>Excel</span><span>Analytics</span></div>
+      <a class="btn" href="projects/subscription_analytics.html">View</a>
+    </div>
+
+    <div class="card">
+      <h3>SQL Segmentation Pack</h3>
+      <p>Customer segmentation and revenue insights using SQL queries.</p>
+      <div class="tags"><span>SQL</span><span>Analytics</span></div>
+      <a class="btn" href="projects/sql_segmentation.html">View</a>
+    </div>
+
   </div>
 
 </div>

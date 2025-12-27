@@ -67,57 +67,6 @@
       margin-bottom:30px;
     }
 
-    .featured-wrapper { margin-bottom:50px; }
-
-    .featured-title {
-      font-size:26px;
-      font-weight:800;
-      margin-bottom:10px;
-    }
-
-    .featured-box {
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:20px;
-    }
-
-    .featured-img {
-      width:100%;
-      border-radius:12px;
-      border:1px solid var(--border);
-      margin-bottom:18px;
-    }
-
-    .featured-text {
-      margin-bottom:18px;
-      font-size:17px;
-    }
-
-    .btn {
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:10px 16px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      transition:.2s ease;
-    }
-
-    .btn:hover { background:var(--accent-2); }
-
-    .tags span {
-      display:inline-block;
-      background:#1e1e29;
-      padding:4px 10px;
-      margin-right:6px;
-      margin-bottom:6px;
-      font-size:13px;
-      border-radius:6px;
-      color:var(--muted);
-    }
-
     .pipeline-title {
       font-size:28px;
       font-weight:900;
@@ -136,6 +85,9 @@
       padding:20px;
       border-radius:14px;
       transition:.25s ease;
+      display:flex;
+      flex-direction:column;
+      min-height:420px; /* keeps cards visually consistent */
     }
 
     .card:hover {
@@ -155,6 +107,33 @@
       margin-bottom:16px;
     }
 
+    .tags { margin-top:auto; } /* pushes tags + button toward consistent bottom alignment */
+    .tags span {
+      display:inline-block;
+      background:#1e1e29;
+      padding:4px 10px;
+      margin-right:6px;
+      margin-bottom:6px;
+      font-size:13px;
+      border-radius:6px;
+      color:var(--muted);
+    }
+
+    .btn {
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.2s ease;
+      margin-top:10px;
+    }
+
+    .btn:hover { background:var(--accent-2); }
+
+    /* MEDIA BLOCK (image or placeholder) to keep every card same size */
     .project-img {
       width:100%;
       height:180px;
@@ -162,6 +141,11 @@
       border-radius:10px;
       border:1px solid var(--border);
       margin-bottom:15px;
+      display:block;
+    }
+
+    .project-img.placeholder {
+      background:linear-gradient(135deg, #11111a 0%, #141421 55%, #11111a 100%);
     }
   </style>
 </head>
@@ -189,96 +173,22 @@
   <h1>Portfolio</h1>
   <div class="subtitle">A collection of analytics, financial models, and multi-tool data projects.</div>
 
-  <!-- FEATURED PROJECT -->
-  <div class="featured-wrapper">
-    <h2 class="featured-title">Featured Project</h2>
-
-    <div class="featured-box">
-
-      <img src="files/case-studies/streamverse/StreamVerse_Dashboard.png"
-           alt="StreamVerse Dashboard"
-           class="featured-img">
-
-      <h2 style="font-size:24px; font-weight:800; color:var(--accent);">
-        StreamVerse — Customer Churn & Revenue Dashboard
-      </h2>
-
-      <div class="featured-text">
-        End-to-end churn, retention, and revenue insights using Excel and Power BI.
-        Includes MRR trends, cohort analysis, churn drivers, ARPU, and customer behavior analysis.
-      </div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
-
-    </div>
-  </div>
-
   <!-- GENERAL PROJECTS -->
-  <h2 class="pipeline-title">General Projects</h2>
+  <h2 class="pipeline-title">Projects</h2>
 
   <div class="grid">
 
-    <!-- SPY vs XLU -->
+    <!-- (MOST RECENT) NYC AIRBNB MARKET (TABLEAU) -->
     <div class="card">
-      <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
+      <div class="project-img placeholder" aria-label="NYC Airbnb Project Placeholder"></div>
+      <h3>Explaining the NYC Airbnb Market (Tableau)</h3>
       <p>
-        Mean–Variance Portfolio Optimization in Excel to construct an efficient frontier and
-        identify the minimum-variance allocation between SPY and XLU.
+        Tableau dashboard analyzing NYC Airbnb pricing, availability, and supply patterns across boroughs and room types.
+        Includes a pricing map, distribution view, supply concentration, and room-type mix insights.
       </p>
-      <div class="tags"><span>Excel</span><span>Finance</span><span>Risk</span></div>
+      <div class="tags"><span>Tableau</span><span>NYC</span><span>Mapping</span><span>Market Analysis</span></div>
       <a class="btn"
-         href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
-    </div>
-
-    <!-- SUBSCRIPTION ANALYTICS -->
-    <div class="card">
-      <h3>Subscription Analytics Dashboard</h3>
-
-      <img src="files/Subscription Project Files/Subscription_Dashboard.png"
-           alt="Subscription Dashboard"
-           class="project-img">
-
-      <p>
-        Excel-based subscription analytics dashboard tracking MRR, ARR, churn,
-        retention, and customer growth metrics.
-      </p>
-
-      <div class="tags"><span>Excel</span><span>Analytics</span></div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
-    </div>
-
-    <!-- SQL SEGMENTATION PACK -->
-    <div class="card">
-      <h3>SQL Segmentation Pack — CommerceConnect</h3>
-
-      <img src="files/sql-segmentation/sql-preview.png"
-           alt="SQL Segmentation Pack Preview"
-           class="project-img">
-
-      <p>
-        Customer segmentation, retention analysis, and revenue modeling using PostgreSQL,
-        including cohort analysis and LTV segmentation.
-      </p>
-
-      <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Analytics</span></div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect"
+         href="https://github.com/brianbuchanan-official/NYC-Airbnb-Market/"
          target="_blank"
          rel="noopener">
         View on GitHub
@@ -287,12 +197,11 @@
 
     <!-- INTERNATIONAL DEBT STATISTICS -->
     <div class="card">
-      <h3>International Debt Statistics — Global Debt Analysis (1970–2024)</h3>
-
       <img src="files/international-debt/International_Debt_Statistics_Dashboard.png"
            alt="International Debt Statistics Dashboard"
            class="project-img">
 
+      <h3>International Debt Statistics — Global Debt Analysis (1970–2024)</h3>
       <p>
         Global external debt analysis using World Bank International Debt Statistics (IDS).
         Built with PostgreSQL, SQL, and Power BI with a focus on clean aggregation,
@@ -309,30 +218,13 @@
       </a>
     </div>
 
-    <!-- NYC AIRBNB MARKET (TABLEAU) -->
-    <div class="card">
-      <h3>Explaining the NYC Airbnb Market (Tableau)</h3>
-      <p>
-        Tableau dashboard analyzing NYC Airbnb pricing, availability, and supply patterns across boroughs and room types.
-        Includes a pricing map, distribution view, supply concentration, and room-type mix insights.
-      </p>
-      <div class="tags"><span>Tableau</span><span>NYC</span><span>Mapping</span><span>Market Analysis</span></div>
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/NYC-Airbnb-Market/"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
-    </div>
-
     <!-- CAR INSURANCE CLAIM OUTCOMES -->
     <div class="card">
-      <h3>Modeling Car Insurance Claim Outcomes</h3>
-
       <img src="files/car-insurance/claim_rate_by_risk_tier.png"
            alt="Car Insurance Claim Risk Segmentation"
            class="project-img">
 
+      <h3>Modeling Car Insurance Claim Outcomes</h3>
       <p>
         Interpretable auto insurance risk model using Logistic Regression to predict
         claim likelihood and segment policyholders into underwriting risk tiers.
@@ -348,6 +240,67 @@
 
       <a class="btn"
          href="https://github.com/brianbuchanan-official/Car_Insurance_Claim_Outcomes"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- SQL SEGMENTATION PACK -->
+    <div class="card">
+      <img src="files/sql-segmentation/sql-preview.png"
+           alt="SQL Segmentation Pack Preview"
+           class="project-img">
+
+      <h3>SQL Segmentation Pack — CommerceConnect</h3>
+      <p>
+        Customer segmentation, retention analysis, and revenue modeling using PostgreSQL,
+        including cohort analysis and LTV segmentation.
+      </p>
+
+      <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Analytics</span></div>
+
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- SUBSCRIPTION ANALYTICS -->
+    <div class="card">
+      <img src="files/Subscription Project Files/Subscription_Dashboard.png"
+           alt="Subscription Dashboard"
+           class="project-img">
+
+      <h3>Subscription Analytics Dashboard</h3>
+      <p>
+        Excel-based subscription analytics dashboard tracking MRR, ARR, churn,
+        retention, and customer growth metrics.
+      </p>
+
+      <div class="tags"><span>Excel</span><span>Analytics</span></div>
+
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard"
+         target="_blank"
+         rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+
+    <!-- SPY vs XLU -->
+    <div class="card">
+      <div class="project-img placeholder" aria-label="SPY vs XLU Placeholder"></div>
+      <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
+      <p>
+        Mean–Variance Portfolio Optimization in Excel to construct an efficient frontier and
+        identify the minimum-variance allocation between SPY and XLU.
+      </p>
+      <div class="tags"><span>Excel</span><span>Finance</span><span>Risk</span></div>
+      <a class="btn"
+         href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization"
          target="_blank"
          rel="noopener">
         View on GitHub

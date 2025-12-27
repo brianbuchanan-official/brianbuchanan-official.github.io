@@ -45,7 +45,6 @@
       text-decoration:none;
       margin-left:22px;
       font-weight:500;
-      transition:.2s ease;
     }
 
     nav a:hover { color:var(--accent); }
@@ -67,12 +66,6 @@
       margin-bottom:30px;
     }
 
-    .pipeline-title {
-      font-size:28px;
-      font-weight:900;
-      margin:10px 0 20px;
-    }
-
     .grid {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -87,12 +80,25 @@
       transition:.25s ease;
       display:flex;
       flex-direction:column;
-      min-height:420px; /* keeps cards visually consistent */
+      min-height:420px;
     }
 
     .card:hover {
       border-color:var(--accent);
       transform:translateY(-3px);
+    }
+
+    .project-img {
+      width:100%;
+      height:180px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      margin-bottom:15px;
+      object-fit:cover;
+    }
+
+    .project-img.placeholder {
+      background:linear-gradient(135deg,#11111a,#141421);
     }
 
     .card h3 {
@@ -107,7 +113,10 @@
       margin-bottom:16px;
     }
 
-    .tags { margin-top:auto; } /* pushes tags + button toward consistent bottom alignment */
+    .tags {
+      margin-top:auto;
+    }
+
     .tags span {
       display:inline-block;
       background:#1e1e29;
@@ -127,26 +136,10 @@
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
-      transition:.2s ease;
       margin-top:10px;
     }
 
     .btn:hover { background:var(--accent-2); }
-
-    /* MEDIA BLOCK (image or placeholder) to keep every card same size */
-    .project-img {
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:10px;
-      border:1px solid var(--border);
-      margin-bottom:15px;
-      display:block;
-    }
-
-    .project-img.placeholder {
-      background:linear-gradient(135deg, #11111a 0%, #141421 55%, #11111a 100%);
-    }
   </style>
 </head>
 
@@ -173,138 +166,78 @@
   <h1>Portfolio</h1>
   <div class="subtitle">A collection of analytics, financial models, and multi-tool data projects.</div>
 
-  <!-- GENERAL PROJECTS -->
-  <h2 class="pipeline-title">Projects</h2>
-
   <div class="grid">
 
-    <!-- (MOST RECENT) NYC AIRBNB MARKET (TABLEAU) -->
+    <!-- NYC AIRBNB -->
     <div class="card">
-      <div class="project-img placeholder" aria-label="NYC Airbnb Project Placeholder"></div>
+      <div class="project-img placeholder"></div>
       <h3>Explaining the NYC Airbnb Market (Tableau)</h3>
       <p>
-        Tableau dashboard analyzing NYC Airbnb pricing, availability, and supply patterns across boroughs and room types.
-        Includes a pricing map, distribution view, supply concentration, and room-type mix insights.
+        Interactive Tableau dashboard analyzing NYC Airbnb pricing, availability,
+        and supply patterns across boroughs and room types.
       </p>
-      <div class="tags"><span>Tableau</span><span>NYC</span><span>Mapping</span><span>Market Analysis</span></div>
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/NYC-Airbnb-Market/"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
+      <div class="tags"><span>Tableau</span><span>NYC</span><span>Market Analysis</span></div>
+      <a class="btn" href="https://github.com/brianbuchanan-official/NYC-Airbnb-Market/" target="_blank">View on GitHub</a>
     </div>
 
-    <!-- INTERNATIONAL DEBT STATISTICS -->
+    <!-- STREAMVERSE -->
     <div class="card">
-      <img src="files/international-debt/International_Debt_Statistics_Dashboard.png"
-           alt="International Debt Statistics Dashboard"
-           class="project-img">
-
-      <h3>International Debt Statistics — Global Debt Analysis (1970–2024)</h3>
+      <div class="project-img placeholder"></div>
+      <h3>StreamVerse — Customer Churn & Revenue Analytics</h3>
       <p>
-        Global external debt analysis using World Bank International Debt Statistics (IDS).
-        Built with PostgreSQL, SQL, and Power BI with a focus on clean aggregation,
-        removing hierarchical double counting, and producing finance-oriented macro insights.
+        End-to-end churn, retention, and revenue analysis including MRR trends,
+        cohort analysis, churn drivers, and ARPU.
       </p>
-
-      <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Power BI</span><span>Macro</span></div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/International-Debt-Statistics"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
+      <div class="tags"><span>Excel</span><span>Power BI</span><span>SaaS</span></div>
+      <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">View on GitHub</a>
     </div>
 
-    <!-- CAR INSURANCE CLAIM OUTCOMES -->
+    <!-- INTERNATIONAL DEBT -->
     <div class="card">
-      <img src="files/car-insurance/claim_rate_by_risk_tier.png"
-           alt="Car Insurance Claim Risk Segmentation"
-           class="project-img">
+      <img src="files/international-debt/International_Debt_Statistics_Dashboard.png" class="project-img">
+      <h3>International Debt Statistics — Global Debt Analysis</h3>
+      <p>
+        Global external debt analysis using World Bank data with SQL and Power BI,
+        focused on clean aggregation and macroeconomic insights.
+      </p>
+      <div class="tags"><span>SQL</span><span>Power BI</span><span>Macro</span></div>
+      <a class="btn" href="https://github.com/brianbuchanan-official/International-Debt-Statistics" target="_blank">View on GitHub</a>
+    </div>
 
+    <!-- CAR INSURANCE -->
+    <div class="card">
+      <img src="files/car-insurance/claim_rate_by_risk_tier.png" class="project-img">
       <h3>Modeling Car Insurance Claim Outcomes</h3>
       <p>
-        Interpretable auto insurance risk model using Logistic Regression to predict
-        claim likelihood and segment policyholders into underwriting risk tiers.
-        Focused on pricing, loss control, and real-world insurance decision-making.
+        Logistic regression model predicting claim likelihood and segmenting
+        policyholders into underwriting risk tiers.
       </p>
-
-      <div class="tags">
-        <span>Python</span>
-        <span>Logistic Regression</span>
-        <span>Insurance</span>
-        <span>Risk</span>
-      </div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/Car_Insurance_Claim_Outcomes"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
+      <div class="tags"><span>Python</span><span>Insurance</span><span>Risk</span></div>
+      <a class="btn" href="https://github.com/brianbuchanan-official/Car_Insurance_Claim_Outcomes" target="_blank">View on GitHub</a>
     </div>
 
-    <!-- SQL SEGMENTATION PACK -->
+    <!-- SQL SEGMENTATION -->
     <div class="card">
-      <img src="files/sql-segmentation/sql-preview.png"
-           alt="SQL Segmentation Pack Preview"
-           class="project-img">
-
+      <img src="files/sql-segmentation/sql-preview.png" class="project-img">
       <h3>SQL Segmentation Pack — CommerceConnect</h3>
       <p>
-        Customer segmentation, retention analysis, and revenue modeling using PostgreSQL,
-        including cohort analysis and LTV segmentation.
+        Customer segmentation, retention analysis, and lifetime value modeling
+        using PostgreSQL.
       </p>
-
-      <div class="tags"><span>SQL</span><span>PostgreSQL</span><span>Analytics</span></div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
+      <div class="tags"><span>SQL</span><span>PostgreSQL</span></div>
+      <a class="btn" href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect" target="_blank">View on GitHub</a>
     </div>
 
-    <!-- SUBSCRIPTION ANALYTICS -->
+    <!-- SUBSCRIPTION -->
     <div class="card">
-      <img src="files/Subscription Project Files/Subscription_Dashboard.png"
-           alt="Subscription Dashboard"
-           class="project-img">
-
+      <img src="files/Subscription Project Files/Subscription_Dashboard.png" class="project-img">
       <h3>Subscription Analytics Dashboard</h3>
       <p>
-        Excel-based subscription analytics dashboard tracking MRR, ARR, churn,
-        retention, and customer growth metrics.
+        Excel-based dashboard tracking MRR, ARR, churn, retention,
+        and customer growth metrics.
       </p>
-
       <div class="tags"><span>Excel</span><span>Analytics</span></div>
-
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
-    </div>
-
-    <!-- SPY vs XLU -->
-    <div class="card">
-      <div class="project-img placeholder" aria-label="SPY vs XLU Placeholder"></div>
-      <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
-      <p>
-        Mean–Variance Portfolio Optimization in Excel to construct an efficient frontier and
-        identify the minimum-variance allocation between SPY and XLU.
-      </p>
-      <div class="tags"><span>Excel</span><span>Finance</span><span>Risk</span></div>
-      <a class="btn"
-         href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization"
-         target="_blank"
-         rel="noopener">
-        View on GitHub
-      </a>
+      <a class="btn" href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard" target="_blank">View on GitHub</a>
     </div>
 
   </div>

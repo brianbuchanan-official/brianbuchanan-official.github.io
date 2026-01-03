@@ -1,11 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Certifications | Brian Buchanan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/v2/assets/css/style.css" />
+
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
+
+  <style>
+    :root{
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.62);
+      --accent:#7c5cff;
+      --green:#36d399;
+      --amber:#fbbf24;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+    }
+
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+
+    .layout{
+      display:grid;
+      grid-template-columns:300px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    @media (max-width:980px){
+      .layout{grid-template-columns:1fr}
+    }
+
+    /* SIDEBAR */
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .side-inner{padding:18px}
+
+    .name{font-weight:800;font-size:20px;margin-bottom:6px}
+    .role{
+      display:inline-block;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-size:12.5px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .side hr{border:0;border-top:1px solid var(--border);margin:16px 0}
+
+    .mini{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+    .pill{
+      padding:7px 10px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:600;
+      color:rgba(255,255,255,.75);
+      white-space:nowrap;
+    }
+
+    /* MAIN */
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:700px}
+
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .content{padding:18px}
+
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+
+    .card h3{margin:0 0 6px;font-size:14px;font-weight:900}
+    .card p{margin:0 0 12px;font-size:13px;color:var(--muted)}
+
+    .statusrow{display:flex;gap:8px;flex-wrap:wrap}
+
+    .status{
+      padding:7px 10px;
+      font-size:12px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:rgba(255,255,255,.75);
+    }
+
+    .passed{background:linear-gradient(90deg,#fbbf24,#7c5cff);color:#0b0f14;border:none}
+    .completed{border-color:rgba(54,211,153,.35);background:rgba(54,211,153,.12);color:#36d399}
+    .inprogress{border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.12);color:#fbbf24}
+    .studying{border-color:rgba(124,92,255,.35);background:rgba(124,92,255,.12);color:#bfb6ff}
+
+    .divider{border:0;border-top:1px solid var(--border);margin:16px 0}
+  </style>
 </head>
+
 <body>
 
 <header class="nav">
@@ -23,59 +170,113 @@
   </div>
 </header>
 
-<main class="container cert-page">
+<div class="wrap">
+  <div class="layout">
 
-  <h1 class="page-title">Certifications</h1>
-  <p class="page-subtitle">
-    Finance, insurance, and analytics credentials supporting quantitative and business-focused work.
-  </p>
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="side-inner">
+        <div class="name">Brian Buchanan</div>
+        <div class="role">Finance & Data Analytics</div>
 
-  <!-- FINANCE -->
-  <section class="cert-card">
-    <h2>Finance Exams</h2>
-    <ul>
-      <li>
-        <span class="cert-name">FINRA Securities Industry Essentials (SIE)</span>
-        <span class="cert-status passed">Passed</span>
-      </li>
-      <li>
-        <span class="cert-name">SOA Exam FM</span>
-        <span class="cert-status in-progress">In Progress</span>
-      </li>
-    </ul>
-  </section>
+        <hr>
 
-  <!-- INSURANCE -->
-  <section class="cert-card">
-    <h2>Insurance & Medicare</h2>
-    <ul>
-      <li>
-        <span class="cert-name">Life & Health Insurance License (NY)</span>
-        <span class="cert-status passed">Licensed</span>
-      </li>
-      <li>
-        <span class="cert-name">Medicare Advantage & Part D Certification</span>
-        <span class="cert-status passed">Completed</span>
-      </li>
-    </ul>
-  </section>
+        <div class="mini">
+          Employer-relevant exams, licenses, and analytics study.
+          No filler. Only applicable credentials.
+        </div>
 
-  <!-- ANALYTICS -->
-  <section class="cert-card">
-    <h2>Analytics & Technical Learning</h2>
-    <ul>
-      <li>
-        <span class="cert-name">Google Data Analytics (Coursera)</span>
-        <span class="cert-status in-progress">In Progress</span>
-      </li>
-      <li>
-        <span class="cert-name">SQL, Python, Excel, Power BI (Project-Based)</span>
-        <span class="cert-status self">Applied</span>
-      </li>
-    </ul>
-  </section>
+        <div class="pillrow">
+          <span class="pill">SIE: Passed</span>
+          <span class="pill">Exam FM: Studying</span>
+          <span class="pill">Medicare: Certified</span>
+        </div>
 
-</main>
+        <hr>
+
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+          LinkedIn →
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="main-head">
+        <div>
+          <h1 class="title">Certifications & Active Study</h1>
+          <p class="subtitle">
+            Finance, insurance, actuarial, and analytics credentials with current status.
+          </p>
+        </div>
+        <div class="tab">Certifications</div>
+      </div>
+
+      <div class="content">
+
+        <!-- FINANCE -->
+        <section class="section">
+          <h2>Finance Exams</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Securities Industry Essentials (SIE)</h3>
+              <p>FINRA fundamentals covering markets, products, and ethics.</p>
+              <div class="statusrow"><span class="status passed">Passed</span></div>
+            </div>
+
+            <div class="card">
+              <h3>Actuarial Exam FM</h3>
+              <p>Interest theory, annuities, bonds, duration, convexity.</p>
+              <div class="statusrow"><span class="status studying">Studying</span></div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- INSURANCE -->
+        <section class="section">
+          <h2>Insurance & Medicare</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>NY Life & Health License</h3>
+              <p>State licensing for life and health insurance products.</p>
+              <div class="statusrow"><span class="status completed">Completed</span></div>
+            </div>
+
+            <div class="card">
+              <h3>Medicare (AHIP + Carrier)</h3>
+              <p>Annual Medicare Advantage & Part D compliance.</p>
+              <div class="statusrow"><span class="status completed">Completed</span></div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- ANALYTICS -->
+        <section class="section">
+          <h2>Analytics Learning</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Google Data Analytics</h3>
+              <p>Case-based analytics workflow and dashboards.</p>
+              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+            </div>
+
+            <div class="card">
+              <h3>Excel, SQL, Python (Projects)</h3>
+              <p>Applied analytics through portfolio projects.</p>
+              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</div>
 
 </body>
 </html>

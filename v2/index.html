@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brian Buchanan | Finance & Analytics</title>
+  <title>Home | Brian Buchanan</title>
 
   <link rel="stylesheet" href="/v2/assets/css/style.css">
 
@@ -18,154 +18,137 @@
       --shadow:0 18px 50px rgba(0,0,0,.45);
     }
 
-    .wrap{max-width:1100px;margin:auto;padding:22px}
+    .wrap{max-width:1180px;margin:auto;padding:22px}
 
-    /* HERO */
-    .hero{
+    .layout{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:28px;
-      align-items:center;
-      margin-top:40px;
+      grid-template-columns:260px 1fr;
+      gap:18px;
+      align-items:start;
     }
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
 
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
+    /* SIDEBAR */
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
-
-    .badge{
-      display:inline-block;
+    .side-inner{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+    .name{
+      font-weight:900;
+      font-size:22px;
+      letter-spacing:.3px;
+      margin:0;
+    }
+    .pill{
       padding:7px 12px;
       font-size:12px;
       border-radius:999px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      color:var(--muted);
       font-weight:700;
-      margin-bottom:14px;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+      width:fit-content;
     }
+    .pill:hover{border-color:rgba(255,255,255,.25)}
 
-    h1{
-      font-size:40px;
-      line-height:1.1;
-      margin:0 0 12px;
-      font-weight:900;
-    }
-
-    .subtitle{
-      font-size:16px;
-      color:var(--muted);
-      max-width:640px;
-      line-height:1.6;
-    }
-
-    /* Smaller photo card */
-    .photo{
-      border-radius:18px;
-      overflow:hidden;
+    .avatar{
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      width: 320px;
-      max-width: 100%;
-      margin-left: auto; /* keeps it tucked to the right */
-      box-shadow: var(--shadow);
+      border-radius:16px;
+      overflow:hidden;
+      width:100%;
+      max-width:220px; /* makes it smaller */
     }
-
-    .photo img{
+    .avatar img{
       width:100%;
       height:auto;
       display:block;
     }
 
-    @media (max-width:900px){
-      .photo{margin-left:0}
-    }
+    .side hr{border:0;border-top:1px solid var(--border);margin:4px 0}
 
-    /* SECTIONS */
-    .section{
-      margin-top:56px;
-    }
-
-    .section h2{
-      font-size:20px;
-      font-weight:900;
-      margin-bottom:12px;
-    }
-
-    .text{
-      max-width:820px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:14.5px;
-    }
-
-    /* SKILLS */
-    .skills{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-      margin-top:20px;
-    }
-
-    @media (max-width:900px){
-      .skills{grid-template-columns:1fr}
-    }
-
-    .skill-card{
+    /* MAIN */
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
       border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      border-radius:16px;
-      padding:16px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      min-width:0;
     }
-
-    .skill-card h3{
-      margin:0 0 6px;
-      font-size:15px;
-      font-weight:900;
-    }
-
-    .skill-card p{
-      margin:0;
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.5;
-    }
-
-    /* EDUCATION */
-    .edu-grid{
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-
-    @media (max-width:900px){
-      .edu-grid{grid-template-columns:1fr}
-    }
-
-    .edu-card{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      border-radius:16px;
-      padding:16px;
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
       display:flex;
+      justify-content:space-between;
       gap:14px;
-      align-items:center;
+      flex-wrap:wrap;
+    }
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:760px;line-height:1.55}
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:900;
+      white-space:nowrap;
     }
 
+    .content{padding:18px}
+
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+    .card p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+
+    .skill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:14px;
+    }
+    .skill h3{margin:0 0 6px;font-size:14px;font-weight:900}
+    .skill p{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+
+    .edu{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
     .edu-logo{
-      width:64px;
-      height:64px;
+      width:54px;height:54px;
       border-radius:14px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.02);
-      display:flex;
-      align-items:center;
-      justify-content:center;
       overflow:hidden;
-      flex: 0 0 auto;
+      flex:0 0 auto;
+      display:flex;align-items:center;justify-content:center;
     }
-
     .edu-logo img{
       width:100%;
       height:100%;
@@ -173,23 +156,11 @@
       padding:8px;
       display:block;
     }
+    .edu-meta{min-width:0}
+    .edu-school{margin:0 0 2px;font-weight:900;font-size:13.5px}
+    .edu-degree{margin:0;color:var(--muted);font-size:13px}
 
-    .edu-meta{
-      min-width:0;
-    }
-
-    .edu-school{
-      font-weight:900;
-      margin:0 0 4px;
-      font-size:14.5px;
-    }
-
-    .edu-degree{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
-    }
+    .divider{border:0;border-top:1px solid var(--border);margin:16px 0}
   </style>
 </head>
 
@@ -211,97 +182,123 @@
 </header>
 
 <div class="wrap">
+  <div class="layout">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <span class="badge">Finance · Actuarial · Data Analytics</span>
-      <h1>Brian Buchanan</h1>
-      <p class="subtitle">
-        Finance and analytics professional with an actuarial background, focused on turning data into clear,
-        decision-ready insights across insurance, investments, and business analytics.
-      </p>
-    </div>
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="side-inner">
+        <p class="name">Brian Buchanan</p>
 
-    <div class="photo">
-      <!-- Make sure this file exists: /v2/assets/img/profile.jpg -->
-      <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
-    </div>
-  </section>
-
-  <!-- WHO I AM -->
-  <section class="section">
-    <h2>Who I Am</h2>
-    <p class="text">
-      I’m a finance and analytics professional with a strong foundation in quantitative thinking, problem-solving,
-      and data-driven decision making. I enjoy working with complex datasets, building efficient analytical tools,
-      and translating results into insights that support real business decisions.
-    </p>
-  </section>
-
-  <!-- BACKGROUND -->
-  <section class="section">
-    <h2>Background</h2>
-    <p class="text">
-      I hold an A.A.S. in Accounting (Queensborough Community College) and a B.A. in Actuarial Science (Baruch College).
-      I’ve passed the FINRA Securities Industry Essentials (SIE) exam and completed multiple state insurance licensing
-      exams. My work spans finance, insurance, and analytics with a focus on clear communication and measurable impact.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="section">
-    <h2>Skills Snapshot</h2>
-
-    <div class="skills">
-      <div class="skill-card">
-        <h3>Finance & Actuarial</h3>
-        <p>Financial mathematics, insurance concepts, risk analysis, portfolio fundamentals, actuarial modeling.</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Data & Analytics</h3>
-        <p>KPI design, churn & revenue analysis, segmentation, forecasting, data validation.</p>
-      </div>
-
-      <div class="skill-card">
-        <h3>Tools & Technology</h3>
-        <p>Excel (advanced), SQL, Python, Power BI, Tableau, Power Query, dashboards.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section">
-    <h2>Education</h2>
-
-    <div class="edu-grid">
-
-      <div class="edu-card">
-        <div class="edu-logo">
-          <!-- Make sure this file exists: /v2/assets/edu/qcc-logo.png -->
-          <img src="/v2/assets/edu/qcc-logo.png" alt="Queensborough Community College Logo">
+        <!-- photo (smaller) -->
+        <div class="avatar">
+          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
         </div>
-        <div class="edu-meta">
-          <p class="edu-school">Queensborough Community College (CUNY)</p>
-          <p class="edu-degree">A.A.S. — Accounting</p>
+
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+          LinkedIn →
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="main-head">
+        <div>
+          <h1 class="title">Home</h1>
+          <p class="subtitle">
+            Finance and analytics professional with an actuarial background — focused on decision-ready insights across
+            insurance, investments, and business analytics.
+          </p>
         </div>
+        <div class="tab">Overview</div>
       </div>
 
-      <div class="edu-card">
-        <div class="edu-logo">
-          <!-- Make sure this file exists: /v2/assets/edu/baruch-logo.png -->
-          <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch College Logo">
-        </div>
-        <div class="edu-meta">
-          <p class="edu-school">Baruch College (CUNY)</p>
-          <p class="edu-degree">B.A. — Actuarial Science</p>
-        </div>
+      <div class="content">
+
+        <!-- WHO I AM -->
+        <section class="section">
+          <h2>Who I Am</h2>
+          <div class="card">
+            <p>
+              I work at the intersection of finance and analytics. I like taking messy information,
+              building clean KPI frameworks, and translating results into clear business decisions.
+            </p>
+          </div>
+        </section>
+
+        <!-- BACKGROUND -->
+        <section class="section">
+          <h2>Background</h2>
+          <div class="card">
+            <p>
+              I studied Accounting at Queensborough Community College (A.A.S.) and Actuarial Science at Baruch College (B.A.).
+              I’ve passed the FINRA Securities Industry Essentials (SIE) exam and completed multiple state insurance licensing exams.
+              My work combines quantitative rigor with practical communication.
+            </p>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- SKILLS SNAPSHOT -->
+        <section class="section">
+          <h2>Skills Snapshot</h2>
+          <div class="grid">
+            <div class="skill">
+              <h3>Finance & Actuarial</h3>
+              <p>Financial mathematics, insurance fundamentals, risk analysis, portfolio concepts.</p>
+            </div>
+            <div class="skill">
+              <h3>Business Analytics</h3>
+              <p>KPI design, churn & revenue analytics, segmentation, forecasting, validation.</p>
+            </div>
+            <div class="skill">
+              <h3>Tools</h3>
+              <p>Excel (advanced), SQL, Python, Power BI, Tableau, Power Query.</p>
+            </div>
+            <div class="skill">
+              <h3>Communication</h3>
+              <p>Executive-ready summaries, stakeholder updates, clear documentation.</p>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- EDUCATION -->
+        <section class="section">
+          <h2>Education</h2>
+          <div class="grid">
+            <div class="card">
+              <div class="edu">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/qcc-logo.png" alt="QCC Logo">
+                </div>
+                <div class="edu-meta">
+                  <p class="edu-school">Queensborough Community College (CUNY)</p>
+                  <p class="edu-degree">A.A.S. — Accounting</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="edu">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch Logo">
+                </div>
+                <div class="edu-meta">
+                  <p class="edu-school">Baruch College (CUNY)</p>
+                  <p class="edu-degree">B.A. — Actuarial Science</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
+    </main>
 
-    </div>
-  </section>
-
+  </div>
 </div>
 
 </body>

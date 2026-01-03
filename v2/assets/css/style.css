@@ -54,3 +54,77 @@ nav a:hover {
 .hero p {
   color: #9ca3af;
 }
+
+/* ========== Certifications Page (vCard-inspired) ========== */
+
+.cert-page {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: #9ca3af;
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.cert-card {
+  background: #0f172a;
+  border: 1px solid #1f2933;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cert-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-card ul {
+  list-style: none;
+}
+
+.cert-card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #1f2933;
+}
+
+.cert-card li:last-child {
+  border-bottom: none;
+}
+
+.cert-name {
+  font-size: 0.95rem;
+}
+
+.cert-status {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.cert-status.passed {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
+}
+
+.cert-status.in-progress {
+  background: rgba(59,130,246,0.15);
+  color: #3b82f6;
+}
+
+.cert-status.self {
+  background: rgba(168,85,247,0.15);
+  color: #a855f7;
+}
+

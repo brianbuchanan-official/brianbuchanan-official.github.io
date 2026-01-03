@@ -24,7 +24,7 @@
 
     .layout{
       display:grid;
-      grid-template-columns:300px 1fr;
+      grid-template-columns:260px 1fr;
       gap:18px;
       align-items:start;
     }
@@ -41,39 +41,33 @@
       box-shadow:var(--shadow);
     }
 
-    .side-inner{padding:18px}
-
-    .name{font-weight:800;font-size:20px;margin-bottom:6px}
-    .role{
-      display:inline-block;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      font-size:12.5px;
-      color:var(--muted);
-      font-weight:600;
+    .side-inner{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:14px;
     }
 
-    .side hr{border:0;border-top:1px solid var(--border);margin:16px 0}
-
-    .mini{
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.6;
+    .name{
+      font-weight:900;
+      font-size:22px;
+      letter-spacing:.3px;
     }
-
-    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 
     .pill{
-      padding:7px 10px;
+      padding:7px 12px;
       font-size:12px;
       border-radius:999px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
       font-weight:600;
-      color:rgba(255,255,255,.75);
-      white-space:nowrap;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+    }
+
+    .pill:hover{
+      border-color:rgba(255,255,255,.25);
     }
 
     /* MAIN */
@@ -177,24 +171,7 @@
     <aside class="side">
       <div class="side-inner">
         <div class="name">Brian Buchanan</div>
-        <div class="role">Finance & Data Analytics</div>
-
-        <hr>
-
-        <div class="mini">
-          Employer-relevant exams, licenses, and analytics study.
-          No filler. Only applicable credentials.
-        </div>
-
-        <div class="pillrow">
-          <span class="pill">SIE: Passed</span>
-          <span class="pill">Exam FM: Studying</span>
-          <span class="pill">Medicare: Certified</span>
-        </div>
-
-        <hr>
-
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
           LinkedIn →
         </a>
       </div>
@@ -206,7 +183,7 @@
         <div>
           <h1 class="title">Certifications & Active Study</h1>
           <p class="subtitle">
-            Finance, insurance, actuarial, and analytics credentials with current status.
+            Employer-relevant exams, licenses, and analytics credentials with current status.
           </p>
         </div>
         <div class="tab">Certifications</div>
@@ -225,6 +202,12 @@
             </div>
 
             <div class="card">
+              <h3>Series 7 — General Securities Representative</h3>
+              <p>Full-scope securities representative qualification.</p>
+              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+            </div>
+
+            <div class="card">
               <h3>Actuarial Exam FM</h3>
               <p>Interest theory, annuities, bonds, duration, convexity.</p>
               <div class="statusrow"><span class="status studying">Studying</span></div>
@@ -239,14 +222,18 @@
           <h2>Insurance & Medicare</h2>
           <div class="grid">
             <div class="card">
-              <h3>NY Life & Health License</h3>
-              <p>State licensing for life and health insurance products.</p>
+              <h3>Life / Accident / Health Insurance</h3>
+              <p>
+                NY — Resident<br>
+                NJ — Non-Resident<br>
+                FL — Non-Resident
+              </p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
 
             <div class="card">
-              <h3>Medicare (AHIP + Carrier)</h3>
-              <p>Annual Medicare Advantage & Part D compliance.</p>
+              <h3>AHIP + Medicare Carrier Certifications</h3>
+              <p>Annual Medicare Advantage & Part D compliance training.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
           </div>
@@ -259,14 +246,20 @@
           <h2>Analytics Learning</h2>
           <div class="grid">
             <div class="card">
-              <h3>Google Data Analytics</h3>
+              <h3>Google Data Analytics (Coursera)</h3>
               <p>Case-based analytics workflow and dashboards.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>
 
             <div class="card">
-              <h3>Excel, SQL, Python (Projects)</h3>
-              <p>Applied analytics through portfolio projects.</p>
+              <h3>Statistics & Data Analysis with Excel</h3>
+              <p>Applied statistics, regression basics, forecasting.</p>
+              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+            </div>
+
+            <div class="card">
+              <h3>McGuire Research Course</h3>
+              <p>Critical thinking, analytical writing, research fundamentals.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>
           </div>

@@ -25,12 +25,14 @@
     }
 
     *{box-sizing:border-box}
+    html, body{height:100%}
     body{
       margin:0;
       font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
         radial-gradient(900px 500px at 10% -10%, rgba(124,92,255,.15), transparent 55%),
+        radial-gradient(800px 480px at 90% 0%, rgba(251,191,36,.10), transparent 55%),
         var(--bg);
     }
 
@@ -41,6 +43,8 @@
     .topbar{
       display:flex;
       justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
       margin-bottom:18px;
     }
     .topbar a{
@@ -52,38 +56,36 @@
       font-weight:600;
       color:var(--muted);
     }
-    .topbar a:hover{color:var(--text)}
+    .topbar a:hover{color:var(--text);border-color:rgba(255,255,255,.18)}
 
     /* ---------- LAYOUT ---------- */
     .layout{
       display:grid;
       grid-template-columns:320px 1fr;
       gap:18px;
-      align-items:flex-start;
+      align-items:start;
     }
 
     @media (max-width:980px){
       .layout{grid-template-columns:1fr}
-      .side{
-        position:static;
-        margin-bottom:18px;
-      }
     }
 
-    /* ---------- SIDEBAR ---------- */
+    /* ---------- SIDEBAR (NOT STICKY) ---------- */
     .side{
-      position:sticky;
-      top:22px;
+      /* KEY CHANGE: no sticky. This will scroll normally. */
+      position:static;
       background:linear-gradient(180deg,var(--panel2),var(--panel));
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
+      overflow:hidden;
     }
     .side-inner{padding:18px}
     .avatar{
       width:82px;height:82px;border-radius:22px;
       background:
         radial-gradient(60px 60px at 30% 30%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(60px 60px at 80% 55%, rgba(251,191,36,.18), transparent 65%),
         rgba(255,255,255,.06);
       border:1px solid var(--border);
     }
@@ -109,6 +111,7 @@
       background:rgba(255,255,255,.03);
       font-weight:600;
       color:rgba(255,255,255,.75);
+      white-space:nowrap;
     }
 
     /* ---------- MAIN ---------- */
@@ -118,6 +121,7 @@
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
+      min-width:0; /* prevents weird overflow on small widths */
     }
     .main-head{
       padding:18px;
@@ -128,7 +132,7 @@
       flex-wrap:wrap;
     }
     .title{margin:0;font-size:22px;font-weight:900}
-    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:700px}
+    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:700px;line-height:1.55}
     .tab{
       padding:10px 12px;
       border-radius:12px;
@@ -136,6 +140,7 @@
       background:rgba(124,92,255,.18);
       font-size:13px;
       font-weight:800;
+      white-space:nowrap;
     }
 
     .content{padding:18px}
@@ -157,8 +162,8 @@
       border-radius:16px;
       padding:14px;
     }
-    .card h3{margin:0 0 6px;font-size:14px;font-weight:900}
-    .card p{margin:0 0 12px;font-size:13px;color:var(--muted)}
+    .card h3{margin:0 0 6px;font-size:14px;font-weight:900;line-height:1.25}
+    .card p{margin:0 0 12px;font-size:13px;color:var(--muted);line-height:1.5}
 
     .statusrow{display:flex;gap:8px;flex-wrap:wrap}
     .status{
@@ -169,6 +174,7 @@
       border:1px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.04);
       color:rgba(255,255,255,.75);
+      white-space:nowrap;
     }
     .passed{background:linear-gradient(90deg,#fbbf24,#7c5cff);color:#0b0d13;border:none}
     .completed{border-color:rgba(54,211,153,.35);background:rgba(54,211,153,.12);color:#36d399}
@@ -192,7 +198,7 @@
     <!-- SIDEBAR -->
     <aside class="side">
       <div class="side-inner">
-        <div class="avatar"></div>
+        <div class="avatar" aria-hidden="true"></div>
         <div class="name">Brian Buchanan</div>
         <div class="role">Finance + Data Analytics</div>
 
@@ -200,7 +206,7 @@
 
         <div class="mini">
           Credentials relevant to finance, actuarial, and data analytics roles.
-          Clean list only — no filler.
+          Clean list only — no filler training.
         </div>
 
         <div class="pillrow">
@@ -211,7 +217,7 @@
 
         <hr>
 
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
           LinkedIn →
         </a>
       </div>
@@ -249,7 +255,7 @@
 
             <div class="card">
               <h3>Actuarial Exam FM</h3>
-              <p>Financial mathematics: interest theory, annuities, bonds, duration.</p>
+              <p>Financial mathematics: interest theory, annuities, bonds, duration/convexity.</p>
               <div class="statusrow"><span class="status studying">Studying</span></div>
             </div>
           </div>
@@ -263,7 +269,7 @@
           <div class="grid">
             <div class="card">
               <h3>NY Life/Accident/Health — 2025</h3>
-              <p>State licensing for life and health insurance.</p>
+              <p>State licensing for life and health insurance products.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
 
@@ -275,13 +281,13 @@
 
             <div class="card">
               <h3>FL Life/Accident/Health — 2025</h3>
-              <p>Life & A&H licensing for Florida.</p>
+              <p>Life &amp; A&amp;H licensing completed for Florida.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
 
             <div class="card">
-              <h3>AHIP + Medicare Certifications — 2025</h3>
-              <p>Annual Medicare Advantage & Part D compliance.</p>
+              <h3>AHIP + Medicare Carrier Certifications — 2025</h3>
+              <p>Annual Medicare Advantage &amp; Part D compliance training.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
           </div>
@@ -295,12 +301,12 @@
           <div class="grid">
             <div class="card">
               <h3>Google Data Analytics (Coursera)</h3>
-              <p>Analytics workflow: spreadsheets, SQL concepts, dashboards.</p>
+              <p>Case-based analytics workflow: spreadsheets, SQL concepts, dashboards.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>
 
             <div class="card">
-              <h3>Statistics & Data Analysis with Excel</h3>
+              <h3>Statistics &amp; Data Analysis with Excel</h3>
               <p>Applied statistics, regression basics, forecasting.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>

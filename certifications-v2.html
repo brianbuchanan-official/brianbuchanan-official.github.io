@@ -3,65 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Certifications — Brian Buchanan</title>
+  <title>Certifications | Brian Buchanan</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
 
   <style>
     :root{
-      --bg:#0b0d13;
       --panel:rgba(255,255,255,.04);
       --panel2:rgba(255,255,255,.06);
       --border:rgba(255,255,255,.10);
-      --text:rgba(255,255,255,.92);
       --muted:rgba(255,255,255,.62);
-
       --accent:#7c5cff;
       --green:#36d399;
       --amber:#fbbf24;
-
       --radius:18px;
       --shadow:0 18px 50px rgba(0,0,0,.45);
     }
 
-    *{box-sizing:border-box}
-    html, body{height:100%}
-    body{
-      margin:0;
-      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 10% -10%, rgba(124,92,255,.15), transparent 55%),
-        radial-gradient(800px 480px at 90% 0%, rgba(251,191,36,.10), transparent 55%),
-        var(--bg);
-    }
-
-    a{color:inherit;text-decoration:none}
     .wrap{max-width:1180px;margin:auto;padding:22px}
 
-    /* ---------- TOP LINKS ---------- */
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:18px;
-    }
-    .topbar a{
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      font-size:13px;
-      font-weight:600;
-      color:var(--muted);
-    }
-    .topbar a:hover{color:var(--text);border-color:rgba(255,255,255,.18)}
-
-    /* ---------- LAYOUT ---------- */
     .layout{
       display:grid;
-      grid-template-columns:320px 1fr;
+      grid-template-columns:300px 1fr;
       gap:18px;
       align-items:start;
     }
@@ -70,26 +33,17 @@
       .layout{grid-template-columns:1fr}
     }
 
-    /* ---------- SIDEBAR (NOT STICKY) ---------- */
+    /* SIDEBAR */
     .side{
-      /* KEY CHANGE: no sticky. This will scroll normally. */
-      position:static;
       background:linear-gradient(180deg,var(--panel2),var(--panel));
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      overflow:hidden;
     }
+
     .side-inner{padding:18px}
-    .avatar{
-      width:82px;height:82px;border-radius:22px;
-      background:
-        radial-gradient(60px 60px at 30% 30%, rgba(124,92,255,.35), transparent 60%),
-        radial-gradient(60px 60px at 80% 55%, rgba(251,191,36,.18), transparent 65%),
-        rgba(255,255,255,.06);
-      border:1px solid var(--border);
-    }
-    .name{margin:14px 0 6px;font-weight:800;font-size:20px}
+
+    .name{font-weight:800;font-size:20px;margin-bottom:6px}
     .role{
       display:inline-block;
       padding:7px 10px;
@@ -100,9 +54,17 @@
       color:var(--muted);
       font-weight:600;
     }
+
     .side hr{border:0;border-top:1px solid var(--border);margin:16px 0}
-    .mini{font-size:13px;color:var(--muted);line-height:1.6}
+
+    .mini{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
     .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
     .pill{
       padding:7px 10px;
       font-size:12px;
@@ -114,15 +76,15 @@
       white-space:nowrap;
     }
 
-    /* ---------- MAIN ---------- */
+    /* MAIN */
     .main{
       background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
-      min-width:0; /* prevents weird overflow on small widths */
     }
+
     .main-head{
       padding:18px;
       border-bottom:1px solid var(--border);
@@ -131,8 +93,10 @@
       gap:14px;
       flex-wrap:wrap;
     }
+
     .title{margin:0;font-size:22px;font-weight:900}
-    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:700px;line-height:1.55}
+    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:700px}
+
     .tab{
       padding:10px 12px;
       border-radius:12px;
@@ -144,6 +108,7 @@
     }
 
     .content{padding:18px}
+
     .section{margin-bottom:18px}
     .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
 
@@ -152,6 +117,7 @@
       grid-template-columns:repeat(2,1fr);
       gap:12px;
     }
+
     @media (max-width:980px){
       .grid{grid-template-columns:1fr}
     }
@@ -162,10 +128,12 @@
       border-radius:16px;
       padding:14px;
     }
-    .card h3{margin:0 0 6px;font-size:14px;font-weight:900;line-height:1.25}
-    .card p{margin:0 0 12px;font-size:13px;color:var(--muted);line-height:1.5}
+
+    .card h3{margin:0 0 6px;font-size:14px;font-weight:900}
+    .card p{margin:0 0 12px;font-size:13px;color:var(--muted)}
 
     .statusrow{display:flex;gap:8px;flex-wrap:wrap}
+
     .status{
       padding:7px 10px;
       font-size:12px;
@@ -174,9 +142,9 @@
       border:1px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.04);
       color:rgba(255,255,255,.75);
-      white-space:nowrap;
     }
-    .passed{background:linear-gradient(90deg,#fbbf24,#7c5cff);color:#0b0d13;border:none}
+
+    .passed{background:linear-gradient(90deg,#fbbf24,#7c5cff);color:#0b0f14;border:none}
     .completed{border-color:rgba(54,211,153,.35);background:rgba(54,211,153,.12);color:#36d399}
     .inprogress{border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.12);color:#fbbf24}
     .studying{border-color:rgba(124,92,255,.35);background:rgba(124,92,255,.12);color:#bfb6ff}
@@ -186,38 +154,47 @@
 </head>
 
 <body>
-<div class="wrap">
 
-  <div class="topbar">
-    <a href="index.html">← Back to Home</a>
-    <a href="portfolio.html">View Projects</a>
+<header class="nav">
+  <div class="container">
+    <div class="logo">Brian Buchanan</div>
+    <nav>
+      <a href="/v2/index.html">Home</a>
+      <a href="/v2/about.html">About</a>
+      <a href="/v2/portfolio.html">Portfolio</a>
+      <a href="/v2/certifications.html" class="active">Certifications</a>
+      <a href="/v2/resume.html">Resume</a>
+      <a href="/v2/mission.html">Mission</a>
+      <a href="/v2/contact.html">LinkedIn</a>
+    </nav>
   </div>
+</header>
 
+<div class="wrap">
   <div class="layout">
 
     <!-- SIDEBAR -->
     <aside class="side">
       <div class="side-inner">
-        <div class="avatar" aria-hidden="true"></div>
         <div class="name">Brian Buchanan</div>
-        <div class="role">Finance + Data Analytics</div>
+        <div class="role">Finance & Data Analytics</div>
 
         <hr>
 
         <div class="mini">
-          Credentials relevant to finance, actuarial, and data analytics roles.
-          Clean list only — no filler training.
+          Employer-relevant exams, licenses, and analytics study.
+          No filler. Only applicable credentials.
         </div>
 
         <div class="pillrow">
           <span class="pill">SIE: Passed</span>
           <span class="pill">Exam FM: Studying</span>
-          <span class="pill">Series 7: In Progress</span>
+          <span class="pill">Medicare: Certified</span>
         </div>
 
         <hr>
 
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
           LinkedIn →
         </a>
       </div>
@@ -229,7 +206,7 @@
         <div>
           <h1 class="title">Certifications & Active Study</h1>
           <p class="subtitle">
-            Employer-relevant exams, licenses, and analytics coursework with current status.
+            Finance, insurance, actuarial, and analytics credentials with current status.
           </p>
         </div>
         <div class="tab">Certifications</div>
@@ -243,19 +220,13 @@
           <div class="grid">
             <div class="card">
               <h3>Securities Industry Essentials (SIE)</h3>
-              <p>FINRA entry-level exam covering markets, products, and ethics.</p>
+              <p>FINRA fundamentals covering markets, products, and ethics.</p>
               <div class="statusrow"><span class="status passed">Passed</span></div>
             </div>
 
             <div class="card">
-              <h3>Series 7 — General Securities Representative</h3>
-              <p>Full-scope securities representative qualification.</p>
-              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-            </div>
-
-            <div class="card">
               <h3>Actuarial Exam FM</h3>
-              <p>Financial mathematics: interest theory, annuities, bonds, duration/convexity.</p>
+              <p>Interest theory, annuities, bonds, duration, convexity.</p>
               <div class="statusrow"><span class="status studying">Studying</span></div>
             </div>
           </div>
@@ -268,26 +239,14 @@
           <h2>Insurance & Medicare</h2>
           <div class="grid">
             <div class="card">
-              <h3>NY Life/Accident/Health — 2025</h3>
+              <h3>NY Life & Health License</h3>
               <p>State licensing for life and health insurance products.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
 
             <div class="card">
-              <h3>NJ Life/Accident/Health — 2025</h3>
-              <p>State licensing for life and health insurance.</p>
-              <div class="statusrow"><span class="status completed">Completed</span></div>
-            </div>
-
-            <div class="card">
-              <h3>FL Life/Accident/Health — 2025</h3>
-              <p>Life &amp; A&amp;H licensing completed for Florida.</p>
-              <div class="statusrow"><span class="status completed">Completed</span></div>
-            </div>
-
-            <div class="card">
-              <h3>AHIP + Medicare Carrier Certifications — 2025</h3>
-              <p>Annual Medicare Advantage &amp; Part D compliance training.</p>
+              <h3>Medicare (AHIP + Carrier)</h3>
+              <p>Annual Medicare Advantage & Part D compliance.</p>
               <div class="statusrow"><span class="status completed">Completed</span></div>
             </div>
           </div>
@@ -300,20 +259,14 @@
           <h2>Analytics Learning</h2>
           <div class="grid">
             <div class="card">
-              <h3>Google Data Analytics (Coursera)</h3>
-              <p>Case-based analytics workflow: spreadsheets, SQL concepts, dashboards.</p>
+              <h3>Google Data Analytics</h3>
+              <p>Case-based analytics workflow and dashboards.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>
 
             <div class="card">
-              <h3>Statistics &amp; Data Analysis with Excel</h3>
-              <p>Applied statistics, regression basics, forecasting.</p>
-              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-            </div>
-
-            <div class="card">
-              <h3>McGuire Research Course</h3>
-              <p>Critical thinking, analytical writing, research fundamentals.</p>
+              <h3>Excel, SQL, Python (Projects)</h3>
+              <p>Applied analytics through portfolio projects.</p>
               <div class="statusrow"><span class="status inprogress">In Progress</span></div>
             </div>
           </div>
@@ -321,7 +274,9 @@
 
       </div>
     </main>
+
   </div>
 </div>
+
 </body>
 </html>

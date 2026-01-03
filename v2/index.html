@@ -23,7 +23,7 @@
     /* HERO */
     .hero{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns:1.2fr .8fr;
       gap:28px;
       align-items:center;
       margin-top:40px;
@@ -59,17 +59,26 @@
       line-height:1.6;
     }
 
+    /* Smaller photo card */
     .photo{
       border-radius:18px;
       overflow:hidden;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
+      width: 320px;
+      max-width: 100%;
+      margin-left: auto; /* keeps it tucked to the right */
+      box-shadow: var(--shadow);
     }
 
     .photo img{
       width:100%;
       height:auto;
       display:block;
+    }
+
+    @media (max-width:900px){
+      .photo{margin-left:0}
     }
 
     /* SECTIONS */
@@ -121,6 +130,66 @@
       color:var(--muted);
       line-height:1.5;
     }
+
+    /* EDUCATION */
+    .edu-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    @media (max-width:900px){
+      .edu-grid{grid-template-columns:1fr}
+    }
+
+    .edu-card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .edu-logo{
+      width:64px;
+      height:64px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex: 0 0 auto;
+    }
+
+    .edu-logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:8px;
+      display:block;
+    }
+
+    .edu-meta{
+      min-width:0;
+    }
+
+    .edu-school{
+      font-weight:900;
+      margin:0 0 4px;
+      font-size:14.5px;
+    }
+
+    .edu-degree{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
   </style>
 </head>
 
@@ -149,14 +218,13 @@
       <span class="badge">Finance · Actuarial · Data Analytics</span>
       <h1>Brian Buchanan</h1>
       <p class="subtitle">
-        Finance and analytics professional with an actuarial background, focused on
-        turning data into clear, decision-ready insights across insurance,
-        investments, and business analytics.
+        Finance and analytics professional with an actuarial background, focused on turning data into clear,
+        decision-ready insights across insurance, investments, and business analytics.
       </p>
     </div>
 
     <div class="photo">
-      <!-- replace src with your actual image path -->
+      <!-- Make sure this file exists: /v2/assets/img/profile.jpg -->
       <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
     </div>
   </section>
@@ -165,9 +233,8 @@
   <section class="section">
     <h2>Who I Am</h2>
     <p class="text">
-      I’m a finance and analytics professional with a strong foundation in
-      quantitative thinking, problem-solving, and data-driven decision making.
-      I enjoy working with complex datasets, building efficient analytical tools,
+      I’m a finance and analytics professional with a strong foundation in quantitative thinking, problem-solving,
+      and data-driven decision making. I enjoy working with complex datasets, building efficient analytical tools,
       and translating results into insights that support real business decisions.
     </p>
   </section>
@@ -176,11 +243,9 @@
   <section class="section">
     <h2>Background</h2>
     <p class="text">
-      I hold a B.A. in Actuarial Science and have passed the FINRA Securities Industry
-      Essentials (SIE) exam, along with multiple state insurance licensing exams.
-      My experience spans financial planning, insurance analytics, and client-facing
-      analysis, giving me a strong understanding of both technical modeling and
-      real-world application.
+      I hold an A.A.S. in Accounting (Queensborough Community College) and a B.A. in Actuarial Science (Baruch College).
+      I’ve passed the FINRA Securities Industry Essentials (SIE) exam and completed multiple state insurance licensing
+      exams. My work spans finance, insurance, and analytics with a focus on clear communication and measurable impact.
     </p>
   </section>
 
@@ -191,27 +256,49 @@
     <div class="skills">
       <div class="skill-card">
         <h3>Finance & Actuarial</h3>
-        <p>
-          Financial mathematics, insurance concepts, risk analysis,
-          portfolio fundamentals, actuarial modeling.
-        </p>
+        <p>Financial mathematics, insurance concepts, risk analysis, portfolio fundamentals, actuarial modeling.</p>
       </div>
 
       <div class="skill-card">
         <h3>Data & Analytics</h3>
-        <p>
-          KPI design, churn & revenue analysis, segmentation,
-          forecasting, data validation.
-        </p>
+        <p>KPI design, churn & revenue analysis, segmentation, forecasting, data validation.</p>
       </div>
 
       <div class="skill-card">
         <h3>Tools & Technology</h3>
-        <p>
-          Excel (advanced), SQL, Python, Power BI, Tableau,
-          Power Query, dashboards.
-        </p>
+        <p>Excel (advanced), SQL, Python, Power BI, Tableau, Power Query, dashboards.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <h2>Education</h2>
+
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <div class="edu-logo">
+          <!-- Make sure this file exists: /v2/assets/edu/qcc-logo.png -->
+          <img src="/v2/assets/edu/qcc-logo.png" alt="Queensborough Community College Logo">
+        </div>
+        <div class="edu-meta">
+          <p class="edu-school">Queensborough Community College (CUNY)</p>
+          <p class="edu-degree">A.A.S. — Accounting</p>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-logo">
+          <!-- Make sure this file exists: /v2/assets/edu/baruch-logo.png -->
+          <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch College Logo">
+        </div>
+        <div class="edu-meta">
+          <p class="edu-school">Baruch College (CUNY)</p>
+          <p class="edu-degree">B.A. — Actuarial Science</p>
+        </div>
+      </div>
+
     </div>
   </section>
 

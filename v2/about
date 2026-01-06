@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Brian Buchanan</title>
+
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
+
+  <style>
+    :root{
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.62);
+      --accent:#7c5cff;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+    }
+
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+
+    .layout{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
+
+    /* SIDEBAR */
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .side-inner{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      text-align:center;
+    }
+
+    .avatar{
+      width:100%;
+      max-width:240px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+    }
+
+    .avatar img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .name{
+      font-weight:900;
+      font-size:22px;
+      margin:6px 0 2px;
+    }
+
+    .pill{
+      padding:7px 14px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:700;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+    }
+
+    /* MAIN */
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{
+      margin-top:6px;
+      font-size:13.5px;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
+
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .content{padding:18px}
+
+    .section{margin-bottom:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:900;
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .card p:last-child{margin-bottom:0}
+
+    .divider{
+      border:0;
+      border-top:1px solid var(--border);
+      margin:18px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="logo">Brian Buchanan</div>
+    <nav>
+      <a href="/v2/index.html">Home</a>
+      <a href="/v2/about.html" class="active">About</a>
+      <a href="/v2/portfolio.html">Portfolio</a>
+      <a href="/v2/certifications.html">Certifications</a>
+      <a href="/v2/resume.html">Resume</a>
+      <a href="/v2/mission.html">Mission</a>
+      <a href="/v2/contact.html">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="side-inner">
+        <div class="avatar">
+          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
+        </div>
+        <div class="name">Brian Buchanan</div>
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+          LinkedIn →
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="main-head">
+        <div>
+          <h1 class="title">About Me</h1>
+          <p class="subtitle">
+            Actuarial science graduate with a strong quantitative foundation and a
+            focus on applying analytics to real-world business challenges.
+          </p>
+        </div>
+        <div class="tab">About</div>
+      </div>
+
+      <div class="content">
+
+        <section class="section">
+          <div class="card">
+            <p>
+              I am a recent Actuarial Science graduate from Baruch College, having begun my academic
+              journey at Queensborough Community College. My background is rooted in quantitative
+              problem-solving and a drive to understand the “why” behind the numbers. I thrive at the
+              intersection of data-driven strategy and real-world application, always looking for ways
+              to use my analytical training to solve complex business challenges.
+            </p>
+
+            <p>
+              On the technical side, I focus on bridging the gap between raw data and strategic
+              decision-making. To accelerate my professional growth, I challenged myself to master
+              the financial regulatory landscape, successfully passing the FINRA Securities Industry
+              Essentials (SIE) and the New York Insurance exam within the same two-week window.
+              I am currently licensed in New York, New Jersey, and Florida. My technical toolkit
+              includes Python, SQL, Power BI, and Advanced Excel, and I leverage AI-driven workflows
+              to improve productivity, audit code for accuracy, and build custom digital tools
+              and websites efficiently.
+            </p>
+
+            <p>
+              I have been a dedicated Lifeguard since 2016, supported by a lifelong foundation in
+              competitive swimming that began at age eight. As a certified YMCA Swim Instructor
+              and Lifeguard, I have spent years assisting coaches and mentoring swimmers in developing
+              life-saving techniques. My goal is to help individuals move from discomfort around water
+              to confidence, reinforcing the idea that growth comes from challenge in a safe,
+              supportive environment.
+            </p>
+
+            <p>
+              This same commitment to helping others grow extends to my work as a pro-bono Algebra
+              Tutor. By offering free support to students struggling with mathematical concepts,
+              I have strengthened my ability to translate complex, technical information into clear,
+              accessible explanations. Whether in the pool or the classroom, I am motivated by the
+              opportunity to make a positive impact and help others achieve their goals.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+</body>
+</html>

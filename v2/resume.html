@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume | Brian Buchanan</title>
 
-  <link rel="stylesheet" href="/v2/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <style>
     :root{
@@ -34,8 +34,8 @@
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
+      overflow:hidden;
     }
-
     .side-inner{
       padding:18px;
       display:flex;
@@ -44,7 +44,6 @@
       gap:14px;
       text-align:center;
     }
-
     .avatar{
       width:100%;
       max-width:240px;
@@ -53,18 +52,8 @@
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
     }
-
-    .avatar img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
-
-    .name{
-      font-weight:900;
-      font-size:22px;
-      margin:6px 0 2px;
-    }
+    .avatar img{width:100%;height:auto;display:block}
+    .name{font-weight:900;font-size:22px;margin:6px 0 2px}
 
     .pill{
       padding:7px 14px;
@@ -77,8 +66,6 @@
       text-decoration:none;
       width:fit-content;
     }
-
-    .pill:hover{border-color:rgba(255,255,255,.25)}
 
     /* MAIN */
     .main{
@@ -128,10 +115,7 @@
       text-decoration:none;
       white-space:nowrap;
     }
-
-    .btn.primary{
-      background:rgba(124,92,255,.18);
-    }
+    .btn.primary{background:rgba(124,92,255,.18)}
 
     .content{padding:18px}
 
@@ -149,9 +133,15 @@
       border:0;
       display:block;
     }
+    @media (max-width:980px){ .pdf{height:75vh} }
 
-    @media (max-width:980px){
-      .pdf{height:75vh}
+    .fallback{
+      padding:14px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+      border-top:1px solid var(--border);
+      background:rgba(255,255,255,.02);
     }
   </style>
 </head>
@@ -162,13 +152,13 @@
   <div class="container">
     <div class="logo">Brian Buchanan</div>
     <nav>
-      <a href="/v2/index.html">Home</a>
-      <a href="/v2/about.html">About</a>
-      <a href="/v2/portfolio.html">Portfolio</a>
-      <a href="/v2/certifications.html">Certifications</a>
-      <a href="/v2/resume.html" class="active">Resume</a>
-      <a href="/v2/mission.html">Mission</a>
-      <a href="/v2/contact.html">LinkedIn</a>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./portfolio.html">Portfolio</a>
+      <a href="./certifications.html">Certifications</a>
+      <a href="./resume.html" class="active">Resume</a>
+      <a href="./mission.html">Mission</a>
+      <a href="./contact.html">LinkedIn</a>
     </nav>
   </div>
 </header>
@@ -180,7 +170,7 @@
     <aside class="side">
       <div class="side-inner">
         <div class="avatar">
-          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
+          <img src="./assets/img/profile.jpg" alt="Brian Buchanan">
         </div>
         <div class="name">Brian Buchanan</div>
         <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
@@ -194,16 +184,14 @@
       <div class="main-head">
         <div>
           <h1 class="title">Resume</h1>
-          <p class="subtitle">
-            View my resume directly on this page or download the PDF.
-          </p>
+          <p class="subtitle">View my resume below or open/download the PDF.</p>
         </div>
 
         <div class="head-actions">
-          <a class="btn primary" href="/v2/assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">
+          <a class="btn primary" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">
             Open PDF
           </a>
-          <a class="btn" href="/v2/assets/resume/Brian_Buchanan_Resume.pdf" download>
+          <a class="btn" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>
             Download
           </a>
         </div>
@@ -211,11 +199,17 @@
 
       <div class="content">
         <div class="pdf-wrap">
-          <iframe
+          <!-- More reliable than iframe across browsers -->
+          <object
             class="pdf"
-            src="/v2/assets/resume/Brian_Buchanan_Resume.pdf#view=FitH"
-            title="Brian Buchanan Resume PDF">
-          </iframe>
+            data="./assets/resume/Brian_Buchanan_Resume.pdf"
+            type="application/pdf">
+            <div class="fallback">
+              Your browser can’t display the PDF inline.<br>
+              Use: <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+              or <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>Download</a>
+            </div>
+          </object>
         </div>
       </div>
     </main>

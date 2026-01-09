@@ -2,7 +2,7 @@
   <img src="v2/assets/img/profile.jpg" alt="Brian Buchanan" width="160" />
 </p>
 
-<h1 align="center">Brian Buchanan — Portfolio Website</h1>
+<h1 align="center">Brian Buchanan Portfolio Website</h1>
 
 <p align="center">
   Actuarial Science • Finance • Data Analytics

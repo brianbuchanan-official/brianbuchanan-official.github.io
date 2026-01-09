@@ -138,7 +138,11 @@
       color:rgba(255,255,255,.75);
     }
 
-    .passed{background:linear-gradient(90deg,#fbbf24,#7c5cff);color:#0b0f14;border:none}
+    /* CHANGES REQUESTED:
+       - Passed should be green like Completed
+       - In Progress unchanged
+       - Studying unchanged (purple) */
+    .passed{border-color:rgba(54,211,153,.35);background:rgba(54,211,153,.12);color:#36d399}
     .completed{border-color:rgba(54,211,153,.35);background:rgba(54,211,153,.12);color:#36d399}
     .inprogress{border-color:rgba(251,191,36,.35);background:rgba(251,191,36,.12);color:#fbbf24}
     .studying{border-color:rgba(124,92,255,.35);background:rgba(124,92,255,.12);color:#bfb6ff}
@@ -147,133 +151,134 @@
   </style>
 </head>
 
-<body>
+<body data-page="certifications">
 
-<header class="nav">
-  <div class="container">
-    <div class="logo">Brian Buchanan</div>
-    <nav>
-      <a href="/v2/index.html">Home</a>
-      <a href="/v2/about.html">About</a>
-      <a href="/v2/skills.html">Skills</a>
-      <a href="/v2/portfolio.html">Portfolio</a>
-      <a href="/v2/certifications.html">Certifications</a>
-      <a href="/v2/resume.html">Resume</a>
-      <a href="/v2/mission.html">Mission</a>
-      <a href="/v2/contact.html">LinkedIn</a>
-    </nav>
-  </div>
-</header>
+  <!-- SHARED NAV PLACEHOLDER -->
+  <div id="site-nav"></div>
 
-<div class="wrap">
-  <div class="layout">
+  <div class="wrap">
+    <div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="side">
-      <div class="side-inner">
-        <div class="name">Brian Buchanan</div>
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
-          LinkedIn →
-        </a>
-      </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-      <div class="main-head">
-        <div>
-          <h1 class="title">Certifications & Active Study</h1>
-          <p class="subtitle">
-            Employer-relevant exams, licenses, and analytics credentials with current status.
-          </p>
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="side-inner">
+          <div class="name">Brian Buchanan</div>
+          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+            LinkedIn →
+          </a>
         </div>
-        <div class="tab">Certifications</div>
-      </div>
+      </aside>
 
-      <div class="content">
-
-        <!-- FINANCE -->
-        <section class="section">
-          <h2>Finance Exams</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Securities Industry Essentials (SIE)</h3>
-              <p>FINRA fundamentals covering markets, products, and ethics.</p>
-              <div class="statusrow"><span class="status passed">Passed</span></div>
-            </div>
-
-            <div class="card">
-              <h3>Series 7 — General Securities Representative</h3>
-              <p>Full-scope securities representative qualification.</p>
-              <div class="statusrow"><span class="status inprogress">Studying</span></div>
-            </div>
-
-            <div class="card">
-              <h3>Actuarial Exam FM</h3>
-              <p>Interest theory, annuities, bonds, duration, convexity.</p>
-              <div class="statusrow"><span class="status studying">Studying</span></div>
-            </div>
+      <!-- MAIN -->
+      <main class="main">
+        <div class="main-head">
+          <div>
+            <h1 class="title">Certifications & Active Study</h1>
+            <p class="subtitle">
+              Employer-relevant exams, licenses, and analytics credentials with current status.
+            </p>
           </div>
-        </section>
+          <div class="tab">Certifications</div>
+        </div>
 
-        <hr class="divider">
+        <div class="content">
 
-        <!-- INSURANCE -->
-        <section class="section">
-          <h2>Insurance & Medicare</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Life / Accident / Health Insurance</h3>
-              <p>
-                NY — Resident<br>
-                NJ — Non-Resident<br>
-                FL — Non-Resident
-              </p>
-              <div class="statusrow"><span class="status completed">Completed</span></div>
+          <!-- FINANCE -->
+          <section class="section">
+            <h2>Finance Exams</h2>
+            <div class="grid">
+              <div class="card">
+                <h3>Securities Industry Essentials (SIE)</h3>
+                <p>FINRA fundamentals covering markets, products, and ethics.</p>
+                <div class="statusrow"><span class="status passed">Passed</span></div>
+              </div>
+
+              <div class="card">
+                <h3>Series 7 — General Securities Representative</h3>
+                <p>Full-scope securities representative qualification.</p>
+                <div class="statusrow"><span class="status inprogress">Studying</span></div>
+              </div>
+
+              <div class="card">
+                <h3>Actuarial Exam FM</h3>
+                <p>Interest theory, annuities, bonds, duration, convexity.</p>
+                <div class="statusrow"><span class="status studying">Studying</span></div>
+              </div>
             </div>
+          </section>
 
-            <div class="card">
-              <h3>AHIP + Medicare Carrier Certifications</h3>
-              <p>Annual Medicare Advantage & Part D compliance training.</p>
-              <div class="statusrow"><span class="status completed">Completed</span></div>
+          <hr class="divider">
+
+          <!-- INSURANCE -->
+          <section class="section">
+            <h2>Insurance & Medicare</h2>
+            <div class="grid">
+              <div class="card">
+                <h3>Life / Accident / Health Insurance</h3>
+                <p>
+                  NY — Resident<br>
+                  NJ — Non-Resident<br>
+                  FL — Non-Resident
+                </p>
+                <div class="statusrow"><span class="status completed">Completed</span></div>
+              </div>
+
+              <div class="card">
+                <h3>AHIP + Medicare Carrier Certifications</h3>
+                <p>Annual Medicare Advantage & Part D compliance training.</p>
+                <div class="statusrow"><span class="status completed">Completed</span></div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <hr class="divider">
+          <hr class="divider">
 
-        <!-- ANALYTICS -->
-        <section class="section">
-          <h2>Analytics Learning</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Google Data Analytics (Coursera)</h3>
-              <p>Case-based analytics workflow and dashboards.</p>
-              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+          <!-- ANALYTICS -->
+          <section class="section">
+            <h2>Analytics Learning</h2>
+            <div class="grid">
+              <div class="card">
+                <h3>Google Data Analytics (Coursera)</h3>
+                <p>Case-based analytics workflow and dashboards.</p>
+                <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+              </div>
+
+              <div class="card">
+                <h3>Statistics & Data Analysis with Excel</h3>
+                <p>Applied statistics, regression basics, forecasting.</p>
+                <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+              </div>
+
+              <div class="card">
+                <h3>McGuire Research Course</h3>
+                <p>Critical thinking, analytical writing, research fundamentals.</p>
+                <div class="statusrow"><span class="status inprogress">In Progress</span></div>
+              </div>
             </div>
+          </section>
 
-            <div class="card">
-              <h3>Statistics & Data Analysis with Excel</h3>
-              <p>Applied statistics, regression basics, forecasting.</p>
-              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-            </div>
+        </div>
+      </main>
 
-            <div class="card">
-              <h3>McGuire Research Course</h3>
-              <p>Critical thinking, analytical writing, research fundamentals.</p>
-              <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </main>
-
+    </div>
   </div>
-</div>
+
+  <!-- NAV INJECTION SCRIPT -->
+  <script>
+    (async function () {
+      const host = document.getElementById("site-nav");
+      if (!host) return;
+
+      const res = await fetch("/v2/partials/nav.html");
+      host.innerHTML = await res.text();
+
+      const page = document.body.getAttribute("data-page");
+      if (!page) return;
+
+      const active = host.querySelector(`[data-page="${page}"]`);
+      if (active) active.classList.add("active");
+    })();
+  </script>
 
 </body>
 </html>
-
-
-

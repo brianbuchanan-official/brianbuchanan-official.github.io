@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mission | Brian Buchanan</title>
+
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
+
+  <style>
+    :root{
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.62);
+      --accent:#7c5cff;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+    }
+
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+
+    .layout{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
+
+    /* SIDEBAR */
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .side-inner{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      text-align:center;
+    }
+
+    .avatar{
+      width:100%;
+      max-width:240px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+    }
+
+    .avatar img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .name{
+      font-weight:900;
+      font-size:22px;
+      margin:6px 0 2px;
+    }
+
+    .pill{
+      padding:7px 14px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:700;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+    }
+
+    /* MAIN */
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{
+      margin-top:6px;
+      font-size:13.5px;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
+
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .content{padding:18px}
+
+    .section{margin-bottom:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:900;
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .card p:last-child{margin-bottom:0}
+
+    .divider{
+      border:0;
+      border-top:1px solid var(--border);
+      margin:18px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="logo">Brian Buchanan</div>
+    <nav>
+      <a href="/v2/index.html">Home</a>
+      <a href="/v2/about.html">About</a>
+      <a href="/v2/portfolio.html">Portfolio</a>
+      <a href="/v2/certifications.html">Certifications</a>
+      <a href="/v2/resume.html">Resume</a>
+      <a href="/v2/mission.html" class="active">Mission</a>
+      <a href="/v2/contact.html">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="side-inner">
+        <div class="avatar">
+          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
+        </div>
+        <div class="name">Brian Buchanan</div>
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+          LinkedIn →
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="main-head">
+        <div>
+          <h1 class="title">My Mission</h1>
+          <p class="subtitle">
+            Building long-term growth through discipline, accountability, and teamwork —
+            with a focus on creating real value for people and businesses.
+          </p>
+        </div>
+        <div class="tab">Mission</div>
+      </div>
+
+      <div class="content">
+
+        <section class="section">
+          <div class="card">
+
+            <p>
+              My mission is to continuously grow as a professional and as a person by taking on
+              meaningful challenges, learning quickly, and applying what I learn to solve real
+              problems. I am driven by work that requires both analytical thinking and practical
+              decision-making, especially in areas connected to finance, risk, and strategy.
+            </p>
+
+            <p>
+              While I am deeply committed to my own personal and professional growth, my mission
+              extends beyond myself. I believe meaningful progress happens when individuals are
+              supported, challenged, and encouraged to grow together. I am motivated by environments
+              where collaboration, accountability, and shared goals drive both individual development
+              and collective success.
+            </p>
+
+            <p>
+              In the short term, my goal is to join a team-oriented organization where my skills can
+              be demonstrated, refined, and expanded alongside experienced professionals. I value
+              learning from others, contributing thoughtfully, and continuously improving through
+              exposure to real-world challenges and strong mentorship.
+            </p>
+
+            <p>
+              Over the long term, I aspire to grow into a position where I can help develop, lead,
+              and support high-performing teams. I am especially interested in creating environments
+              where teams operate efficiently, communicate clearly, and are properly incentivized to
+              pursue continuous improvement—not only for the benefit of the organization, but also in
+              alignment with each individual’s personal and professional goals.
+            </p>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+</body>
+</html>

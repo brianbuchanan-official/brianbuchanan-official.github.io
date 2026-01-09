@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Brian Buchanan</title>
+
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
+
+  <style>
+    :root{
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.62);
+      --accent:#7c5cff;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+    }
+
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+
+    .layout{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
+
+    /* SIDEBAR */
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .side-inner{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      text-align:center;
+    }
+    .avatar{
+      width:100%;
+      max-width:240px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+    }
+    .avatar img{width:100%;height:auto;display:block}
+    .name{font-weight:900;font-size:22px;margin:6px 0 2px}
+
+    .pill{
+      padding:7px 14px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:700;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+      width:fit-content;
+    }
+
+    /* MAIN */
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      min-width:0;
+    }
+
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+    }
+
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{
+      margin-top:6px;
+      font-size:13.5px;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
+
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    .content{padding:18px}
+    .section{margin-bottom:18px}
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    .card p:last-child{margin-bottom:0}
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:9px 12px;
+      font-size:12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:800;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .btn.primary{background:rgba(124,92,255,.18)}
+
+    /* FORM (kept minimal; matches your theme) */
+    .form{
+      display:grid;
+      gap:12px;
+      margin-top:12px;
+    }
+    .field label{
+      display:block;
+      font-size:12px;
+      font-weight:800;
+      color:rgba(255,255,255,.85);
+      margin:0 0 6px;
+    }
+    .field input,
+    .field textarea{
+      width:100%;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:rgba(255,255,255,.88);
+      padding:12px 12px;
+      font-size:13px;
+      outline:none;
+    }
+    .field textarea{min-height:140px;resize:vertical}
+    .note{
+      font-size:12.5px;
+      color:var(--muted);
+      line-height:1.6;
+      margin-top:10px;
+    }
+
+    .success{
+      display:none;
+      margin-top:12px;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(54,211,153,.35);
+      background:rgba(54,211,153,.10);
+      color:#36d399;
+      font-weight:800;
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body data-page="contact">
+
+  <!-- SHARED NAV PLACEHOLDER -->
+  <div id="site-nav"></div>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="side-inner">
+          <div class="avatar">
+            <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
+          </div>
+          <div class="name">Brian Buchanan</div>
+          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+            LinkedIn →
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <div class="main-head">
+          <div>
+            <h1 class="title">Contact</h1>
+            <p class="subtitle">
+              The fastest way to reach me is LinkedIn. You can also use the form below to send a message
+              directly (your message is forwarded privately — my email is not shown).
+            </p>
+          </div>
+          <div class="tab">Contact</div>
+        </div>
+
+        <div class="content">
+
+          <!-- LINKEDIN -->
+          <section class="section">
+            <div class="card">
+              <p>
+                For direct messaging, please contact me on LinkedIn:
+              </p>
+              <div class="actions">
+                <a class="btn primary" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+                  Message me on LinkedIn
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- FORM -->
+          <section class="section">
+            <div class="card">
+              <p>
+                Prefer not to use LinkedIn? Send a message here:
+              </p>
+
+              <!-- Formspree keeps your email private (no email shown on the site) -->
+              <form class="form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required>
+                </div>
+
+                <div class="field">
+                  <label for="email">Your Email</label>
+                  <input id="email" name="email" type="email" placeholder="email@domain.com" required>
+                </div>
+
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+                </div>
+
+                <button class="btn primary" type="submit">Send Message</button>
+
+                <div class="note">
+                  Note: This form sends your message securely through a form service and does not expose my email address.
+                </div>
+
+                <div class="success" id="successMsg">
+                  Message sent — thank you! I’ll get back to you as soon as possible.
+                </div>
+              </form>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- NAV INJECTION SCRIPT -->
+  <script>
+    (async function () {
+      const host = document.getElementById("site-nav");
+      if (!host) return;
+
+      const res = await fetch("/v2/partials/nav.html");
+      host.innerHTML = await res.text();
+
+      const page = document.body.getAttribute("data-page");
+      if (!page) return;
+
+      const active = host.querySelector(`[data-page="${page}"]`);
+      if (active) active.classList.add("active");
+    })();
+
+    // Optional: show a success message if Formspree redirects back with ?success=1
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("success") === "1") {
+        const el = document.getElementById("successMsg");
+        if (el) el.style.display = "block";
+      }
+    })();
+  </script>
+
+</body>
+</html>

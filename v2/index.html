@@ -93,10 +93,11 @@
       justify-content:space-between;
       gap:14px;
       flex-wrap:wrap;
+      align-items:flex-start;
     }
 
     .title{margin:0;font-size:22px;font-weight:900}
-    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:760px}
+    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:760px;line-height:1.6}
 
     .tab{
       padding:10px 12px;
@@ -105,6 +106,7 @@
       background:rgba(124,92,255,.18);
       font-size:13px;
       font-weight:900;
+      white-space:nowrap;
     }
 
     .content{padding:18px}
@@ -118,66 +120,66 @@
       border-radius:16px;
       padding:14px;
     }
-    .card p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+    .card p{margin:0;font-size:13px;color:var(--muted);line-height:1.7}
+
+    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
 
     .grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:20px;
+      gap:14px;
     }
     @media (max-width:980px){ .grid{grid-template-columns:1fr} }
 
-    .skill{
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    /* FEATURED PROJECTS */
+    .project{
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
       border-radius:16px;
-      padding:14px;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
     }
-    .skill h3{margin:0 0 6px;font-size:14px;font-weight:900}
-    .skill p{margin:0;font-size:13px;color:var(--muted)}
-
-    /* EDUCATION — 2× BIGGER LOGOS */
-    .edu-card{
+    .thumb img{width:100%;height:160px;object-fit:cover;display:block}
+    .project-body{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      flex-grow:1;
+    }
+    .project h3{margin:0;font-size:15px;font-weight:900}
+    .project p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      padding:6px 9px;
+      font-size:11px;
+      border-radius:999px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      border-radius:18px;
-      padding:28px;
-      text-align:center;
+      font-weight:700;
+      color:rgba(255,255,255,.85);
     }
-
-    .edu-logo{
-      width:280px;
-      height:280px;
-      margin:0 auto 18px;
-      border-radius:24px;
+    .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:8px 12px;
+      font-size:12px;
+      border-radius:10px;
       border:1px solid var(--border);
-      background:rgba(255,255,255,.02);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
+      background:rgba(255,255,255,.03);
+      font-weight:700;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
     }
-
-    .edu-logo img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      padding:18px;
-    }
-
-    .edu-school{
-      font-weight:900;
-      font-size:16px;
-      margin:0 0 6px;
-    }
-
-    .edu-degree{
-      margin:0;
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
   </style>
 </head>
 
@@ -196,8 +198,8 @@
             <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
           </div>
           <div class="name">Brian Buchanan</div>
-          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
-            LinkedIn →
+          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+            LinkedIn
           </a>
         </div>
       </aside>
@@ -208,8 +210,8 @@
           <div>
             <h1 class="title">Home</h1>
             <p class="subtitle">
-              Finance and analytics professional with an actuarial background,
-              focused on decision-ready insights.
+              Finance and analytics professional with a Bachelor of Arts in Actuarial Science and an Associate degree in Accounting.
+              I focus on using data, quantitative analysis, and financial reasoning to support clear, decision ready insights.
             </p>
           </div>
           <div class="tab">Overview</div>
@@ -217,74 +219,118 @@
 
         <div class="content">
 
-          <!-- WHO I AM -->
+          <!-- CREDIBILITY -->
           <section class="section">
-            <h2>Who I Am</h2>
+            <h2>Credibility</h2>
             <div class="card">
-              <p>
-                I work at the intersection of finance and analytics, building clear KPI frameworks
-                and translating complex data into actionable business decisions.
-              </p>
-            </div>
-          </section>
-
-          <!-- EDUCATION -->
-          <section class="section">
-            <h2>Education</h2>
-            <div class="grid">
-              <div class="edu-card">
-                <div class="edu-logo">
-                  <img src="/v2/assets/edu/qcc-logo.png" alt="QCC Logo">
-                </div>
-                <p class="edu-school">Queensborough Community College (CUNY)</p>
-                <p class="edu-degree">A.A.S. — Accounting</p>
-              </div>
-
-              <div class="edu-card">
-                <div class="edu-logo">
-                  <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch Logo">
-                </div>
-                <p class="edu-school">Baruch College (CUNY)</p>
-                <p class="edu-degree">B.A. — Actuarial Science</p>
-              </div>
+              <ul class="list">
+                <li>Bachelor of Arts in Actuarial Science</li>
+                <li>Associate of Applied Science in Accounting</li>
+                <li>FINRA SIE passed</li>
+                <li>Licensed in New York, New Jersey, and Florida</li>
+              </ul>
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- BACKGROUND -->
+          <!-- SITE PURPOSE -->
           <section class="section">
-            <h2>Background</h2>
+            <h2>What this site represents</h2>
             <div class="card">
               <p>
-                I’ve passed the FINRA SIE exam and hold multiple state insurance licenses.
-                My work combines quantitative rigor with practical communication
-                across finance, insurance, and analytics.
+                All projects featured on this site are designed to showcase my ability to work with data in a finance and analytics context.
+                They emphasize problem framing, KPI development, quantitative reasoning, and clear communication.
               </p>
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- SKILLS -->
+          <!-- FEATURED PROJECTS -->
           <section class="section">
-            <h2>Skills Snapshot</h2>
+            <h2>Featured Projects</h2>
+
             <div class="grid">
-              <div class="skill">
-                <h3>Finance & Actuarial</h3>
-                <p>Financial math, insurance, risk analysis, portfolio concepts.</p>
+              <!-- StreamVerse -->
+              <div class="project">
+                <div class="thumb">
+                  <img src="/v2/assets/projects/streamverse-churn-revenue.png" alt="StreamVerse project thumbnail">
+                </div>
+                <div class="project-body">
+                  <h3>StreamVerse Customer Churn and Revenue Analytics</h3>
+                  <p>End to end churn, retention, and revenue KPI analysis focused on business impact.</p>
+                  <div class="tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">Power BI</span>
+                  </div>
+                  <div class="actions">
+                    <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank" rel="noreferrer">View Repository</a>
+                  </div>
+                </div>
               </div>
-              <div class="skill">
-                <h3>Analytics</h3>
-                <p>KPI design, churn & revenue analytics, segmentation, forecasting.</p>
+
+              <!-- SPY vs XLU -->
+              <div class="project">
+                <div class="thumb">
+                  <img src="/v2/assets/projects/spy-xlu-portfolio-optimization.png" alt="SPY vs XLU project thumbnail">
+                </div>
+                <div class="project-body">
+                  <h3>SPY vs XLU Portfolio Optimization (2020 to 2025)</h3>
+                  <p>Risk return tradeoff and efficient frontier modeling.</p>
+                  <div class="tags">
+                    <span class="tag">Finance</span>
+                  </div>
+                  <div class="actions">
+                    <a class="btn" href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization" target="_blank" rel="noreferrer">View Repository</a>
+                  </div>
+                </div>
               </div>
-              <div class="skill">
-                <h3>Tools</h3>
-                <p>Excel, SQL, Python, Power BI, Tableau, Power Query.</p>
+
+              <!-- SQL Segmentation Pack -->
+              <div class="project">
+                <div class="thumb">
+                  <img src="/v2/assets/projects/sql-segmentation-pack.png" alt="SQL Segmentation Pack project thumbnail">
+                </div>
+                <div class="project-body">
+                  <h3>SQL Segmentation Pack CommerceConnect</h3>
+                  <p>Customer segmentation for targeting and retention.</p>
+                  <div class="tags">
+                    <span class="tag">SQL</span>
+                  </div>
+                  <div class="actions">
+                    <a class="btn" href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect" target="_blank" rel="noreferrer">View Repository</a>
+                  </div>
+                </div>
               </div>
-              <div class="skill">
-                <h3>Communication</h3>
-                <p>Executive summaries, stakeholder reporting, documentation.</p>
+
+              <!-- Optional fourth slot kept empty on purpose -->
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- CURRENT FOCUS -->
+          <section class="section">
+            <h2>Current Focus</h2>
+            <div class="card">
+              <p>
+                Preparing for Exam FM and the Series 7. Open to FINRA, SOA, and any additional registrations required for employment.
+              </p>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- CALLS TO ACTION -->
+          <section class="section">
+            <h2>Next Steps</h2>
+            <div class="card">
+              <div class="actions">
+                <a class="btn" href="/v2/portfolio.html">View Portfolio</a>
+                <a class="btn" href="/v2/resume.html">View Resume</a>
+                <a class="btn" href="/v2/certifications.html">View Certifications</a>
+                <a class="btn" href="/v2/contact.html">Connect</a>
               </div>
             </div>
           </section>

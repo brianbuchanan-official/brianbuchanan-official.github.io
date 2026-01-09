@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills & Capabilities | Brian Buchanan</title>
+
+  <link rel="stylesheet" href="/v2/assets/css/style.css">
+
+  <style>
+    :root{
+      --panel:rgba(255,255,255,.04);
+      --panel2:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.10);
+      --muted:rgba(255,255,255,.62);
+      --accent:#7c5cff;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(0,0,0,.45);
+    }
+
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+
+    .layout{
+      display:grid;
+      grid-template-columns:260px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
+
+    .side{
+      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .side-inner{
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      text-align:center;
+    }
+
+    .avatar{
+      width:100%;
+      max-width:240px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+    }
+
+    .avatar img{width:100%;display:block}
+
+    .name{font-weight:900;font-size:22px}
+
+    .pill{
+      padding:7px 14px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      font-weight:700;
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+    }
+
+    .main{
+      background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .main-head{
+      padding:18px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .title{margin:0;font-size:22px;font-weight:900}
+    .subtitle{
+      margin-top:6px;
+      font-size:13.5px;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
+
+    .tab{
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.18);
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .content{padding:18px}
+
+    .section{margin-bottom:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:900;
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .card ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container">
+    <div class="logo">Brian Buchanan</div>
+    <nav>
+      <a href="/v2/index.html">Home</a>
+      <a href="/v2/about.html">About</a>
+      <a href="/v2/skills.html" class="active">Skills</a>
+      <a href="/v2/portfolio.html">Portfolio</a>
+      <a href="/v2/certifications.html">Certifications</a>
+      <a href="/v2/resume.html">Resume</a>
+      <a href="/v2/contact.html">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="side-inner">
+        <div class="avatar">
+          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
+        </div>
+        <div class="name">Brian Buchanan</div>
+        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
+          LinkedIn →
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="main-head">
+        <div>
+          <h1 class="title">Skills & Capabilities</h1>
+          <p class="subtitle">
+            A summary of my technical, financial, and leadership capabilities,
+            developed through academic training, professional experience, and applied projects.
+          </p>
+        </div>
+        <div class="tab">Skills</div>
+      </div>
+
+      <div class="content">
+
+        <section class="section">
+          <h2>Quantitative & Analytical Skills</h2>
+          <div class="card">
+            <ul>
+              <li>Financial mathematics and time value of money analysis</li>
+              <li>Probability, risk modeling, and uncertainty analysis</li>
+              <li>Cash flow modeling and scenario analysis</li>
+              <li>Optimization and data-driven decision support</li>
+              <li>Translating quantitative results into business insights</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Finance, Insurance & Product Knowledge</h2>
+          <div class="card">
+            <ul>
+              <li>Insurance products including life, health, LTC, and annuities</li>
+              <li>Product pricing fundamentals and benefit structures</li>
+              <li>Regulatory and compliance knowledge (FINRA SIE)</li>
+              <li>Client suitability, risk profiling, and financial planning concepts</li>
+              <li>Understanding of capital markets and investment products</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Accounting & Business Fundamentals</h2>
+          <div class="card">
+            <ul>
+              <li>Intermediate accounting concepts and financial statements</li>
+              <li>Revenue recognition and cost structure analysis</li>
+              <li>Cash flow analysis and profitability metrics</li>
+              <li>Business performance measurement and pricing evaluation</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Data & Technical Tools</h2>
+          <div class="card">
+            <ul>
+              <li>Python for data analysis, modeling, and automation</li>
+              <li>SQL for data extraction, transformation, and analysis</li>
+              <li>Power BI for dashboards, KPIs, and executive reporting</li>
+              <li>Advanced Excel including Power Query, PivotTables, and models</li>
+              <li>AI-assisted workflows for validation, efficiency, and tooling</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Leadership & Communication</h2>
+          <div class="card">
+            <ul>
+              <li>Shift lead experience managing lifeguard teams and pool operations</li>
+              <li>Ensuring safety compliance and operational standards on deck</li>
+              <li>Training, mentoring, and coordinating coworkers</li>
+              <li>Communicating clearly with members, parents, and staff</li>
+              <li>Building trust-based relationships through professionalism and consistency</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Applied Project Experience</h2>
+          <div class="card">
+            <ul>
+              <li>End-to-end analytics projects from problem definition to insight</li>
+              <li>Developing metrics, dashboards, and decision frameworks</li>
+              <li>Presenting findings in clear, non-technical language</li>
+              <li>Applying analytical thinking to real-world business scenarios</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+
+</body>
+</html>

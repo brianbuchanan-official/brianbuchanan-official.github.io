@@ -119,26 +119,20 @@
     .content{padding:18px}
 
     .section{margin-bottom:18px}
-    .section h2{
-      margin:0 0 10px;
-      font-size:16px;
-      font-weight:900;
-    }
+    .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
 
     .card{
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
       border-radius:16px;
-      padding:18px;
+      padding:14px;
     }
-
     .card p{
       margin:0 0 14px;
       font-size:13.5px;
       color:var(--muted);
       line-height:1.7;
     }
-
     .card p:last-child{margin-bottom:0}
 
     .card ul{
@@ -168,19 +162,66 @@
       font-size:12px;
       font-weight:800;
     }
-    .jump a:hover{ border-color:rgba(255,255,255,.18); }
+    .jump a:hover{border-color:rgba(255,255,255,.18)}
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+
+    /* EDUCATION LOGOS SAME AS HOME */
+    .edu-card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;
+      padding:28px;
+      text-align:center;
+    }
+
+    .edu-logo{
+      width:280px;
+      height:280px;
+      margin:0 auto 18px;
+      border-radius:24px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .edu-logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:18px;
+    }
+
+    .edu-school{
+      font-weight:900;
+      font-size:16px;
+      margin:0 0 6px;
+    }
+
+    .edu-degree{
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
+    }
   </style>
 </head>
 
 <body data-page="about">
 
-  <!-- SHARED NAV PLACEHOLDER -->
   <div id="site-nav"></div>
 
   <div class="wrap">
     <div class="layout">
 
-      <!-- SIDEBAR -->
       <aside class="side">
         <div class="side-inner">
           <div class="avatar">
@@ -193,14 +234,12 @@
         </div>
       </aside>
 
-      <!-- MAIN -->
       <main class="main">
         <div class="main-head">
           <div>
             <h1 class="title">About</h1>
             <p class="subtitle">
-              Actuarial science graduate with a strong quantitative foundation and a focus on applying analytics
-              to real-world business challenges.
+              Actuarial science graduate with a quantitative foundation and a focus on finance and analytics.
             </p>
           </div>
           <div class="tab">About</div>
@@ -208,79 +247,91 @@
 
         <div class="content">
 
-          <!-- Jump links -->
           <div class="jump">
             <a href="#about-core">About</a>
+            <a href="#education">Education</a>
             <a href="#mission">Mission</a>
             <a href="#interests">Interests</a>
           </div>
 
-          <!-- ABOUT -->
           <section id="about-core" class="section">
             <h2>About Me</h2>
             <div class="card">
               <p>
-                I’m an Actuarial Science graduate from Baruch College, and I began my academic journey at
-                Queensborough Community College. My background is rooted in quantitative problem-solving and a drive
-                to understand the “why” behind the numbers. I enjoy work at the intersection of data-driven strategy
-                and real-world decision-making.
+                I’m an Actuarial Science graduate from Baruch College, and I began my academic journey at Queensborough Community College.
+                My background is rooted in quantitative problem solving and a strong curiosity for understanding the why behind numbers.
+                I enjoy work at the intersection of data driven strategy and real world decision making, where analytical insight supports business outcomes.
               </p>
 
               <p>
-                On the technical side, I focus on bridging the gap between raw data and business outcomes.
-                I challenged myself to master the financial regulatory landscape by passing the FINRA Securities
-                Industry Essentials (SIE) and the New York Insurance exam within the same two-week window, and I’m
-                currently licensed in New York, New Jersey, and Florida. My toolkit includes Python, SQL, Power BI,
-                and Advanced Excel, and I use AI-assisted workflows to improve productivity and catch errors early.
+                On the technical side, I focus on translating raw data into actionable insights.
+                I challenged myself to master the financial regulatory landscape by passing the FINRA Securities Industry Essentials exam and the New York Insurance exam within the same two week period.
+                I am currently licensed in New York, New Jersey, and Florida.
+                My toolkit includes Python, SQL, Power BI, and Advanced Excel, and I apply these tools across portfolio projects focused on finance, risk, and performance analysis.
               </p>
 
               <p>
-                Across my academic training and portfolio projects, I’ve developed an understanding of financial
-                products, pricing, and risk — including insurance and annuities. I learn quickly, adapt easily, and
-                enjoy roles that require analytical depth and business judgment, with a focus on turning complex
-                information into clear, actionable insights.
+                Across my academic training and professional experience, I’ve developed a strong understanding of financial products, pricing, and risk, particularly within insurance and long term financial planning.
+                I learn quickly, adapt easily, and perform best in environments that value analytical depth, clear communication, and thoughtful decision making.
               </p>
 
               <p>
-                Outside of analytics, I’ve been a dedicated Lifeguard since 2016 and a certified YMCA Swim Instructor.
-                I value environments that prioritize accountability, safety, and growth — and I bring that same mindset
-                into professional work.
+                Outside of analytics, I have been a dedicated Lifeguard since 2016 and a certified YMCA Swim Instructor.
+                These roles reinforced accountability, attention to detail, and leadership under pressure, qualities that translate well to professional settings where trust and precision matter.
               </p>
+            </div>
+          </section>
+
+          <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="grid">
+              <div class="edu-card">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/qcc-logo.png" alt="QCC Logo">
+                </div>
+                <p class="edu-school">Queensborough Community College (CUNY)</p>
+                <p class="edu-degree">Associate of Applied Science in Accounting</p>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch Logo">
+                </div>
+                <p class="edu-school">Baruch College (CUNY)</p>
+                <p class="edu-degree">Bachelor of Arts in Actuarial Science</p>
+              </div>
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- MISSION -->
           <section id="mission" class="section">
             <h2>Mission</h2>
             <div class="card">
               <p>
-                My mission is to continuously grow through meaningful challenges, learning quickly, and applying what I
-                learn to solve real problems — especially in finance, risk, and strategy.
+                My mission is to continue growing through meaningful challenges and disciplined learning while applying analytical thinking to solve real world problems in finance, risk, and strategy.
+                I aim to build solutions that are technically sound, practical, and clearly communicated.
               </p>
 
               <p>
-                I’m motivated by team-oriented environments where collaboration, accountability, and strong mentorship
-                drive performance. Long term, I aim to grow into roles where I can help build and support high-performing
-                teams that operate efficiently and communicate clearly.
+                Long term, I am motivated by collaborative environments with strong mentorship and shared accountability.
+                I strive to grow into roles where I can contribute to high performing teams, support sound decision making, and help organizations operate more efficiently and transparently.
               </p>
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- INTERESTS -->
           <section id="interests" class="section">
             <h2>Interests</h2>
             <div class="card">
-              <p style="margin-bottom:12px;">
-                Outside of my core work, these interests reinforce discipline, problem-solving, and long-term thinking.
+              <p>
+                Outside of my core work, these interests reinforce long term thinking, discipline, and problem solving.
               </p>
               <ul>
-                <li><strong>Markets & Long-Term Investing:</strong> long-term mindset, risk awareness, and retirement planning</li>
-                <li><strong>Building & Technical Curiosity:</strong> website building, iterative design, PC upgrades and troubleshooting</li>
-                <li><strong>Fitness & Performance:</strong> strength training, swimming, cycling/spinning, long walks</li>
+                <li><strong>Markets and long term investing</strong> with a focus on risk awareness, retirement planning, and tracking market trends</li>
+                <li><strong>Building and technical curiosity</strong> through website development and PC building, upgrades, and troubleshooting</li>
+                <li><strong>Fitness and performance</strong> through strength training, swimming, cycling and spinning, and long walks</li>
               </ul>
             </div>
           </section>
@@ -291,7 +342,6 @@
     </div>
   </div>
 
-  <!-- NAV INJECTION SCRIPT -->
   <script>
     (async function () {
       const host = document.getElementById("site-nav");

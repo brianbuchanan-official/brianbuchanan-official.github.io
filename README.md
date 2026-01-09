@@ -44,7 +44,7 @@ While some datasets or project ideas originated from data platforms or public da
 
 Many projects were developed or refined using **AI-assisted workflows** as productivity and validation tools. All assumptions, logic, analytical decisions, and final outputs were reviewed and controlled by me.
 
-AI tools were used to accelerate learning and execution — not to replace understanding, ownership, or responsibility for the work.
+AI tools were used to accelerate learning and execution, not to replace understanding, ownership, or responsibility for the work.
 
 ---
 

@@ -146,78 +146,81 @@
   </style>
 </head>
 
-<body>
+<body data-page="resume">
 
-<header class="nav">
-  <div class="container">
-    <div class="logo">Brian Buchanan</div>
-    <nav>
-      <a href="/v2/index.html">Home</a>
-      <a href="/v2/about.html">About</a>
-      <a href="/v2/skills.html">Skills</a>
-      <a href="/v2/portfolio.html">Portfolio</a>
-      <a href="/v2/certifications.html">Certifications</a>
-      <a href="/v2/resume.html">Resume</a>
-      <a href="/v2/mission.html">Mission</a>
-      <a href="/v2/contact.html">LinkedIn</a>
-    </nav>
-  </div>
-</header>
+  <!-- SHARED NAV PLACEHOLDER -->
+  <div id="site-nav"></div>
 
-<div class="wrap">
-  <div class="layout">
+  <div class="wrap">
+    <div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="side">
-      <div class="side-inner">
-        <div class="avatar">
-          <img src="./assets/img/profile.jpg" alt="Brian Buchanan">
-        </div>
-        <div class="name">Brian Buchanan</div>
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
-          LinkedIn →
-        </a>
-      </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-      <div class="main-head">
-        <div>
-          <h1 class="title">Resume</h1>
-          <p class="subtitle">View my resume below or open/download the PDF.</p>
-        </div>
-
-        <div class="head-actions">
-          <a class="btn primary" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">
-            Open PDF
-          </a>
-          <a class="btn" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>
-            Download
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="side-inner">
+          <div class="avatar">
+            <img src="./assets/img/profile.jpg" alt="Brian Buchanan">
+          </div>
+          <div class="name">Brian Buchanan</div>
+          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+            LinkedIn →
           </a>
         </div>
-      </div>
+      </aside>
 
-      <div class="content">
-        <div class="pdf-wrap">
-          <!-- More reliable than iframe across browsers -->
-          <object
-            class="pdf"
-            data="./assets/resume/Brian_Buchanan_Resume.pdf"
-            type="application/pdf">
-            <div class="fallback">
-              Your browser can’t display the PDF inline.<br>
-              Use: <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">Open PDF</a>
-              or <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>Download</a>
-            </div>
-          </object>
+      <!-- MAIN -->
+      <main class="main">
+        <div class="main-head">
+          <div>
+            <h1 class="title">Resume</h1>
+            <p class="subtitle">View my resume below or open/download the PDF.</p>
+          </div>
+
+          <div class="head-actions">
+            <a class="btn primary" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">
+              Open PDF
+            </a>
+            <a class="btn" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>
+              Download
+            </a>
+          </div>
         </div>
-      </div>
-    </main>
 
+        <div class="content">
+          <div class="pdf-wrap">
+            <!-- More reliable than iframe across browsers -->
+            <object
+              class="pdf"
+              data="./assets/resume/Brian_Buchanan_Resume.pdf"
+              type="application/pdf">
+              <div class="fallback">
+                Your browser can’t display the PDF inline.<br>
+                Use: <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+                or <a class="pill" href="./assets/resume/Brian_Buchanan_Resume.pdf" download>Download</a>
+              </div>
+            </object>
+          </div>
+        </div>
+      </main>
+
+    </div>
   </div>
-</div>
+
+  <!-- NAV INJECTION SCRIPT -->
+  <script>
+    (async function () {
+      const host = document.getElementById("site-nav");
+      if (!host) return;
+
+      const res = await fetch("/v2/partials/nav.html");
+      host.innerHTML = await res.text();
+
+      const page = document.body.getAttribute("data-page");
+      if (!page) return;
+
+      const active = host.querySelector(`[data-page="${page}"]`);
+      if (active) active.classList.add("active");
+    })();
+  </script>
 
 </body>
 </html>
-

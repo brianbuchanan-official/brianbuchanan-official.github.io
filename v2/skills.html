@@ -136,23 +136,10 @@
   </style>
 </head>
 
-<body>
+<body data-page="skills">
 
-<header class="nav">
-  <div class="container">
-    <div class="logo">Brian Buchanan</div>
-    <nav>
-      <a href="/v2/index.html">Home</a>
-      <a href="/v2/about.html">About</a>
-      <a href="/v2/skills.html">Skills</a>
-      <a href="/v2/portfolio.html">Portfolio</a>
-      <a href="/v2/certifications.html">Certifications</a>
-      <a href="/v2/resume.html">Resume</a>
-      <a href="/v2/mission.html">Mission</a>
-      <a href="/v2/contact.html">LinkedIn</a>
-    </nav>
-  </div>
-</header>
+<!-- SHARED NAV PLACEHOLDER -->
+<div id="site-nav"></div>
 
 <div class="wrap">
   <div class="layout">
@@ -266,6 +253,23 @@
 
   </div>
 </div>
+
+<!-- NAV INJECTION SCRIPT -->
+<script>
+  (async function () {
+    const host = document.getElementById("site-nav");
+    if (!host) return;
+
+    const res = await fetch("/v2/partials/nav.html");
+    host.innerHTML = await res.text();
+
+    const page = document.body.getAttribute("data-page");
+    if (!page) return;
+
+    const active = host.querySelector(`[data-page="${page}"]`);
+    if (active) active.classList.add("active");
+  })();
+</script>
 
 </body>
 </html>

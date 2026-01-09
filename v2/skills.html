@@ -13,99 +13,38 @@
       --panel2:rgba(255,255,255,.06);
       --border:rgba(255,255,255,.10);
       --muted:rgba(255,255,255,.62);
-      --accent:#7c5cff;
       --radius:18px;
       --shadow:0 18px 50px rgba(0,0,0,.45);
     }
 
     .wrap{max-width:1180px;margin:auto;padding:22px}
 
-    .layout{
-      display:grid;
-      grid-template-columns:260px 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    @media (max-width:980px){ .layout{grid-template-columns:1fr} }
-
-    .side{
-      background:linear-gradient(180deg,var(--panel2),var(--panel));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-
-    .side-inner{
-      padding:22px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .name{font-weight:900;font-size:22px}
-
-    .pill{
-      padding:7px 12px;
-      font-size:12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      font-weight:600;
-      color:rgba(255,255,255,.85);
-      text-decoration:none;
-      width:fit-content;
-    }
-
     .main{
       background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .main-head{
       padding:18px;
-      border-bottom:1px solid var(--border);
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:14px;
     }
 
-    .title{margin:0;font-size:22px;font-weight:900}
-    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted)}
-
-    .tab{
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(124,92,255,.18);
-      font-size:13px;
-      font-weight:800;
-    }
-
-    .content{padding:18px}
-
-    .section{margin-bottom:18px}
-    .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
+    h1{margin:0 0 14px;font-size:22px;font-weight:900}
+    h2{margin:18px 0 10px;font-size:16px;font-weight:900}
 
     .card{
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
       border-radius:16px;
       padding:14px;
+      margin-bottom:18px;
     }
 
-    .card ul{
+    ul{
       margin:0;
       padding-left:18px;
-      font-size:13px;
+      font-size:13.5px;
       color:var(--muted);
       line-height:1.7;
     }
-
-    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
   </style>
 </head>
 
@@ -114,108 +53,81 @@
 <div id="site-nav"></div>
 
 <div class="wrap">
-  <div class="layout">
+  <main class="main">
 
-    <aside class="side">
-      <div class="side-inner">
-        <div class="name">Brian Buchanan</div>
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
-          LinkedIn →
-        </a>
-      </div>
-    </aside>
+    <h1>Skills</h1>
 
-    <main class="main">
-      <div class="main-head">
-        <div>
-          <h1 class="title">Skills</h1>
-          <p class="subtitle">
-            Technical, analytical, and business skills developed through education,
-            professional experience, and applied projects.
-          </p>
-        </div>
-        <div class="tab">Skills</div>
-      </div>
+    <!-- DATA ANALYTICS -->
+    <h2>Data Analytics and Tools</h2>
+    <div class="card">
+      <ul>
+        <li>SQL for querying, segmentation, and KPI development</li>
+        <li>Python for data analysis, automation, and exploratory modeling</li>
+        <li>Advanced Excel including Power Query, pivot tables, and financial modeling</li>
+        <li>Power BI and Tableau for dashboarding and executive reporting</li>
+        <li>Data cleaning, transformation, and validation</li>
+      </ul>
+    </div>
 
-      <div class="content">
+    <!-- E-COMMERCE STRATEGIC OPERATIONS -->
+    <h2>E-commerce Strategic Operations and Analytics</h2>
+    <div class="card">
+      <ul>
+        <li>Analyzed historical pricing trends and market signals to identify high velocity, high margin arbitrage opportunities</li>
+        <li>Estimated resale values using scenario based forecasting informed by past market performance and demand shifts</li>
+        <li>Conducted spread analysis and profit modeling to evaluate net margins after fees, shipping, and transaction costs</li>
+        <li>Managed working capital across rapid purchase and resale cycles to maintain liquidity and inventory turnover</li>
+        <li>Maintained detailed financial records to track inventory, receivables, payables, and cash flow</li>
+        <li>Structured financial tracking aligned with income statements, balance sheets, and cash flow reporting</li>
+        <li>Recorded all transactions to monitor asset levels, liabilities, and realized profit over time</li>
+        <li>Executed multi channel sales across e-commerce platforms and in person transactions</li>
+        <li>Leveraged automation and system management to scale acquisition and fulfillment workflows</li>
+        <li>Managed operational risk related to price volatility, disputes, chargebacks, and platform constraints</li>
+      </ul>
+    </div>
 
-        <!-- ANALYTICS -->
-        <section class="section">
-          <h2>Data Analytics & Tools</h2>
-          <div class="card">
-            <ul>
-              <li>SQL querying, joins, aggregations, and segmentation</li>
-              <li>Excel modeling, Power Query, dashboards, and KPI tracking</li>
-              <li>Python for analysis, automation, and data validation</li>
-              <li>Power BI dashboards and executive reporting</li>
-            </ul>
-          </div>
-        </section>
+    <!-- FINANCE AND INSURANCE -->
+    <h2>Finance, Insurance and Product Knowledge</h2>
+    <div class="card">
+      <ul>
+        <li>Understanding of insurance products, annuities, and risk based financial planning</li>
+        <li>FINRA Securities Industry Essentials exam passed</li>
+        <li>Licensed in New York, New Jersey, and Florida</li>
+        <li>Pricing, underwriting concepts, and suitability analysis</li>
+      </ul>
+    </div>
 
-        <hr class="divider">
+    <!-- MARKETS -->
+    <h2>Stocks and Financial Markets</h2>
+    <div class="card">
+      <ul>
+        <li>Equity market fundamentals and sector analysis</li>
+        <li>Portfolio risk and return concepts</li>
+        <li>Market trend analysis and valuation awareness</li>
+      </ul>
+    </div>
 
-        <!-- FINANCE / INSURANCE -->
-        <section class="section">
-          <h2>Finance, Insurance & Product Knowledge</h2>
-          <div class="card">
-            <ul>
-              <li>Financial markets and regulatory fundamentals (FINRA SIE)</li>
-              <li>Insurance products including life, annuities, and LTC concepts</li>
-              <li>Pricing, suitability, and risk considerations</li>
-              <li>Understanding of compliance and client-facing financial products</li>
-            </ul>
-          </div>
-        </section>
+    <!-- ACCOUNTING -->
+    <h2>Accounting and Financial Concepts</h2>
+    <div class="card">
+      <ul>
+        <li>Income statement, balance sheet, and cash flow analysis</li>
+        <li>Cost structures, margins, and profitability analysis</li>
+        <li>Working capital and cash flow management</li>
+      </ul>
+    </div>
 
-        <!-- STOCKS (NEW SECTION) -->
-        <section class="section">
-          <h2>Stocks & Financial Markets</h2>
-          <div class="card">
-            <ul>
-              <li>Equity market fundamentals (stocks, ETFs, indices)</li>
-              <li>Risk–return tradeoffs and diversification principles</li>
-              <li>Portfolio construction and asset allocation concepts</li>
-              <li>Performance measurement (returns, volatility, correlations)</li>
-              <li>Sector and factor-based market analysis</li>
-              <li>Interpreting market data to support investment decisions</li>
-            </ul>
-          </div>
-        </section>
+    <!-- PROFESSIONAL -->
+    <h2>Professional and Leadership Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Clear communication of technical and financial insights</li>
+        <li>Stakeholder focused reporting and documentation</li>
+        <li>Time management, accountability, and execution under pressure</li>
+      </ul>
+    </div>
 
-        <hr class="divider">
-
-        <!-- ACCOUNTING -->
-        <section class="section">
-          <h2>Accounting & Financial Concepts</h2>
-          <div class="card">
-            <ul>
-              <li>Intermediate accounting concepts</li>
-              <li>Financial statements and performance analysis</li>
-              <li>Revenue recognition and cost structures</li>
-              <li>Linking accounting data to business insights</li>
-            </ul>
-          </div>
-        </section>
-
-        <hr class="divider">
-
-        <!-- PROFESSIONAL -->
-        <section class="section">
-          <h2>Professional & Leadership Skills</h2>
-          <div class="card">
-            <ul>
-              <li>Leadership experience as a lifeguard shift lead</li>
-              <li>Team coordination and operational oversight</li>
-              <li>Clear communication with stakeholders and members</li>
-              <li>Ability to learn quickly and adapt to new environments</li>
-            </ul>
-          </div>
-        </section>
-
-      </div>
-    </main>
-
-  </div>
+  </main>
 </div>
 
 <script>

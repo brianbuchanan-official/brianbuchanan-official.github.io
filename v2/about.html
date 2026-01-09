@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | Brian Buchanan</title>
+  <title>About | Brian Buchanan</title>
 
   <link rel="stylesheet" href="/v2/assets/css/style.css">
 
@@ -84,6 +84,7 @@
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
+      min-width:0;
     }
 
     .main-head{
@@ -97,7 +98,13 @@
     }
 
     .title{margin:0;font-size:22px;font-weight:900}
-    .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted);max-width:760px;line-height:1.6}
+    .subtitle{
+      margin-top:6px;
+      font-size:13.5px;
+      color:var(--muted);
+      max-width:760px;
+      line-height:1.6;
+    }
 
     .tab{
       padding:10px 12px;
@@ -120,78 +127,101 @@
       border-radius:16px;
       padding:14px;
     }
-    .card p{margin:0;font-size:13px;color:var(--muted);line-height:1.7}
-
-    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:14px;
+    .card p{
+      margin:0 0 14px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
     }
-    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+    .card p:last-child{margin-bottom:0}
 
-    .list{
+    .card ul{
       margin:0;
       padding-left:18px;
+      font-size:13.5px;
       color:var(--muted);
-      font-size:13px;
       line-height:1.7;
     }
 
-    /* FEATURED PROJECTS */
-    .project{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      border-radius:16px;
-      overflow:hidden;
+    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
+
+    /* Jump links */
+    .jump{
       display:flex;
-      flex-direction:column;
-    }
-    .thumb img{width:100%;height:160px;object-fit:cover;display:block}
-    .project-body{
-      padding:14px;
-      display:flex;
-      flex-direction:column;
       gap:10px;
-      flex-grow:1;
+      flex-wrap:wrap;
+      margin:0 0 14px;
     }
-    .project h3{margin:0;font-size:15px;font-weight:900}
-    .project p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
-    .tags{display:flex;gap:8px;flex-wrap:wrap}
-    .tag{
-      padding:6px 9px;
-      font-size:11px;
+    .jump a{
+      padding:7px 12px;
       border-radius:999px;
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
-      font-weight:700;
-      color:rgba(255,255,255,.85);
-    }
-    .actions{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap}
-    .btn{
-      display:inline-block;
-      padding:8px 12px;
-      font-size:12px;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      font-weight:700;
       color:rgba(255,255,255,.85);
       text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+    }
+    .jump a:hover{border-color:rgba(255,255,255,.18)}
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
+
+    /* EDUCATION LOGOS SAME AS HOME */
+    .edu-card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;
+      padding:28px;
+      text-align:center;
+    }
+
+    .edu-logo{
+      width:280px;
+      height:280px;
+      margin:0 auto 18px;
+      border-radius:24px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .edu-logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:18px;
+    }
+
+    .edu-school{
+      font-weight:900;
+      font-size:16px;
+      margin:0 0 6px;
+    }
+
+    .edu-degree{
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
     }
   </style>
 </head>
 
-<body data-page="home">
+<body data-page="about">
 
-  <!-- SHARED NAV PLACEHOLDER -->
   <div id="site-nav"></div>
 
   <div class="wrap">
     <div class="layout">
 
-      <!-- SIDEBAR -->
       <aside class="side">
         <div class="side-inner">
           <div class="avatar">
@@ -199,139 +229,110 @@
           </div>
           <div class="name">Brian Buchanan</div>
           <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
-            LinkedIn
+            LinkedIn →
           </a>
         </div>
       </aside>
 
-      <!-- MAIN -->
       <main class="main">
         <div class="main-head">
           <div>
-            <h1 class="title">Home</h1>
+            <h1 class="title">About</h1>
             <p class="subtitle">
-              Finance and analytics professional with a Bachelor of Arts in Actuarial Science and an Associate degree in Accounting.
-              I focus on using data, quantitative analysis, and financial reasoning to support clear, decision ready insights.
+              Actuarial science graduate with a quantitative foundation and a focus on finance and analytics.
             </p>
           </div>
-          <div class="tab">Overview</div>
+          <div class="tab">About</div>
         </div>
 
         <div class="content">
 
-          <!-- CREDIBILITY -->
-          <section class="section">
-            <h2>Credibility</h2>
-            <div class="card">
-              <ul class="list">
-                <li>Bachelor of Arts in Actuarial Science</li>
-                <li>Associate of Applied Science in Accounting</li>
-                <li>FINRA SIE passed</li>
-                <li>Licensed in New York, New Jersey, and Florida</li>
-              </ul>
-            </div>
-          </section>
+          <div class="jump">
+            <a href="#about-core">About</a>
+            <a href="#education">Education</a>
+            <a href="#mission">Mission</a>
+            <a href="#interests">Interests</a>
+          </div>
 
-          <hr class="divider">
-
-          <!-- SITE PURPOSE -->
-          <section class="section">
-            <h2>What this site represents</h2>
+          <section id="about-core" class="section">
+            <h2>About Me</h2>
             <div class="card">
               <p>
-                All projects featured on this site are designed to showcase my ability to work with data in a finance and analytics context.
-                They emphasize problem framing, KPI development, quantitative reasoning, and clear communication.
+                I’m an Actuarial Science graduate from Baruch College, and I began my academic journey at Queensborough Community College.
+                My background is rooted in quantitative problem solving and a strong curiosity for understanding the why behind numbers.
+                I enjoy work at the intersection of data driven strategy and real world decision making, where analytical insight supports business outcomes.
+              </p>
+
+              <p>
+                On the technical side, I focus on translating raw data into actionable insights.
+                I challenged myself to master the financial regulatory landscape by passing the FINRA Securities Industry Essentials exam and the New York Insurance exam within the same two week period.
+                I am currently licensed in New York, New Jersey, and Florida.
+                My toolkit includes Python, SQL, Power BI, and Advanced Excel, and I apply these tools across portfolio projects focused on finance, risk, and performance analysis.
+              </p>
+
+              <p>
+                Across my academic training and professional experience, I’ve developed a strong understanding of financial products, pricing, and risk, particularly within insurance and long term financial planning.
+                I learn quickly, adapt easily, and perform best in environments that value analytical depth, clear communication, and thoughtful decision making.
+              </p>
+
+              <p>
+                Outside of analytics, I have been a dedicated Lifeguard since 2016 and a certified YMCA Swim Instructor.
+                These roles reinforced accountability, attention to detail, and leadership under pressure, qualities that translate well to professional settings where trust and precision matter.
               </p>
             </div>
           </section>
 
-          <hr class="divider">
-
-          <!-- FEATURED PROJECTS -->
-          <section class="section">
-            <h2>Featured Projects</h2>
-
+          <section id="education" class="section">
+            <h2>Education</h2>
             <div class="grid">
-              <!-- StreamVerse -->
-              <div class="project">
-                <div class="thumb">
-                  <img src="/v2/assets/projects/streamverse-churn-revenue.png" alt="StreamVerse project thumbnail">
+              <div class="edu-card">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/qcc-logo.png" alt="QCC Logo">
                 </div>
-                <div class="project-body">
-                  <h3>StreamVerse Customer Churn and Revenue Analytics</h3>
-                  <p>End to end churn, retention, and revenue KPI analysis focused on business impact.</p>
-                  <div class="tags">
-                    <span class="tag">SQL</span>
-                    <span class="tag">Power BI</span>
-                  </div>
-                  <div class="actions">
-                    <a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank" rel="noreferrer">View Repository</a>
-                  </div>
-                </div>
+                <p class="edu-school">Queensborough Community College (CUNY)</p>
+                <p class="edu-degree">Associate of Applied Science in Accounting</p>
               </div>
 
-              <!-- SPY vs XLU -->
-              <div class="project">
-                <div class="thumb">
-                  <img src="/v2/assets/projects/spy-xlu-portfolio-optimization.png" alt="SPY vs XLU project thumbnail">
+              <div class="edu-card">
+                <div class="edu-logo">
+                  <img src="/v2/assets/edu/baruch-logo.png" alt="Baruch Logo">
                 </div>
-                <div class="project-body">
-                  <h3>SPY vs XLU Portfolio Optimization (2020 to 2025)</h3>
-                  <p>Risk return tradeoff and efficient frontier modeling.</p>
-                  <div class="tags">
-                    <span class="tag">Finance</span>
-                  </div>
-                  <div class="actions">
-                    <a class="btn" href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization" target="_blank" rel="noreferrer">View Repository</a>
-                  </div>
-                </div>
+                <p class="edu-school">Baruch College (CUNY)</p>
+                <p class="edu-degree">Bachelor of Arts in Actuarial Science</p>
               </div>
-
-              <!-- SQL Segmentation Pack -->
-              <div class="project">
-                <div class="thumb">
-                  <img src="/v2/assets/projects/sql-segmentation-pack.png" alt="SQL Segmentation Pack project thumbnail">
-                </div>
-                <div class="project-body">
-                  <h3>SQL Segmentation Pack CommerceConnect</h3>
-                  <p>Customer segmentation for targeting and retention.</p>
-                  <div class="tags">
-                    <span class="tag">SQL</span>
-                  </div>
-                  <div class="actions">
-                    <a class="btn" href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect" target="_blank" rel="noreferrer">View Repository</a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Optional fourth slot kept empty on purpose -->
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- CURRENT FOCUS -->
-          <section class="section">
-            <h2>Current Focus</h2>
+          <section id="mission" class="section">
+            <h2>Mission</h2>
             <div class="card">
               <p>
-                Preparing for Exam FM and the Series 7. Open to FINRA, SOA, and any additional registrations required for employment.
+                My mission is to continue growing through meaningful challenges and disciplined learning while applying analytical thinking to solve real world problems in finance, risk, and strategy.
+                I aim to build solutions that are technically sound, practical, and clearly communicated.
+              </p>
+
+              <p>
+                Long term, I am motivated by collaborative environments with strong mentorship and shared accountability.
+                I strive to grow into roles where I can contribute to high performing teams, support sound decision making, and help organizations operate more efficiently and transparently.
               </p>
             </div>
           </section>
 
           <hr class="divider">
 
-          <!-- CALLS TO ACTION -->
-          <section class="section">
-            <h2>Next Steps</h2>
+          <section id="interests" class="section">
+            <h2>Interests</h2>
             <div class="card">
-              <div class="actions">
-                <a class="btn" href="/v2/portfolio.html">View Portfolio</a>
-                <a class="btn" href="/v2/resume.html">View Resume</a>
-                <a class="btn" href="/v2/certifications.html">View Certifications</a>
-                <a class="btn" href="/v2/contact.html">Connect</a>
-              </div>
+              <p>
+                Outside of my core work, these interests reinforce long term thinking, discipline, and problem solving.
+              </p>
+              <ul>
+                <li><strong>Markets and long term investing</strong> with a focus on risk awareness, retirement planning, and tracking market trends</li>
+                <li><strong>Building and technical curiosity</strong> through website development and PC building, upgrades, and troubleshooting</li>
+                <li><strong>Fitness and performance</strong> through strength training, swimming, cycling and spinning, and long walks</li>
+              </ul>
             </div>
           </section>
 
@@ -341,7 +342,6 @@
     </div>
   </div>
 
-  <!-- NAV INJECTION SCRIPT -->
   <script>
     (async function () {
       const host = document.getElementById("site-nav");

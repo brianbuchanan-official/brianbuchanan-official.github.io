@@ -116,11 +116,6 @@
     .content{padding:18px}
 
     .section{margin-bottom:18px}
-    .section h2{
-      margin:0 0 10px;
-      font-size:16px;
-      font-weight:900;
-    }
 
     .card{
       border:1px solid var(--border);
@@ -137,32 +132,13 @@
     }
 
     .card p:last-child{margin-bottom:0}
-
-    .divider{
-      border:0;
-      border-top:1px solid var(--border);
-      margin:18px 0;
-    }
   </style>
 </head>
 
-<body>
+<body data-page="about">
 
-<header class="nav">
-  <div class="container">
-    <div class="logo">Brian Buchanan</div>
-    <nav>
-      <a href="/v2/index.html">Home</a>
-      <a href="/v2/about.html">About</a>
-      <a href="/v2/skills.html">Skills</a>
-      <a href="/v2/portfolio.html">Portfolio</a>
-      <a href="/v2/certifications.html">Certifications</a>
-      <a href="/v2/resume.html">Resume</a>
-      <a href="/v2/mission.html">Mission</a>
-      <a href="/v2/contact.html">LinkedIn</a>
-    </nav>
-  </div>
-</header>
+<!-- SHARED NAV PLACEHOLDER -->
+<div id="site-nav"></div>
 
 <div class="wrap">
   <div class="layout">
@@ -194,9 +170,9 @@
       </div>
 
       <div class="content">
-
         <section class="section">
           <div class="card">
+
             <p>
               I am a recent Actuarial Science graduate from Baruch College, having begun my academic
               journey at Queensborough Community College. My background is rooted in quantitative
@@ -216,7 +192,6 @@
               and websites efficiently.
             </p>
 
-            <!-- ADDED BRIDGE PARAGRAPH -->
             <p>
               Across my academic training and portfolio projects, I’ve developed a broad understanding
               of financial products, pricing, and risk, including insurance and annuities. I learn
@@ -242,14 +217,31 @@
               accessible explanations. Whether in the pool or the classroom, I am motivated by the
               opportunity to make a positive impact and help others achieve their goals.
             </p>
+
           </div>
         </section>
-
       </div>
     </main>
 
   </div>
 </div>
+
+<!-- NAV INJECTION SCRIPT -->
+<script>
+  (async function () {
+    const host = document.getElementById("site-nav");
+    if (!host) return;
+
+    const res = await fetch("/v2/partials/nav.html");
+    host.innerHTML = await res.text();
+
+    const page = document.body.getAttribute("data-page");
+    if (!page) return;
+
+    const active = host.querySelector(`[data-page="${page}"]`);
+    if (active) active.classList.add("active");
+  })();
+</script>
 
 </body>
 </html>

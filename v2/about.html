@@ -84,6 +84,7 @@
       border-radius:var(--radius);
       box-shadow:var(--shadow);
       overflow:hidden;
+      min-width:0;
     }
 
     .main-head{
@@ -93,6 +94,7 @@
       justify-content:space-between;
       gap:14px;
       flex-wrap:wrap;
+      align-items:flex-start;
     }
 
     .title{margin:0;font-size:22px;font-weight:900}
@@ -111,11 +113,17 @@
       background:rgba(124,92,255,.18);
       font-size:13px;
       font-weight:900;
+      white-space:nowrap;
     }
 
     .content{padding:18px}
 
     .section{margin-bottom:18px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      font-weight:900;
+    }
 
     .card{
       border:1px solid var(--border);
@@ -132,116 +140,173 @@
     }
 
     .card p:last-child{margin-bottom:0}
+
+    .card ul{
+      margin:0;
+      padding-left:18px;
+      font-size:13.5px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .divider{border:0;border-top:1px solid var(--border);margin:18px 0}
+
+    /* Jump links */
+    .jump{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:0 0 14px;
+    }
+    .jump a{
+      padding:7px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:rgba(255,255,255,.85);
+      text-decoration:none;
+      font-size:12px;
+      font-weight:800;
+    }
+    .jump a:hover{ border-color:rgba(255,255,255,.18); }
   </style>
 </head>
 
 <body data-page="about">
 
-<!-- SHARED NAV PLACEHOLDER -->
-<div id="site-nav"></div>
+  <!-- SHARED NAV PLACEHOLDER -->
+  <div id="site-nav"></div>
 
-<div class="wrap">
-  <div class="layout">
+  <div class="wrap">
+    <div class="layout">
 
-    <!-- SIDEBAR -->
-    <aside class="side">
-      <div class="side-inner">
-        <div class="avatar">
-          <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
-        </div>
-        <div class="name">Brian Buchanan</div>
-        <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
-          LinkedIn →
-        </a>
-      </div>
-    </aside>
-
-    <!-- MAIN -->
-    <main class="main">
-      <div class="main-head">
-        <div>
-          <h1 class="title">About Me</h1>
-          <p class="subtitle">
-            Actuarial science graduate with a strong quantitative foundation and a
-            focus on applying analytics to real-world business challenges.
-          </p>
-        </div>
-        <div class="tab">About</div>
-      </div>
-
-      <div class="content">
-        <section class="section">
-          <div class="card">
-
-            <p>
-              I am a recent Actuarial Science graduate from Baruch College, having begun my academic
-              journey at Queensborough Community College. My background is rooted in quantitative
-              problem-solving and a drive to understand the “why” behind the numbers. I thrive at the
-              intersection of data-driven strategy and real-world application, always looking for ways
-              to use my analytical training to solve complex business challenges.
-            </p>
-
-            <p>
-              On the technical side, I focus on bridging the gap between raw data and strategic
-              decision-making. To accelerate my professional growth, I challenged myself to master
-              the financial regulatory landscape, successfully passing the FINRA Securities Industry
-              Essentials (SIE) and the New York Insurance exam within the same two-week window.
-              I am currently licensed in New York, New Jersey, and Florida. My technical toolkit
-              includes Python, SQL, Power BI, and Advanced Excel, and I leverage AI-driven workflows
-              to improve productivity, audit code for accuracy, and build custom digital tools
-              and websites efficiently.
-            </p>
-
-            <p>
-              Across my academic training and portfolio projects, I’ve developed a broad understanding
-              of financial products, pricing, and risk, including insurance and annuities. I learn
-              quickly, adapt easily to new work environments, and enjoy roles that require both
-              analytical depth and business judgment. My work reflects a balance between technical
-              rigor and practical decision-making, with a focus on turning complex information into
-              clear, actionable insights.
-            </p>
-
-            <p>
-              I have been a dedicated Lifeguard since 2016, supported by a lifelong foundation in
-              competitive swimming that began at age eight. As a certified YMCA Swim Instructor
-              and Lifeguard, I have spent years assisting coaches and mentoring swimmers in developing
-              life-saving techniques. My goal is to help individuals move from discomfort around water
-              to confidence, reinforcing the idea that growth comes from challenge in a safe,
-              supportive environment.
-            </p>
-
-            <p>
-              This same commitment to helping others grow extends to my work as a pro-bono Algebra
-              Tutor. By offering free support to students struggling with mathematical concepts,
-              I have strengthened my ability to translate complex, technical information into clear,
-              accessible explanations. Whether in the pool or the classroom, I am motivated by the
-              opportunity to make a positive impact and help others achieve their goals.
-            </p>
-
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="side-inner">
+          <div class="avatar">
+            <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
           </div>
-        </section>
-      </div>
-    </main>
+          <div class="name">Brian Buchanan</div>
+          <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noreferrer">
+            LinkedIn →
+          </a>
+        </div>
+      </aside>
 
+      <!-- MAIN -->
+      <main class="main">
+        <div class="main-head">
+          <div>
+            <h1 class="title">About</h1>
+            <p class="subtitle">
+              Actuarial science graduate with a strong quantitative foundation and a focus on applying analytics
+              to real-world business challenges.
+            </p>
+          </div>
+          <div class="tab">About</div>
+        </div>
+
+        <div class="content">
+
+          <!-- Jump links -->
+          <div class="jump">
+            <a href="#about-core">About</a>
+            <a href="#mission">Mission</a>
+            <a href="#interests">Interests</a>
+          </div>
+
+          <!-- ABOUT -->
+          <section id="about-core" class="section">
+            <h2>About Me</h2>
+            <div class="card">
+              <p>
+                I’m an Actuarial Science graduate from Baruch College, and I began my academic journey at
+                Queensborough Community College. My background is rooted in quantitative problem-solving and a drive
+                to understand the “why” behind the numbers. I enjoy work at the intersection of data-driven strategy
+                and real-world decision-making.
+              </p>
+
+              <p>
+                On the technical side, I focus on bridging the gap between raw data and business outcomes.
+                I challenged myself to master the financial regulatory landscape by passing the FINRA Securities
+                Industry Essentials (SIE) and the New York Insurance exam within the same two-week window, and I’m
+                currently licensed in New York, New Jersey, and Florida. My toolkit includes Python, SQL, Power BI,
+                and Advanced Excel, and I use AI-assisted workflows to improve productivity and catch errors early.
+              </p>
+
+              <p>
+                Across my academic training and portfolio projects, I’ve developed an understanding of financial
+                products, pricing, and risk — including insurance and annuities. I learn quickly, adapt easily, and
+                enjoy roles that require analytical depth and business judgment, with a focus on turning complex
+                information into clear, actionable insights.
+              </p>
+
+              <p>
+                Outside of analytics, I’ve been a dedicated Lifeguard since 2016 and a certified YMCA Swim Instructor.
+                I value environments that prioritize accountability, safety, and growth — and I bring that same mindset
+                into professional work.
+              </p>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- MISSION -->
+          <section id="mission" class="section">
+            <h2>Mission</h2>
+            <div class="card">
+              <p>
+                My mission is to continuously grow through meaningful challenges, learning quickly, and applying what I
+                learn to solve real problems — especially in finance, risk, and strategy.
+              </p>
+
+              <p>
+                I’m motivated by team-oriented environments where collaboration, accountability, and strong mentorship
+                drive performance. Long term, I aim to grow into roles where I can help build and support high-performing
+                teams that operate efficiently and communicate clearly.
+              </p>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- INTERESTS -->
+          <section id="interests" class="section">
+            <h2>Interests</h2>
+            <div class="card">
+              <p style="margin-bottom:12px;">
+                Outside of my core work, these interests reinforce discipline, problem-solving, and long-term thinking.
+              </p>
+              <ul>
+                <li><strong>Markets & Long-Term Investing:</strong> long-term mindset, risk awareness, and retirement planning</li>
+                <li><strong>Building & Technical Curiosity:</strong> website building, iterative design, PC upgrades and troubleshooting</li>
+                <li><strong>Fitness & Performance:</strong> strength training, swimming, cycling/spinning, long walks</li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+    </div>
   </div>
-</div>
 
-<!-- NAV INJECTION SCRIPT -->
-<script>
-  (async function () {
-    const host = document.getElementById("site-nav");
-    if (!host) return;
+  <!-- NAV INJECTION SCRIPT -->
+  <script>
+    (async function () {
+      const host = document.getElementById("site-nav");
+      if (!host) return;
 
-    const res = await fetch("/v2/partials/nav.html");
-    host.innerHTML = await res.text();
+      const res = await fetch("/v2/partials/nav.html");
+      host.innerHTML = await res.text();
 
-    const page = document.body.getAttribute("data-page");
-    if (!page) return;
+      const page = document.body.getAttribute("data-page");
+      if (!page) return;
 
-    const active = host.querySelector(`[data-page="${page}"]`);
-    if (active) active.classList.add("active");
-  })();
-</script>
+      const active = host.querySelector(`[data-page="${page}"]`);
+      if (active) active.classList.add("active");
+    })();
+  </script>
 
 </body>
 </html>

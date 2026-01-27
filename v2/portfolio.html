@@ -23,7 +23,6 @@
     .side{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
     .side-inner{padding:22px;display:flex;flex-direction:column;gap:14px}
 
-    /* ADDED: avatar (same look as About/Skills) */
     .avatar{
       width:100%;
       max-width:240px;
@@ -32,22 +31,21 @@
       border:1px solid var(--border);
       background:rgba(255,255,255,.03);
     }
-    .avatar img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+    .avatar img{width:100%;height:auto;display:block}
 
     .name{font-weight:900;font-size:22px}
     .pill{padding:7px 12px;font-size:12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-weight:600;color:rgba(255,255,255,.85);text-decoration:none;width:fit-content}
+
     .main{background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
     .main-head{padding:18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap}
     .title{margin:0;font-size:22px;font-weight:900}
     .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted)}
     .tab{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:rgba(124,92,255,.18);font-size:13px;font-weight:800}
+
     .content{padding:18px}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
     @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
     .project{border:1px solid var(--border);background:rgba(255,255,255,.03);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
     .thumb img{width:100%;height:160px;object-fit:cover}
     .project-body{padding:14px;display:flex;flex-direction:column;gap:10px;flex-grow:1}
@@ -68,12 +66,9 @@
 
 <aside class="side">
   <div class="side-inner">
-
-    <!-- ADDED: profile photo -->
     <div class="avatar">
       <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
     </div>
-
     <div class="name">Brian Buchanan</div>
     <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn →</a>
   </div>
@@ -91,13 +86,32 @@
 <div class="content">
 <div class="grid">
 
+<!-- FEATURED -->
+<div class="project">
+  <div class="thumb"><img src="/v2/assets/projects/insurance_capital_model.png"></div>
+  <div class="project-body">
+    <h3>Insurance-Backed Investment Portfolio — Capital & Solvency Model</h3>
+    <p>Regulator-style insurance portfolio model using 95% historical VaR/CVaR, capital charges, and scenario-based solvency analysis to evaluate risk-adjusted capital efficiency.</p>
+    <div class="tags">
+      <span class="tag">Excel</span>
+      <span class="tag">Tableau</span>
+      <span class="tag">Portfolio Risk</span>
+      <span class="tag">Capital Adequacy</span>
+      <span class="tag">Stress Testing</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://github.com/brianbuchanan-official/Insurance_Capital_Model_Project" target="_blank">View Project</a>
+    </div>
+  </div>
+</div>
+
 <!-- 1 -->
 <div class="project">
   <div class="thumb"><img src="/v2/assets/projects/streamverse-churn-revenue.png"></div>
   <div class="project-body">
-    <h3>StreamVerse — Customer Churn & Revenue Analytics</h3>
-    <p>End-to-end churn, retention, and revenue KPI analysis.</p>
-    <div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span></div>
+    <h3>StreamVerse — SaaS Churn & Revenue Analytics</h3>
+    <p>Subscription analytics project modeling churn, MRR, ARPU, and retention scenarios to quantify revenue impact and customer lifetime value.</p>
+    <div class="tags"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">SaaS Analytics</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/StreamVerse-SaaS-Churn-Analytics" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -106,9 +120,9 @@
 <div class="project">
   <div class="thumb"><img src="/v2/assets/projects/spy-xlu-portfolio-optimization.png"></div>
   <div class="project-body">
-    <h3>SPY vs XLU Portfolio Optimization (2020–2025)</h3>
-    <p>Risk–return tradeoff and efficient frontier modeling.</p>
-    <div class="tags"><span class="tag">Finance</span></div>
+    <h3>SPY–XLU Portfolio Optimization</h3>
+    <p>Risk-adjusted portfolio allocation analysis comparing equities and utilities to evaluate diversification benefits and volatility trade-offs.</p>
+    <div class="tags"><span class="tag">Excel</span><span class="tag">Portfolio Optimization</span><span class="tag">Asset Allocation</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/spy-xlu-portfolio-optimization" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -118,8 +132,8 @@
   <div class="thumb"><img src="/v2/assets/projects/sql-segmentation-pack.png"></div>
   <div class="project-body">
     <h3>SQL Segmentation Pack — CommerceConnect</h3>
-    <p>Customer segmentation for targeting and retention.</p>
-    <div class="tags"><span class="tag">SQL</span></div>
+    <p>SQL-driven customer segmentation framework identifying high-value customers, churn risk, and behavioral purchase patterns.</p>
+    <div class="tags"><span class="tag">SQL</span><span class="tag">Customer Segmentation</span><span class="tag">Behavioral Analytics</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/SQL-Segmentation-Pack-CommerceConnect" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -129,8 +143,8 @@
   <div class="thumb"><img src="/v2/assets/projects/subscription-analytics-dashboard.png"></div>
   <div class="project-body">
     <h3>Subscription Analytics Dashboard</h3>
-    <p>Recurring revenue and churn KPIs.</p>
-    <div class="tags"><span class="tag">Excel</span></div>
+    <p>Executive-facing dashboard tracking subscription KPIs including user growth, revenue trends, and churn indicators.</p>
+    <div class="tags"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">KPI Tracking</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/Subscription-Analytics-Dashboard" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -139,9 +153,9 @@
 <div class="project">
   <div class="thumb"><img src="/v2/assets/projects/car-insurance-claims-modeling.png"></div>
   <div class="project-body">
-    <h3>Modeling Car Insurance Claim Outcomes</h3>
-    <p>Insurance risk modeling and analysis.</p>
-    <div class="tags"><span class="tag">Insurance</span></div>
+    <h3>Car Insurance Claims Modeling</h3>
+    <p>Insurance analytics project analyzing claim outcomes, severity drivers, and risk segmentation to support underwriting insights.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Insurance Analytics</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/Modeling-Car-Insurance-Claim-Outcomes" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -150,9 +164,9 @@
 <div class="project">
   <div class="thumb"><img src="/v2/assets/projects/nyc-airbnb-tableau.png"></div>
   <div class="project-body">
-    <h3>Explaining the NYC Airbnb Market</h3>
-    <p>Tableau-based pricing and supply analysis.</p>
-    <div class="tags"><span class="tag">Tableau</span></div>
+    <h3>NYC Airbnb Market Analysis</h3>
+    <p>Tableau-based analysis of NYC Airbnb pricing, availability, and neighborhood-level market dynamics.</p>
+    <div class="tags"><span class="tag">Tableau</span><span class="tag">Pricing Analysis</span><span class="tag">Market Insights</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/NYC-Airbnb-Market" target="_blank">View Project</a></div>
   </div>
 </div>
@@ -162,8 +176,8 @@
   <div class="thumb"><img src="/v2/assets/projects/international-debt-statistics.png"></div>
   <div class="project-body">
     <h3>International Debt Statistics</h3>
-    <p>Global debt trends and risk exposure.</p>
-    <div class="tags"><span class="tag">Economics</span></div>
+    <p>Macroeconomic analysis of sovereign external debt exposure using World Bank International Debt Statistics.</p>
+    <div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Macroeconomics</span></div>
     <div class="actions"><a class="btn" href="https://github.com/brianbuchanan-official/International-Debt-Statistics" target="_blank">View Project</a></div>
   </div>
 </div>

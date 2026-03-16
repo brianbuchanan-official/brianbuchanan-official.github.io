@@ -55,7 +55,7 @@
 
     .avatar img{width:100%;display:block}
 
-    .name{font-weight:900;font-size:22px}
+    .name{font-weight:900;font-size:22px;margin:6px 0 2px;}
 
     .pill{
       padding:7px 14px;
@@ -66,7 +66,9 @@
       font-weight:700;
       color:rgba(255,255,255,.85);
       text-decoration:none;
+      transition:all 0.2s;
     }
+    .pill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
     .main{
       background:linear-gradient(180deg,var(--panel2),rgba(255,255,255,.03));
@@ -93,15 +95,6 @@
       line-height:1.6;
     }
 
-    .tab{
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(124,92,255,.18);
-      font-size:13px;
-      font-weight:900;
-    }
-
     .content{padding:18px}
 
     .section{margin-bottom:18px}
@@ -120,6 +113,7 @@
       color:var(--muted);
       line-height:1.7;
     }
+    .card p:last-child{margin-bottom:0;}
 
     .card ul{
       margin:0;
@@ -147,8 +141,9 @@
     }
 
     .edu-logo{
-      width:280px;
-      height:280px;
+      width:100%;
+      max-width:280px;
+      aspect-ratio:1/1;
       margin:0 auto 18px;
       border-radius:24px;
       border:1px solid var(--border);
@@ -176,7 +171,7 @@
       <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
     </div>
     <div class="name">Brian Buchanan</div>
-    <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">LinkedIn</a>
+    <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noopener noreferrer">LinkedIn &rarr;</a>
   </div>
 </aside>
 
@@ -188,7 +183,6 @@
       Actuarial science graduate with a quantitative foundation and a focus on finance and analytics.
     </p>
   </div>
-  <div class="tab">About</div>
 </div>
 
 <div class="content">
@@ -252,16 +246,15 @@
   <h2>Interests</h2>
   <div class="card">
     <p>
-      Outside of my academic and professional work, I enjoy a mix of storytelling, strategy, and competition.
+      Outside of my academic and professional work, I enjoy a mix of storytelling, strategy, and market analysis.
     </p>
     <ul>
-      <li><strong>Television</strong><br>Criminal Minds, Lost, Breaking Bad, Stranger Things, Fallout</li>
-      <li><strong>Movies</strong><br>Harry Potter series, Marvel and Avengers films, Parasite, The Lion King, The Pursuit of Happyness, Good Will Hunting</li>
-      <li><strong>Anime</strong><br>Jujutsu Kaisen, Naruto, Hunter x Hunter, One Punch Man, Black Clover</li>
-      <li><strong>Video Games</strong><br>FC and FIFA, Pokémon, NBA 2K, Minecraft though I have been far too busy lately to play as much as I would like</li>
-      <li><strong>PC Building</strong><br>PC building and hardware optimization</li>
-      <li><strong>Sneakers &amp; Streetwear</strong><br>Sneakers and streetwear culture</li>
-      <li><strong>Physical Activity</strong><br>Weight lifting, swimming, and cycling/spinning</li>
+      <li><strong>Sports Trading Cards:</strong> Actively collect and analyze the market for basketball and football trading cards (Panini, Topps).</li>
+      <li><strong>Sneakers &amp; Streetwear:</strong> Founded and operated <em>Sneaker Tree</em>, a streetwear reselling business.</li>
+      <li><strong>Physical Activity:</strong> Weight lifting, swimming, and cycling.</li>
+      <li><strong>Video Games:</strong> PlayStation gaming, including titles like <em>Elden Ring</em>, <em>Hogwarts Legacy</em>, and <em>NBA 2K</em>.</li>
+      <li><strong>Movies &amp; Anime:</strong> Enjoy storytelling through film and anime, with favorites like <em>One Piece</em> and <em>Dragon Ball</em>.</li>
+      <li><strong>PC Building:</strong> PC building and hardware optimization.</li>
     </ul>
   </div>
 </section>

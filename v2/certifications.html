@@ -47,7 +47,6 @@
       text-align:center;
     }
 
-    /* ONLY ADDITION */
     .avatar{
       width:100%;
       max-width:240px;
@@ -72,7 +71,9 @@
       font-weight:700;
       color:rgba(255,255,255,.85);
       text-decoration:none;
+      transition:all 0.2s;
     }
+    .pill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
     /* MAIN */
     .main{
@@ -94,18 +95,9 @@
 
     .title{margin:0;font-size:22px;font-weight:900}
     .subtitle{margin-top:6px;font-size:13.5px;color:var(--muted)}
-    .tab{
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(124,92,255,.18);
-      font-size:13px;
-      font-weight:800;
-    }
 
     .content{padding:18px}
 
-    /* EVERYTHING BELOW IS UNCHANGED */
     .section{margin-bottom:18px}
     .section h2{margin:0 0 10px;font-size:16px;font-weight:900}
 
@@ -150,35 +142,28 @@
 <div class="wrap">
 <div class="layout">
 
-<!-- SIDEBAR -->
 <aside class="side">
   <div class="side-inner">
-
-    <!-- ONLY ADDITION -->
     <div class="avatar">
       <img src="/v2/assets/img/profile.jpg" alt="Brian Buchanan">
     </div>
-
     <div class="name">Brian Buchanan</div>
-    <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank">
-      LinkedIn →
+    <a class="pill" href="https://www.linkedin.com/in/brian-buchanan-616727224/" target="_blank" rel="noopener noreferrer">
+      LinkedIn &rarr;
     </a>
   </div>
 </aside>
 
-<!-- MAIN (UNCHANGED) -->
 <main class="main">
   <div class="main-head">
     <div>
       <h1 class="title">Certifications & Active Study</h1>
       <p class="subtitle">Employer-relevant exams, licenses, and analytics credentials with current status.</p>
     </div>
-    <div class="tab">Certifications</div>
   </div>
 
   <div class="content">
 
-    <!-- FINANCE EXAMS -->
     <section class="section">
       <h2>Finance Exams</h2>
       <div class="grid">
@@ -204,7 +189,6 @@
 
     <hr class="divider">
 
-    <!-- INSURANCE -->
     <section class="section">
       <h2>Insurance & Medicare</h2>
       <div class="grid">
@@ -222,32 +206,6 @@
           <h3>AHIP + Medicare Carrier Certifications</h3>
           <p>Annual Medicare Advantage & Part D compliance training.</p>
           <div class="statusrow"><span class="status completed">Completed</span></div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- ANALYTICS -->
-    <section class="section">
-      <h2>Analytics Learning</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Google Data Analytics (Coursera)</h3>
-          <p>Case-based analytics workflow and dashboards.</p>
-          <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-        </div>
-
-        <div class="card">
-          <h3>Statistics & Data Analysis with Excel</h3>
-          <p>Applied statistics, regression basics, forecasting.</p>
-          <div class="statusrow"><span class="status inprogress">In Progress</span></div>
-        </div>
-
-        <div class="card">
-          <h3>McGuire Research Course</h3>
-          <p>Critical thinking, analytical writing, research fundamentals.</p>
-          <div class="statusrow"><span class="status inprogress">In Progress</span></div>
         </div>
       </div>
     </section>
